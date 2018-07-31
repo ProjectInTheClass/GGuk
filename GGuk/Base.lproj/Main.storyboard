@@ -107,13 +107,19 @@
                     <view key="view" contentMode="scaleToFill" id="ud0-ov-diu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dog" translatesAutoresizingMaskIntoConstraints="NO" id="LFc-lX-lx7">
+                                <rect key="frame" x="0.0" y="104" width="375" height="459"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="강아지" id="1dw-YR-NLE"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="elr-Jv-Zwa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2359" y="838"/>
+            <point key="canvasLocation" x="2357.5999999999999" y="837.93103448275872"/>
         </scene>
         <!--눈-->
         <scene sceneID="xXS-77-7ej">
@@ -126,13 +132,45 @@
                     <view key="view" contentMode="scaleToFill" id="WKK-mg-l5n">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="paw2" translatesAutoresizingMaskIntoConstraints="NO" id="a91-Y0-8U2">
+                                <rect key="frame" x="126" y="463" width="68" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="68" id="VmH-ph-jth"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="paw2" translatesAutoresizingMaskIntoConstraints="NO" id="1ac-m5-jTq">
+                                <rect key="frame" x="207" y="394" width="68" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="68" id="XJC-kg-ZAi"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="paw2" translatesAutoresizingMaskIntoConstraints="NO" id="C4o-Jq-6Mi">
+                                <rect key="frame" x="126" y="317" width="68" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="68" id="wBg-mY-HeF"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="paw2" translatesAutoresizingMaskIntoConstraints="NO" id="gSb-SO-eHC">
+                                <rect key="frame" x="207" y="228" width="68" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="68" id="OtE-HF-UIA"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="paw2" translatesAutoresizingMaskIntoConstraints="NO" id="jjN-bl-pq6">
+                                <rect key="frame" x="153" y="138" width="68" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="68" id="pbJ-ZP-KXZ"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="눈" id="a6X-oo-E4z"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J6W-Nx-ZHO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3002" y="919"/>
+            <point key="canvasLocation" x="3000.8000000000002" y="918.89055472263874"/>
         </scene>
         <!--Light View Controller-->
         <scene sceneID="an8-Bc-Qsb">
@@ -298,8 +336,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3LT-1u-9eA">
-                                <rect key="frame" x="0.0" y="62" width="375" height="605"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="PPoc" translatesAutoresizingMaskIntoConstraints="NO" id="3LT-1u-9eA">
+                                <rect key="frame" x="0.0" y="62" width="375" height="556"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -311,7 +349,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XQT-BP-SOW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2017" y="-806"/>
+            <point key="canvasLocation" x="2016.8" y="-806.44677661169419"/>
         </scene>
         <!--Item-->
         <scene sceneID="Zal-xz-dvE">
@@ -382,7 +420,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="PPoc" width="296" height="384"/>
         <image name="blueCircle" width="256" height="256"/>
+        <image name="dog" width="1024" height="1024"/>
+        <image name="paw2" width="45" height="42"/>
         <image name="redCircle" width="256" height="256"/>
     </resources>
     <color key="tintColor" red="0.20814387302278525" green="0.31358548274248077" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
