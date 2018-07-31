@@ -309,6 +309,10 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="blueCircle"/>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="gaO-Rq-KHn">
+                                <rect key="frame" x="31" y="426" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <connections>
@@ -322,12 +326,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ueu-XY-9zc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1372" y="529"/>
+            <point key="canvasLocation" x="1372" y="528.48575712143929"/>
         </scene>
         <!--뽁뽁이-->
         <scene sceneID="4sx-LJ-lw4">
             <objects>
-                <viewController id="BY6-xP-HDT" sceneMemberID="viewController">
+                <viewController id="BY6-xP-HDT" customClass="ppocViewController" customModule="GGuk" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="q66-VM-nxf"/>
                         <viewControllerLayoutGuide type="bottom" id="4NY-UN-yT3"/>
@@ -336,12 +340,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="PPoc" translatesAutoresizingMaskIntoConstraints="NO" id="3LT-1u-9eA">
-                                <rect key="frame" x="0.0" y="62" width="375" height="556"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ciY-f4-Q5x">
+                                <rect key="frame" x="8" y="83" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                                <state key="normal" title="Button" image="스크린샷 2018-07-31 오후 2.57.26"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fad-CW-Xpu">
+                                <rect key="frame" x="59" y="83" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="스크린샷 2018-07-31 오후 2.57.26"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yzu-44-UAT">
+                                <rect key="frame" x="110" y="83" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="스크린샷 2018-07-31 오후 2.57.26"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ecg-hy-jRi">
+                                <rect key="frame" x="162" y="83" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="스크린샷 2018-07-31 오후 2.57.26"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EvT-Vu-jnE">
+                                <rect key="frame" x="213" y="83" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="스크린샷 2018-07-31 오후 2.57.26"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ot-dn-Ngn">
+                                <rect key="frame" x="321" y="83" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="스크린샷 2018-07-31 오후 2.57.26"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w2t-0a-UaE">
+                                <rect key="frame" x="271" y="83" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="스크린샷 2018-07-31 오후 2.57.26"/>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.96862745098039216" green="0.90980392156862744" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="뽁뽁이" id="K35-bD-U0M">
                         <barButtonItem key="rightBarButtonItem" title="다시" id="8XX-eh-F45"/>
@@ -349,7 +384,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XQT-BP-SOW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2016.8" y="-806.44677661169419"/>
+            <point key="canvasLocation" x="2181.5999999999999" y="-809.14542728635683"/>
         </scene>
         <!--Item-->
         <scene sceneID="Zal-xz-dvE">
@@ -420,11 +455,12 @@
         </scene>
     </scenes>
     <resources>
-        <image name="PPoc" width="296" height="384"/>
+        <image name="2" width="192" height="191"/>
         <image name="blueCircle" width="256" height="256"/>
-        <image name="dog" width="1024" height="1024"/>
+        <image name="dog" width="512" height="512"/>
         <image name="paw2" width="45" height="42"/>
         <image name="redCircle" width="256" height="256"/>
+        <image name="스크린샷 2018-07-31 오후 2.57.26" width="50" height="50"/>
     </resources>
     <color key="tintColor" red="0.20814387302278525" green="0.31358548274248077" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

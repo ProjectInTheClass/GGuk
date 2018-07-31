@@ -73,6 +73,7 @@ class buttonViewController: UIViewController{
     
     
     @IBOutlet weak var b: UIButton!
+    
     //버튼크기 작게
     func changeSizeDown(button:UIButton) {
         button.imageEdgeInsets = UIEdgeInsetsMake(3, 3, 3, 3)
