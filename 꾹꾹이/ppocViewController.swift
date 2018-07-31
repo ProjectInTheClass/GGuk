@@ -8,12 +8,40 @@
 
 import UIKit
 
-class bubble {
+class Bubble {
     var bubble:UIButton
-    var bubble 
+    //var bubbleImage:UIImage = UIImage(named: "ppoc")!
+    var isClicked = false
+    
+    init(bubble:UIButton) {
+        self.bubble = bubble
+        setBubbleImage()
+    }
+    func setBubbleImage(){
+        bubble.imageView?.image = UIImage(named: "ppoc")
+    }
+    
+    func whenTouchBubble() {
+        if(isClicked == false){
+            bubble.imageView?.image = UIImage(named: "pooc2")
+        }
+    }
 }
+
+
 class ppocViewController: UIViewController {
 
+    //뽁뽁이를 눌렀을때
+    @IBAction func clickBubble(_ sender: UIButton) {
+        sender.setImage(UIImage(named: "ppoc4"), for: .normal)
+        sender.isEnabled = false
+    }
+    
+    //리플레이를 눌렀을때
+    @IBAction func clickReplay(_ sender: UIBarButtonItem) {
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
