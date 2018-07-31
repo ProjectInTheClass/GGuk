@@ -99,7 +99,7 @@
         <!--강아지-->
         <scene sceneID="kDG-4v-UQZ">
             <objects>
-                <viewController id="aZW-67-nt2" sceneMemberID="viewController">
+                <viewController id="aZW-67-nt2" customClass="dogViewController" customModule="GGuk" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="o3z-wP-n8T"/>
                         <viewControllerLayoutGuide type="bottom" id="uES-fF-bPf"/>
