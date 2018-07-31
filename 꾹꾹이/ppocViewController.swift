@@ -8,7 +8,10 @@
 
 import UIKit
 
-
+class bubble {
+    var bubble:UIButton
+    var bubble 
+}
 class ppocViewController: UIViewController {
 
     override func viewDidLoad() {
