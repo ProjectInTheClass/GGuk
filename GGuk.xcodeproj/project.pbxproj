@@ -14,9 +14,13 @@
 		1D7B356F2106E68000350DE0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D7B356D2106E68000350DE0 /* Main.storyboard */; };
 		1D7B35712106E68000350DE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D7B35702106E68000350DE0 /* Assets.xcassets */; };
 		1D7B35742106E68000350DE0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D7B35722106E68000350DE0 /* LaunchScreen.storyboard */; };
+<<<<<<< HEAD
+		5D67C8722113EB7200844CE8 /* dogSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5D67C8712113EB7200844CE8 /* dogSound.mp3 */; };
+=======
 		1DD2B7552112A37D0049FDBE /* PpocCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD2B7542112A37D0049FDBE /* PpocCollectionViewController.swift */; };
 		1DD2B7572112A4BE0049FDBE /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD2B7562112A4BE0049FDBE /* CollectionViewCell.swift */; };
 		1DD2B7772112DEC70049FDBE /* PawViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD2B7762112DEC70049FDBE /* PawViewController.swift */; };
+>>>>>>> 30ee9e41beb459ae2562f4db09ff61256de2bdd8
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,9 +33,13 @@
 		1D7B35702106E68000350DE0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1D7B35732106E68000350DE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1D7B35752106E68000350DE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+<<<<<<< HEAD
+		5D67C8712113EB7200844CE8 /* dogSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = dogSound.mp3; sourceTree = "<group>"; };
+=======
 		1DD2B7542112A37D0049FDBE /* PpocCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PpocCollectionViewController.swift; sourceTree = "<group>"; };
 		1DD2B7562112A4BE0049FDBE /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		1DD2B7762112DEC70049FDBE /* PawViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PawViewController.swift; sourceTree = "<group>"; };
+>>>>>>> 30ee9e41beb459ae2562f4db09ff61256de2bdd8
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +72,7 @@
 		1D7B35682106E68000350DE0 /* GGuk */ = {
 			isa = PBXGroup;
 			children = (
+				5D67C8712113EB7200844CE8 /* dogSound.mp3 */,
 				1D7B35692106E68000350DE0 /* AppDelegate.swift */,
 				1D2EB23721096FE8006E3F7D /* Mission.swift */,
 				1D7B356D2106E68000350DE0 /* Main.storyboard */,
@@ -140,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D7B35742106E68000350DE0 /* LaunchScreen.storyboard in Resources */,
+				5D67C8722113EB7200844CE8 /* dogSound.mp3 in Resources */,
 				1D7B35712106E68000350DE0 /* Assets.xcassets in Resources */,
 				1D7B356F2106E68000350DE0 /* Main.storyboard in Resources */,
 			);

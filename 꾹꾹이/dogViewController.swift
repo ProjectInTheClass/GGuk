@@ -7,32 +7,70 @@
 //
 
 import UIKit
+import AVFoundation
 
 
 class dogViewController: UIViewController {
     
     
     
+<<<<<<< HEAD
+    @IBOutlet weak var boneImage: UIImageView!
+    
+    @IBOutlet weak var dogImage: UIImageView!
+    
+    @IBOutlet weak var leftButton: UIButton!
+=======
     
     @IBOutlet weak var boneImage: UIImageView!
     
     @IBOutlet weak var dogImage: UIImageView!
+>>>>>>> 30ee9e41beb459ae2562f4db09ff61256de2bdd8
     
  
     @IBOutlet weak var leftButton: UIButton!
    
     @IBOutlet weak var rightButton: UIButton!
+<<<<<<< HEAD
+    
+=======
+>>>>>>> 30ee9e41beb459ae2562f4db09ff61256de2bdd8
     
     override func viewDidLoad() {
         super.viewDidLoad()
         dogImage.image = UIImage(named: "standard")!
         boneImage.image = UIImage(named:"bone")
         
-        // Do any additional setup after loading the view.
     }
+    
     
     var leftUp = false
     var rightUp = false
+    
+    var player: AVAudioPlayer?
+    
+    func playSound() {
+        guard let url = Bundle.main.url(forResource: "dv", withExtension: "m4a")
+            else {
+            print("url not found")
+            return
+        }
+        
+        do {
+            /// this codes for making this app ready to takeover the device audio
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+            try AVAudioSession.sharedInstance().setActive(true)
+            
+            /// change fileTypeHint according to the type of your audio file (you can omit this)
+            
+            player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileTypeMPEGLayer3)
+            
+            // no need for prepareToPlay because prepareToPlay is happen automatically when calling play()
+            player!.play()
+        } catch let error as NSError {
+            print("error: \(error.localizedDescription)")
+        }
+    }
     
     @IBAction func clickLeft(_ sender: UIButton) {
         
@@ -60,6 +98,13 @@ class dogViewController: UIViewController {
         }
         
         
+<<<<<<< HEAD
+        playSound()
+        
+        
+        
+=======
+>>>>>>> 30ee9e41beb459ae2562f4db09ff61256de2bdd8
     }
     
     @IBAction func clickRight(_ sender: Any) {
@@ -86,6 +131,10 @@ class dogViewController: UIViewController {
             rightUp = false
         }
         
+<<<<<<< HEAD
+        playSound()
+=======
+>>>>>>> 30ee9e41beb459ae2562f4db09ff61256de2bdd8
         
         
         
