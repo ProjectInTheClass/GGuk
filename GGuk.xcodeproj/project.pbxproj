@@ -9,27 +9,29 @@
 /* Begin PBXBuildFile section */
 		1D2EB23821096FE8006E3F7D /* Mission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2EB23721096FE8006E3F7D /* Mission.swift */; };
 		1D2EB2402109952F006E3F7D /* buttonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2EB23F2109952F006E3F7D /* buttonViewController.swift */; };
-		1D62FEB921102FCE008E38CE /* ppocViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D62FEB821102FCE008E38CE /* ppocViewController.swift */; };
 		1D62FEBB21103761008E38CE /* dogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D62FEBA21103761008E38CE /* dogViewController.swift */; };
 		1D7B356A2106E68000350DE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7B35692106E68000350DE0 /* AppDelegate.swift */; };
-		1D7B356C2106E68000350DE0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7B356B2106E68000350DE0 /* ViewController.swift */; };
 		1D7B356F2106E68000350DE0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D7B356D2106E68000350DE0 /* Main.storyboard */; };
 		1D7B35712106E68000350DE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D7B35702106E68000350DE0 /* Assets.xcassets */; };
 		1D7B35742106E68000350DE0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D7B35722106E68000350DE0 /* LaunchScreen.storyboard */; };
+		1DD2B7552112A37D0049FDBE /* PpocCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD2B7542112A37D0049FDBE /* PpocCollectionViewController.swift */; };
+		1DD2B7572112A4BE0049FDBE /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD2B7562112A4BE0049FDBE /* CollectionViewCell.swift */; };
+		1DD2B7772112DEC70049FDBE /* PawViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD2B7762112DEC70049FDBE /* PawViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1D2EB23721096FE8006E3F7D /* Mission.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mission.swift; sourceTree = "<group>"; };
 		1D2EB23F2109952F006E3F7D /* buttonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = buttonViewController.swift; sourceTree = "<group>"; };
-		1D62FEB821102FCE008E38CE /* ppocViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ppocViewController.swift; sourceTree = "<group>"; };
 		1D62FEBA21103761008E38CE /* dogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dogViewController.swift; sourceTree = "<group>"; };
 		1D7B35662106E68000350DE0 /* GGuk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GGuk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D7B35692106E68000350DE0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1D7B356B2106E68000350DE0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1D7B356E2106E68000350DE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1D7B35702106E68000350DE0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1D7B35732106E68000350DE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1D7B35752106E68000350DE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1DD2B7542112A37D0049FDBE /* PpocCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PpocCollectionViewController.swift; sourceTree = "<group>"; };
+		1DD2B7562112A4BE0049FDBE /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		1DD2B7762112DEC70049FDBE /* PawViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PawViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,11 +65,12 @@
 			isa = PBXGroup;
 			children = (
 				1D7B35692106E68000350DE0 /* AppDelegate.swift */,
-				1D7B356B2106E68000350DE0 /* ViewController.swift */,
 				1D2EB23721096FE8006E3F7D /* Mission.swift */,
 				1D7B356D2106E68000350DE0 /* Main.storyboard */,
+				1DD2B7762112DEC70049FDBE /* PawViewController.swift */,
+				1DD2B7562112A4BE0049FDBE /* CollectionViewCell.swift */,
+				1DD2B7542112A37D0049FDBE /* PpocCollectionViewController.swift */,
 				1D62FEBA21103761008E38CE /* dogViewController.swift */,
-				1D62FEB821102FCE008E38CE /* ppocViewController.swift */,
 				1D2EB23F2109952F006E3F7D /* buttonViewController.swift */,
 				1D7B35702106E68000350DE0 /* Assets.xcassets */,
 				1D7B35722106E68000350DE0 /* LaunchScreen.storyboard */,
@@ -149,11 +152,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D62FEB921102FCE008E38CE /* ppocViewController.swift in Sources */,
 				1D2EB2402109952F006E3F7D /* buttonViewController.swift in Sources */,
+				1DD2B7552112A37D0049FDBE /* PpocCollectionViewController.swift in Sources */,
+				1DD2B7572112A4BE0049FDBE /* CollectionViewCell.swift in Sources */,
 				1D2EB23821096FE8006E3F7D /* Mission.swift in Sources */,
+				1DD2B7772112DEC70049FDBE /* PawViewController.swift in Sources */,
 				1D62FEBB21103761008E38CE /* dogViewController.swift in Sources */,
-				1D7B356C2106E68000350DE0 /* ViewController.swift in Sources */,
 				1D7B356A2106E68000350DE0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
