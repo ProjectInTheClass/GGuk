@@ -13,14 +13,31 @@ class View:UIView{
 class PawViewController: UIViewController {
 
 
-    var imageView = UIImageView()
-    var pawImage:UIImage!
+    @IBOutlet weak var imageView: UIImageView!
+    //var imageView: UIImageView!
+    let pawImage = UIImage(named: "paw")
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         setImageView()
+        
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tapAction))
+        self.imageView.isUserInteractionEnabled = true
+        self.imageView.addGestureRecognizer(tapGestureRecognizer)
+        
+    }
+    func tapAction(sender: UITapGestureRecognizer){
+        let touchPoint = sender.location(in: self.imageView)
+        print(touchPoint)
+        /*
+        let z1 = touchPoint.x * (imageView.image?.size.width)! / imageView.frame.width
+        let z2 = touchPoint.y * (imageView.image?.size.height)!/imageView.frame.height
+        */
+        let pin = UIImageView(frame: CGRect(x: touchPoint.x - 20, y: touchPoint.y - 20, width: 40, height: 40))
+        pin.image = UIImage(named: "ppoc")
+        imageView.addSubview(pin)
     }
     /*
     func fadeImage(){
@@ -36,21 +53,34 @@ class PawViewController: UIViewController {
         imageView.image = pawImage
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        
+        let touch: UITouch = touches.first!
+        
+        touch.view?.addSubview(imageView)
+    
+        //터치 좌표
+    
+    }
+    
+    
     @IBAction func myActionMethod(_ gestureRecognizer: UIGestureRecognizer){
         guard gestureRecognizer.view != nil else { return }
         
-        
         if gestureRecognizer.state == .ended {
             
-            self.view.addSubview(imageView)
+           // self.view.addSubview(imageView)
             // Move the view down and to the right when tapped.
-            /*
-            let animator = UIViewPropertyAnimator(duration: 0.2, curve: .easeInOut, animations: {
-                gestureRecognizer.view!.center.x += 100
-                gestureRecognizer.view!.center.y += 100
+            
+            let animator = UIViewPropertyAnimator(duration: 0, curve: .easeInOut, animations: {
+                
+                gestureRecognizer.view?.addSubview(self.imageView)
+               // gestureRecognizer.view!.center.x += 100
+               // gestureRecognizer.view!.center.y += 100
             })
             animator.startAnimation()
-            */
+            
             
             
         }

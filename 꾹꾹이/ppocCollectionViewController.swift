@@ -13,13 +13,21 @@ private let reuseIdentifier = "Cell"
 class PpocCollectionViewController: UICollectionViewController {
 
     var bubbleImages = [String]()
-
-    
+    let imagePicker = UIImagePickerController()
     override func viewDidLoad(){
         super.viewDidLoad()
-        
         initBubbleImage()
+        /*
+        collectionView?.dataSource = self
+        collectionView?.delegate = self
+        collectionView?.register(UINib.init(nibName: "Cell", bundle: nil), forCellWithReuseIdentifier: "Cell")
+ */
+        
+       // collectionView?.allowsMultipleSelection = true
+    //collectionView?.isDragging
+        
 }
+    
     
     @IBAction func clickReplay(_ sender: UIBarButtonItem) {
 
@@ -30,7 +38,7 @@ class PpocCollectionViewController: UICollectionViewController {
         }
     }
   
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -71,6 +79,7 @@ class PpocCollectionViewController: UICollectionViewController {
         
         return cell
     }
+    
     func initCollectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell{
          let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! CollectionViewCell
         let image = UIImage(named: bubbleImages[indexPath.row])
@@ -81,6 +90,10 @@ class PpocCollectionViewController: UICollectionViewController {
 
     // MARK: UICollectionViewDelegate
 
+    override func collectionView(_ collectionView:UICollectionView, didSelectItemAt indexPath: IndexPath){
+        //_selectedCells.add(indexPath)
+        collectionView.reloadItems(at: [indexPath])
+    }
     /*
     // Uncomment this method to specify if the specified item should be highlighted during tracking
     override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
