@@ -1,14 +1,14 @@
 //
-//  button.swift
+//  dog.swift
 //  GGuk
 //
-//  Created by CAUAD23 on 2018. 7. 26..
+//  Created by CAUAD22 on 2018. 7. 31..
 //  Copyright © 2018년 CAUAD23. All rights reserved.
 //
 
 import UIKit
 
-class button: UIButton {
+class dog: UIView {
 
     /*
     // Only override draw() if you perform custom drawing.

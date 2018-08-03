@@ -14,14 +14,27 @@ class dogViewController: UIViewController {
     
     
     
+<<<<<<< HEAD
     @IBOutlet weak var boneImage: UIImageView!
     
     @IBOutlet weak var dogImage: UIImageView!
     
     @IBOutlet weak var leftButton: UIButton!
+=======
     
+    @IBOutlet weak var boneImage: UIImageView!
+    
+    @IBOutlet weak var dogImage: UIImageView!
+>>>>>>> 30ee9e41beb459ae2562f4db09ff61256de2bdd8
+    
+ 
+    @IBOutlet weak var leftButton: UIButton!
+   
     @IBOutlet weak var rightButton: UIButton!
+<<<<<<< HEAD
     
+=======
+>>>>>>> 30ee9e41beb459ae2562f4db09ff61256de2bdd8
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -85,10 +98,13 @@ class dogViewController: UIViewController {
         }
         
         
+<<<<<<< HEAD
         playSound()
         
         
         
+=======
+>>>>>>> 30ee9e41beb459ae2562f4db09ff61256de2bdd8
     }
     
     @IBAction func clickRight(_ sender: Any) {
@@ -115,7 +131,10 @@ class dogViewController: UIViewController {
             rightUp = false
         }
         
+<<<<<<< HEAD
         playSound()
+=======
+>>>>>>> 30ee9e41beb459ae2562f4db09ff61256de2bdd8
         
         
         
