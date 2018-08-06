@@ -13,28 +13,23 @@ import AVFoundation
 class dogViewController: UIViewController {
     
     
-    
-<<<<<<< HEAD
     @IBOutlet weak var boneImage: UIImageView!
-    
     @IBOutlet weak var dogImage: UIImageView!
-    
     @IBOutlet weak var leftButton: UIButton!
-=======
-    
-    @IBOutlet weak var boneImage: UIImageView!
-    
-    @IBOutlet weak var dogImage: UIImageView!
->>>>>>> 30ee9e41beb459ae2562f4db09ff61256de2bdd8
-    
- 
-    @IBOutlet weak var leftButton: UIButton!
-   
     @IBOutlet weak var rightButton: UIButton!
-<<<<<<< HEAD
+    @IBOutlet weak var countLabel: UILabel!
     
-=======
->>>>>>> 30ee9e41beb459ae2562f4db09ff61256de2bdd8
+    
+    var leftUp = false
+    var rightUp = false
+    var dogSound = sound(soundName: "dv")
+    var alertCon = PopUp()
+    
+    
+    func printCount() {
+        self.countLabel.text = "\(alertCon.count)"
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,35 +38,16 @@ class dogViewController: UIViewController {
         
     }
     
-    
-    var leftUp = false
-    var rightUp = false
-    
-    var player: AVAudioPlayer?
-    
-    func playSound() {
-        guard let url = Bundle.main.url(forResource: "dv", withExtension: "m4a")
-            else {
-            print("url not found")
-            return
+    @IBAction func handlePan(recognizer:UIPanGestureRecognizer) {
+        let translation = recognizer.translation(in: self.view)
+        if let view = recognizer.view {
+            view.center = CGPoint(x:view.center.x + translation.x,
+                                  y:view.center.y + translation.y)
         }
-        
-        do {
-            /// this codes for making this app ready to takeover the device audio
-            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
-            try AVAudioSession.sharedInstance().setActive(true)
-            
-            /// change fileTypeHint according to the type of your audio file (you can omit this)
-            
-            player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileTypeMPEGLayer3)
-            
-            // no need for prepareToPlay because prepareToPlay is happen automatically when calling play()
-            player!.play()
-        } catch let error as NSError {
-            print("error: \(error.localizedDescription)")
-        }
+        recognizer.setTranslation(CGPoint.zero, in: self.view)
     }
     
+
     @IBAction func clickLeft(_ sender: UIButton) {
         
         //귀모양 사진
@@ -97,15 +73,13 @@ class dogViewController: UIViewController {
             leftUp = false
         }
         
-        
-<<<<<<< HEAD
-        playSound()
-        
-        
-        
-=======
->>>>>>> 30ee9e41beb459ae2562f4db09ff61256de2bdd8
+        alertCon.count += 1
+        dogSound.playSound()
+        viewDidAppear(true)
+
     }
+    
+    
     
     @IBAction func clickRight(_ sender: Any) {
         
@@ -131,29 +105,33 @@ class dogViewController: UIViewController {
             rightUp = false
         }
         
-<<<<<<< HEAD
-        playSound()
-=======
->>>>>>> 30ee9e41beb459ae2562f4db09ff61256de2bdd8
+        alertCon.count += 1
+        dogSound.playSound()
+        viewDidAppear(true)
         
+        
+    }
+
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        //super.viewDidAppear(animated)
+        //if(count == 3 * alertCounter){
+       //     self.showAlertMsg(title: "축", message: "\(3 * alertCounter)번이나 클릭하셨어요!", time: 3)
+        //    alertCounter += 1
+       // }
+        
+        alertCon.printMessage()
+        printCount()
         
         
     }
     
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+
     }
-    
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
-}
+    }
+
+

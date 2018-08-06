@@ -13,13 +13,15 @@ class CollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var myImage: UIImageView!
     var count:Int = 0
+    var ppocSound = sound(soundName: "bubble")
+    
     
     override var isSelected: Bool{
         didSet{
             if self.isSelected{
                 self.myImage.image = UIImage(named: "ppoc4")
                 count += 1
-                
+                ppocSound.playSound()
             }
         }
     }

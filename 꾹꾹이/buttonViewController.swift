@@ -35,6 +35,7 @@ class Button {
      }
      */
     var button:UIButton
+   
     //var buttonImage:UIImage
     init(button:UIButton) {
         self.button = button
@@ -47,6 +48,9 @@ class Button {
     */
     
     //버튼크기 작게
+    
+    
+    
     func changeSizeDown(button:UIButton) {
         button.imageEdgeInsets = UIEdgeInsetsMake(3, 3, 3, 3)
     }
@@ -71,7 +75,7 @@ class buttonViewController: UIViewController{
 
     //var blueCircle:button = button(button: , buttonImage: UIImage(named: "blueCircle"))
     
-    
+    var buttonSound = sound(soundName: "btnSound")
     @IBOutlet weak var b: UIButton!
     
     //버튼크기 작게
@@ -95,15 +99,20 @@ class buttonViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+
     }
     //빨간원 클릭했을때 반응
     @IBAction func buttonTouchDown(_ sender: UIButton) {
           changeSizeDown(button: sender)
           setShadowColor(button: sender)
+          buttonSound.playSound()
+    
     }
     @IBAction func buttonTouchUpInside(_ sender: UIButton) {
         changeSizeUp(button: sender)
+        
+        
+        
     }
     
     /*
@@ -114,18 +123,9 @@ class buttonViewController: UIViewController{
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
