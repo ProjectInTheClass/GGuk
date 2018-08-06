@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+<<<<<<< HEAD
 		1D22694421182DD200E48C44 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D22694321182DD200E48C44 /* Counter.swift */; };
+=======
+>>>>>>> 739209cc30203fbe968f7d5e4926d4be240b5af6
 		1D2EB2402109952F006E3F7D /* buttonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2EB23F2109952F006E3F7D /* buttonViewController.swift */; };
 		1D62FEBB21103761008E38CE /* dogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D62FEBA21103761008E38CE /* dogViewController.swift */; };
 		1D7B356A2106E68000350DE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7B35692106E68000350DE0 /* AppDelegate.swift */; };
@@ -27,7 +30,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+<<<<<<< HEAD
 		1D22694321182DD200E48C44 /* Counter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
+=======
+>>>>>>> 739209cc30203fbe968f7d5e4926d4be240b5af6
 		1D2EB23F2109952F006E3F7D /* buttonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = buttonViewController.swift; sourceTree = "<group>"; };
 		1D62FEBA21103761008E38CE /* dogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dogViewController.swift; sourceTree = "<group>"; };
 		1D7B35662106E68000350DE0 /* GGuk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GGuk.app; sourceTree = BUILT_PRODUCTS_DIR; };
