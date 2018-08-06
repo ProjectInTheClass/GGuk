@@ -6,72 +6,72 @@
 //  Copyright © 2018년 CAUAD23. All rights reserved.
 //
 
+
 import UIKit
 class View:UIView{
     
 }
 class PawViewController: UIViewController {
-
-
-    var imageView = UIImageView()
-    var pawImage:UIImage!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        setImageView()
-    }
+    let pawImage = UIImage(named: "paw")
+    var snowSound = sound(soundName: "snow")
+    //var myLabel:UILabel
+    @IBOutlet weak var countLabel: UILabel!
+    var count = 0
+    //var counter:Counter
     /*
-    func fadeImage(){
-        //let pawImage = UIImage(named: "paw")
-        UIView.transition(with: self.imageView!, duration: 5, options: .transitionCrossDissolve, animations: {self.imageView?.image = pawImage}, completion: nil)
-    }
-*/
-
-    func setImageView(){
-        imageView.frame.size.width = 50
-        imageView.frame.size.height = 50
-        imageView.frame.origin.y = 0
-        imageView.image = pawImage
+    init(myLabel:UILabel, counter:Counter) {
+        self.myLabel = countLabel
+        self.counter = Counter(label: myLabel)
     }
     
-    @IBAction func myActionMethod(_ gestureRecognizer: UIGestureRecognizer){
-        guard gestureRecognizer.view != nil else { return }
-        
-        
-        if gestureRecognizer.state == .ended {
-            
-            self.view.addSubview(imageView)
-            // Move the view down and to the right when tapped.
-            /*
-            let animator = UIViewPropertyAnimator(duration: 0.2, curve: .easeInOut, animations: {
-                gestureRecognizer.view!.center.x += 100
-                gestureRecognizer.view!.center.y += 100
-            })
-            animator.startAnimation()
-            */
-            
-            
-        }
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
-    func handleTapGesture(sender: UITapGestureRecognizer) {
-        if sender.state == .ended {
-            
-        }
-    }
-
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+ 
+    func getLabel()->UILabel{
+        return countLabel
     }
     */
-
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        printCount()
+    }
+    
+    func setImageView(x:CGFloat, y:CGFloat){
+        let imageView = UIImageView()
+        //화면 클릭한곳의 가운데 위치하도록
+        imageView.frame = CGRect(x: x + 20, y: y + 15, width: 40, height: 30)
+        imageView.image = pawImage
+        
+        self.view.addSubview(imageView)
+        snowSound.playSound()
+        count += 1
+        printCount()
+        
+        //alpht = 밝기 -> 1에서 0으로 가면서 fade out
+        imageView.alpha = 1
+        UIView.animate(withDuration: 5, animations: {
+            imageView.alpha = 0
+        })
+        
+    }
+    
+    func printCount(){
+        countLabel.text = "\(count)"
+    }
+ 
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        
+        let touch: UITouch = touches.first!
+        let startPoint:CGPoint = touch.location(in: self.view)
+        let touchX = startPoint.x
+        let touchY = startPoint.y
+        
+        //터치 좌표를 가지고 넣어준다.
+        setImageView(x: touchX, y: touchY)
+    }
+    
 }
