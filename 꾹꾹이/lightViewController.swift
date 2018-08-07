@@ -16,8 +16,7 @@ class LightViewController : UIPageViewController, UIPageViewControllerDelegate, 
     
     lazy var orderedViewControllers: [UIViewController] = {
         return [self.newVc(viewController: "light1"),
-                self.newVc(viewController: "light2"),
-                self.newVc(viewController: "light3")]
+                self.newVc(viewController: "light2")]
     }()
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
@@ -79,43 +78,46 @@ class LightViewController : UIPageViewController, UIPageViewControllerDelegate, 
                                completion: nil)
         }
         
-        
     }
-    
     
     
 }
 
 
 
-
-
-
 class circleViewController: UIViewController {
-    
-    
-    
-    
+
     @IBOutlet weak var img1: UIImageView!
-    @IBOutlet weak var btn: UIButton!
+    @IBOutlet weak var btn1: UIButton!
+  
+    var click = false
+    var switchSound = sound(soundName: "light3")
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        img1.image = UIImage(named: "Image")!
+        img1.image = UIImage(named: "switch2")!
         
     }
     
+    
     @IBAction func btnClick(_ sender: UIButton) {
-        
-        img1.image = UIImage(named: "2")
-        
+        if(click==true){
+        img1.image = UIImage(named: "switch1")
+        click = false
+        switchSound.playSound()
+        }
+        else
+        {
+            img1.image = UIImage(named: "switch2")
+            click = true
+            switchSound.playSound()
+        }
         
     }
     
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     
@@ -125,56 +127,50 @@ class circleViewController: UIViewController {
 
 class cooViewController : UIViewController {
     
+  
     
-    @IBOutlet weak var hjk: UIImageView!
-    @IBOutlet weak var btn2: UIButton!
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        hjk.image = UIImage(named:"2")
-        
-    }
-    
-    
-    @IBAction func btn2Click(_ sender: Any) {
-        
-        hjk.image = UIImage(named:"3")
-    }
-    
-    
-    override func didReceiveMemoryWarning() {
-        
-    }
-    
-    
-}
-
-
-class ciViewController: UIViewController {
-    
-    
-    
-    @IBOutlet weak var fg: UIImageView!
-    @IBOutlet weak var btn3: UIButton!
+    @IBOutlet weak var catTail: UIImageView!
+    @IBOutlet weak var light2: UIImageView!
+    var down = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        fg.image = UIImage(named: "3")
+        catTail.image = UIImage(named: "cattail")
+        light2.image = UIImage(named: "stand")
         
-    }
-    
-    
-    @IBAction func btn3Click(_ sender: Any) {
+        let downSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipes(_:)))
+        downSwipe.direction = .down
+        view.addGestureRecognizer(downSwipe)
+
+        let upSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipes(_:)))
+        upSwipe.direction = .up
+        view.addGestureRecognizer(upSwipe)
+ }
+    func handleSwipes(_ sender:UISwipeGestureRecognizer) {
         
-        fg.image = UIImage(named: "Image")
+        let x = catTail.frame.origin.x
+        let y = catTail.frame.origin.y
+        if (down == false && sender.direction == .down) {
+            let tailPosition = CGPoint(x: x, y: y + 140)
+            UIView.animate(withDuration: 1, animations: {
+                self.catTail.frame = CGRect(x: tailPosition.x, y: tailPosition.y, width: 60, height: 110)
+            })
+            down = true
+        }
+        else if(down == true && sender.direction == .up){
+            let tailPosition = CGPoint(x: x, y: y - 140)
+            UIView.animate(withDuration: 1, animations: {
+                self.catTail.frame = CGRect(x: tailPosition.x, y: tailPosition.y, width: 60, height: 110)
+            })
+            down = false
+        }
     }
-    
     override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+        
     }
-    
 }
+
+
 
 
 

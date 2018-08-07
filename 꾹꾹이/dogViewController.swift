@@ -38,6 +38,7 @@ class dogViewController: UIViewController {
         
     }
     
+    //뼈움직이는거
     @IBAction func handlePan(recognizer:UIPanGestureRecognizer) {
         let translation = recognizer.translation(in: self.view)
         if let view = recognizer.view {
@@ -75,8 +76,8 @@ class dogViewController: UIViewController {
         
         alertCon.count += 1
         dogSound.playSound()
-        viewDidAppear(true)
-
+        alertCon.printMessage()
+        printCount()
     }
     
     
@@ -107,26 +108,10 @@ class dogViewController: UIViewController {
         
         alertCon.count += 1
         dogSound.playSound()
-        viewDidAppear(true)
-        
-        
-    }
-
-    
-    override func viewDidAppear(_ animated: Bool) {
-        
-        //super.viewDidAppear(animated)
-        //if(count == 3 * alertCounter){
-       //     self.showAlertMsg(title: "축", message: "\(3 * alertCounter)번이나 클릭하셨어요!", time: 3)
-        //    alertCounter += 1
-       // }
-        
         alertCon.printMessage()
         printCount()
         
-        
     }
-    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

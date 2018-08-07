@@ -8,27 +8,32 @@
 
 
 import UIKit
-class View:UIView{
-    
-}
+
 class PawViewController: UIViewController {
     
+    @IBOutlet weak var countLabel: UILabel!
+    var count = 0
     let pawImage = UIImage(named: "paw")
     var snowSound = sound(soundName: "snow")
     
+    func printCount(){
+        countLabel.text = "\(count)"
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        printCount()
     }
     
     func setImageView(x:CGFloat, y:CGFloat){
         let imageView = UIImageView()
         //화면 클릭한곳의 가운데 위치하도록
-        imageView.frame = CGRect(x: x + 20, y: y + 15, width: 40, height: 30)
+        imageView.frame = CGRect(x: x - 20, y: y - 15, width: 40, height: 30)
         imageView.image = pawImage
         
         self.view.addSubview(imageView)
         snowSound.playSound()
-        
+        count += 1
+        printCount()
         //alpht = 밝기 -> 1에서 0으로 가면서 fade out
         imageView.alpha = 1
         UIView.animate(withDuration: 5, animations: {

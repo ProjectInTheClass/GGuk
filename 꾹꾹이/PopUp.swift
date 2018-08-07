@@ -29,6 +29,7 @@ class PopUp : UIViewController {
         
         self.alertController = UIAlertController(title: title, message: self.alertMessage(), preferredStyle: .alert)
         
+        
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
             print("Alert was cancelled")
             self.alertController=nil;
@@ -63,8 +64,6 @@ class PopUp : UIViewController {
     self.showAlertMsg(title: "따단", message: "대단")
     case 200:
     self.showAlertMsg(title: "따단", message: "ㅇ")
-    
-    
     default:
     print("")
     }
