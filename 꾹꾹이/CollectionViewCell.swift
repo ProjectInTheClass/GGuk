@@ -12,7 +12,7 @@ import UIKit
 class CollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var myImage: UIImageView!
-    var count:Int = 0
+    var counter = Counter()
     var ppocSound = sound(soundName: "bubble")
     
     
@@ -20,7 +20,7 @@ class CollectionViewCell: UICollectionViewCell {
         didSet{
             if self.isSelected{
                 self.myImage.image = UIImage(named: "ppoc4")
-                count += 1
+                counter.count += 1
                 ppocSound.playSound()
             }
         }

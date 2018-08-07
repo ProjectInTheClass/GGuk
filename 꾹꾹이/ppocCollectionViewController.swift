@@ -17,13 +17,15 @@ class PpocCollectionViewController: UICollectionViewController {
     
     override func viewDidLoad(){
         super.viewDidLoad()
-        
         initBubbleImage()
         collectionView?.allowsMultipleSelection = true
     }
     //다시 누르면 버블 초기화
     @IBAction func clickReplay(_ sender: UIBarButtonItem) {
-        initBubbleImage()
+       // let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! CollectionViewCell
+        for i in 0...bubbleImages.count-1{
+            bubbleImages[i] = "ppoc"
+        }
     }
     
     func initBubbleImage(){

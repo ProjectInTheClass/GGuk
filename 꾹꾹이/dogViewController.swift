@@ -24,20 +24,23 @@ class dogViewController: UIViewController {
     var rightUp = false
     var dogSound = sound(soundName: "dv")
     var alertCon = PopUp()
+    var counter = Counter()
     
-    
+   /*
     func printCount() {
         self.countLabel.text = "\(alertCon.count)"
         
     }
+    */
     
     override func viewDidLoad() {
         super.viewDidLoad()
         dogImage.image = UIImage(named: "standard")!
         boneImage.image = UIImage(named:"bone")
-        
+        counter.printCount(countLabel: countLabel)
     }
     
+    //뼈움직이는거
     @IBAction func handlePan(recognizer:UIPanGestureRecognizer) {
         let translation = recognizer.translation(in: self.view)
         if let view = recognizer.view {
@@ -73,10 +76,10 @@ class dogViewController: UIViewController {
             leftUp = false
         }
         
-        alertCon.count += 1
+        counter.count += 1
         dogSound.playSound()
-        viewDidAppear(true)
-
+        alertCon.printMessage(count: counter.count)
+        counter.printCount(countLabel: countLabel)
     }
     
     
@@ -105,28 +108,12 @@ class dogViewController: UIViewController {
             rightUp = false
         }
         
-        alertCon.count += 1
+        counter.count += 1
         dogSound.playSound()
-        viewDidAppear(true)
-        
-        
-    }
-
-    
-    override func viewDidAppear(_ animated: Bool) {
-        
-        //super.viewDidAppear(animated)
-        //if(count == 3 * alertCounter){
-       //     self.showAlertMsg(title: "축", message: "\(3 * alertCounter)번이나 클릭하셨어요!", time: 3)
-        //    alertCounter += 1
-       // }
-        
-        alertCon.printMessage()
-        printCount()
-        
+        alertCon.printMessage(count: counter.count)
+        counter.printCount(countLabel: countLabel)
         
     }
-    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

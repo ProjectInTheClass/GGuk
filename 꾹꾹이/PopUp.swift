@@ -15,8 +15,6 @@ class PopUp : UIViewController {
     var alertController: UIAlertController?
     var baseMessage: String?
     
-    var count:Int = 0
-    
     func showAlertMsg(title: String, message: String) {
         
         guard (self.alertController == nil) else {
@@ -28,6 +26,7 @@ class PopUp : UIViewController {
         //self.remainingTime = time
         
         self.alertController = UIAlertController(title: title, message: self.alertMessage(), preferredStyle: .alert)
+        
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
             print("Alert was cancelled")
@@ -52,19 +51,17 @@ class PopUp : UIViewController {
         return(message)
     }
     
-    func printMessage(){
+    func printMessage(count:Int){
         
     switch count {
     case 10:
-    self.showAlertMsg(title: "따단", message: "ㅎㅇ")
+    self.showAlertMsg(title: "따단", message: "출발이 좋네요~^^")
     case 50:
-    self.showAlertMsg(title: "따단", message: "ㅅㄱ")
+    self.showAlertMsg(title: "따단", message: "화이팅")
     case 100:
-    self.showAlertMsg(title: "따단", message: "대단")
+    self.showAlertMsg(title: "따단", message: "오예")
     case 200:
-    self.showAlertMsg(title: "따단", message: "ㅇ")
-    
-    
+    self.showAlertMsg(title: "따단", message: "감사합니다")
     default:
     print("")
     }

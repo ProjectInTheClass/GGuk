@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D2269462119433E00E48C44 /* cat.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 1D2269452119433300E48C44 /* cat.m4a */; };
+		1D2269482119446B00E48C44 /* light.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 1D2269472119446700E48C44 /* light.m4a */; };
 		1D2EB2402109952F006E3F7D /* buttonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2EB23F2109952F006E3F7D /* buttonViewController.swift */; };
 		1D62FEBB21103761008E38CE /* dogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D62FEBA21103761008E38CE /* dogViewController.swift */; };
 		1D7B356A2106E68000350DE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7B35692106E68000350DE0 /* AppDelegate.swift */; };
@@ -23,9 +25,20 @@
 		5D71F4B32117FBC400B70840 /* btnSound.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 5D71F4B12117FB1600B70840 /* btnSound.m4a */; };
 		5D71F4B721181D2300B70840 /* LightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D71F4B621181D2300B70840 /* LightViewController.swift */; };
 		5D71F4B92118214400B70840 /* snow.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 5D71F4B82118213F00B70840 /* snow.m4a */; };
+		5D71F4BD21182BC500B70840 /* snow2.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 5D71F4BA21182BBE00B70840 /* snow2.m4a */; };
+		5D71F4BE21182BC800B70840 /* snow3.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 5D71F4BB21182BBE00B70840 /* snow3.m4a */; };
+		5D71F4BF21182BCA00B70840 /* snow4.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 5D71F4BC21182BBE00B70840 /* snow4.m4a */; };
+		5D71F4C121182C3300B70840 /* btn2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5D71F4C021182C3300B70840 /* btn2.mp3 */; };
+		5D71F4C321182C3E00B70840 /* btn3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5D71F4C221182C3E00B70840 /* btn3.mp3 */; };
+		5D71F4C721182D3000B70840 /* light1.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 5D71F4C421182CCB00B70840 /* light1.m4a */; };
+		5D71F4C821182D3200B70840 /* light2.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 5D71F4C521182CED00B70840 /* light2.m4a */; };
+		5D71F4C921182D3400B70840 /* light3.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 5D71F4C621182D2100B70840 /* light3.m4a */; };
+		5D71F4CB21183C2C00B70840 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D71F4CA21183C2C00B70840 /* Counter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1D2269452119433300E48C44 /* cat.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = cat.m4a; sourceTree = "<group>"; };
+		1D2269472119446700E48C44 /* light.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = light.m4a; sourceTree = "<group>"; };
 		1D2EB23F2109952F006E3F7D /* buttonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = buttonViewController.swift; sourceTree = "<group>"; };
 		1D62FEBA21103761008E38CE /* dogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dogViewController.swift; sourceTree = "<group>"; };
 		1D7B35662106E68000350DE0 /* GGuk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GGuk.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +57,15 @@
 		5D71F4B12117FB1600B70840 /* btnSound.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = btnSound.m4a; sourceTree = "<group>"; };
 		5D71F4B621181D2300B70840 /* LightViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightViewController.swift; sourceTree = "<group>"; };
 		5D71F4B82118213F00B70840 /* snow.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = snow.m4a; sourceTree = "<group>"; };
+		5D71F4BA21182BBE00B70840 /* snow2.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = snow2.m4a; sourceTree = "<group>"; };
+		5D71F4BB21182BBE00B70840 /* snow3.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = snow3.m4a; sourceTree = "<group>"; };
+		5D71F4BC21182BBE00B70840 /* snow4.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = snow4.m4a; sourceTree = "<group>"; };
+		5D71F4C021182C3300B70840 /* btn2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = btn2.mp3; sourceTree = "<group>"; };
+		5D71F4C221182C3E00B70840 /* btn3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = btn3.mp3; sourceTree = "<group>"; };
+		5D71F4C421182CCB00B70840 /* light1.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = light1.m4a; sourceTree = "<group>"; };
+		5D71F4C521182CED00B70840 /* light2.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = light2.m4a; sourceTree = "<group>"; };
+		5D71F4C621182D2100B70840 /* light3.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = light3.m4a; sourceTree = "<group>"; };
+		5D71F4CA21183C2C00B70840 /* Counter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,12 +104,23 @@
 				1DD2B7562112A4BE0049FDBE /* CollectionViewCell.swift */,
 				1DD2B7542112A37D0049FDBE /* PpocCollectionViewController.swift */,
 				1D62FEBA21103761008E38CE /* dogViewController.swift */,
+				5D71F4CA21183C2C00B70840 /* Counter.swift */,
 				1D2EB23F2109952F006E3F7D /* buttonViewController.swift */,
 				5D71F4B621181D2300B70840 /* LightViewController.swift */,
-				5D71F4B12117FB1600B70840 /* btnSound.m4a */,
 				5D67C8B721141EC200844CE8 /* dv.m4a */,
+				5D71F4C021182C3300B70840 /* btn2.mp3 */,
+				5D71F4C221182C3E00B70840 /* btn3.mp3 */,
+				5D71F4B12117FB1600B70840 /* btnSound.m4a */,
 				5D71F4AE2117E69400B70840 /* bubble.m4a */,
 				5D71F4B82118213F00B70840 /* snow.m4a */,
+				5D71F4BA21182BBE00B70840 /* snow2.m4a */,
+				5D71F4BB21182BBE00B70840 /* snow3.m4a */,
+				5D71F4BC21182BBE00B70840 /* snow4.m4a */,
+				5D71F4C421182CCB00B70840 /* light1.m4a */,
+				5D71F4C521182CED00B70840 /* light2.m4a */,
+				5D71F4C621182D2100B70840 /* light3.m4a */,
+				1D2269452119433300E48C44 /* cat.m4a */,
+				1D2269472119446700E48C44 /* light.m4a */,
 				1D7B35702106E68000350DE0 /* Assets.xcassets */,
 				1D7B35722106E68000350DE0 /* LaunchScreen.storyboard */,
 				1D7B35752106E68000350DE0 /* Info.plist */,
@@ -161,9 +194,19 @@
 				1D7B35712106E68000350DE0 /* Assets.xcassets in Resources */,
 				5D71F4B32117FBC400B70840 /* btnSound.m4a in Resources */,
 				5D67C8B82114201000844CE8 /* dv.m4a in Resources */,
+				5D71F4C121182C3300B70840 /* btn2.mp3 in Resources */,
+				5D71F4C321182C3E00B70840 /* btn3.mp3 in Resources */,
 				5D71F4B22117FBBD00B70840 /* bubble.m4a in Resources */,
 				5D71F4B92118214400B70840 /* snow.m4a in Resources */,
+				5D71F4BD21182BC500B70840 /* snow2.m4a in Resources */,
+				5D71F4BE21182BC800B70840 /* snow3.m4a in Resources */,
+				5D71F4BF21182BCA00B70840 /* snow4.m4a in Resources */,
+				5D71F4C721182D3000B70840 /* light1.m4a in Resources */,
+				5D71F4C821182D3200B70840 /* light2.m4a in Resources */,
+				5D71F4C921182D3400B70840 /* light3.m4a in Resources */,
+				1D2269482119446B00E48C44 /* light.m4a in Resources */,
 				1D7B356F2106E68000350DE0 /* Main.storyboard in Resources */,
+				1D2269462119433E00E48C44 /* cat.m4a in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,6 +217,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D71F4CB21183C2C00B70840 /* Counter.swift in Sources */,
 				1D2EB2402109952F006E3F7D /* buttonViewController.swift in Sources */,
 				5D71F4B02117E71E00B70840 /* PopUp.swift in Sources */,
 				1DD2B7552112A37D0049FDBE /* PpocCollectionViewController.swift in Sources */,

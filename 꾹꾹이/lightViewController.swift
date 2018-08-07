@@ -16,8 +16,7 @@ class LightViewController : UIPageViewController, UIPageViewControllerDelegate, 
     
     lazy var orderedViewControllers: [UIViewController] = {
         return [self.newVc(viewController: "light1"),
-                self.newVc(viewController: "light2"),
-                self.newVc(viewController: "light3")]
+                self.newVc(viewController: "light2")]
     }()
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
@@ -26,7 +25,6 @@ class LightViewController : UIPageViewController, UIPageViewControllerDelegate, 
         }
         
         let previousIndex = viewControllerIndex - 1
-        
         // User is on the first view controller and swiped left to loop to
         // the last view controller.
         guard previousIndex >= 0 else {
@@ -75,47 +73,53 @@ class LightViewController : UIPageViewController, UIPageViewControllerDelegate, 
         if let firstViewController = orderedViewControllers.first {
             setViewControllers([firstViewController],
                                direction: .forward,
-                               animated: true,
+                               animated: false,
                                completion: nil)
         }
         
-        
     }
-    
     
     
 }
 
 
 
-
-
-
 class circleViewController: UIViewController {
-    
-    
-    
-    
+
     @IBOutlet weak var img1: UIImageView!
-    @IBOutlet weak var btn: UIButton!
+    @IBOutlet weak var btn1: UIButton!
+    var click = false
+    var switchSound = sound(soundName: "light")
+    var counter = Counter()
+    
+    @IBOutlet weak var countLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        img1.image = UIImage(named: "Image")!
-        
+        img1.image = UIImage(named: "switch1")
+        counter.printCount(countLabel: countLabel)
     }
     
+    
     @IBAction func btnClick(_ sender: UIButton) {
-        
-        img1.image = UIImage(named: "2")
-        
-        
+        if(click == false){
+            img1.image = UIImage(named: "switch2")
+            click = true
+            switchSound.playSound()
+        }
+        else
+        {
+            img1.image = UIImage(named: "switch1")
+            click = false
+            switchSound.playSound()
+        }
+        counter.count += 1
+        counter.printCount(countLabel: countLabel)
     }
     
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     
@@ -125,56 +129,60 @@ class circleViewController: UIViewController {
 
 class cooViewController : UIViewController {
     
-    
-    @IBOutlet weak var hjk: UIImageView!
-    @IBOutlet weak var btn2: UIButton!
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        hjk.image = UIImage(named:"2")
-        
-    }
-    
-    
-    @IBAction func btn2Click(_ sender: Any) {
-        
-        hjk.image = UIImage(named:"3")
-    }
-    
-    
-    override func didReceiveMemoryWarning() {
-        
-    }
-    
-    
-}
-
-
-class ciViewController: UIViewController {
-    
-    
-    
-    @IBOutlet weak var fg: UIImageView!
-    @IBOutlet weak var btn3: UIButton!
+    @IBOutlet weak var catTail: UIImageView!
+    @IBOutlet weak var light2: UIImageView!
+    var down = false
+    var catSound = sound(soundName: "cat")
+    @IBOutlet weak var countLabel: UILabel!
+    var counter = Counter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        fg.image = UIImage(named: "3")
+        catTail.image = UIImage(named: "cattail")
+        light2.image = UIImage(named: "stand")
+        counter.printCount(countLabel: countLabel)
+        
+        let downSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipes(_:)))
+        downSwipe.direction = .down
+        view.addGestureRecognizer(downSwipe)
+
+        let upSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipes(_:)))
+        upSwipe.direction = .up
+        view.addGestureRecognizer(upSwipe)
+    }
+    func handleSwipes(_ sender:UISwipeGestureRecognizer) {
+        
+        let x = catTail.frame.origin.x
+        let y = catTail.frame.origin.y
+        let tailPosition:CGPoint?
+        if (down == false && sender.direction == .down) {
+            tailPosition = CGPoint(x: x, y: y + 140)
+            UIView.animate(withDuration: 0.5, animations: {
+                self.catTail.frame = CGRect(x: (tailPosition?.x)!, y: (tailPosition?.y)!, width: 60, height: 110)
+            })
+            down = true
+            catSound.playSound()
+            counter.count += 1
+        }
+        else if(down == true && sender.direction == .up){
+            tailPosition = CGPoint(x: x, y: y - 140)
+            UIView.animate(withDuration: 0.5, animations: {
+                self.catTail.frame = CGRect(x: (tailPosition?.x)!, y: (tailPosition?.y)!, width: 60, height: 110)
+            })
+            down = false
+            catSound.playSound()
+            counter.count += 1
+        }
+        
+        counter.printCount(countLabel: countLabel)
         
     }
-    
-    
-    @IBAction func btn3Click(_ sender: Any) {
-        
-        fg.image = UIImage(named: "Image")
-    }
-    
     override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+        
     }
-    
 }
+
+
 
 
 
