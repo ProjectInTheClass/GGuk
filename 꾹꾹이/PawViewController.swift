@@ -15,38 +15,11 @@ class PawViewController: UIViewController {
     
     let pawImage = UIImage(named: "paw")
     var snowSound = sound(soundName: "snow")
-<<<<<<< HEAD
-    //var myLabel:UILabel
-    @IBOutlet weak var countLabel: UILabel!
-    var count = 0
-    //var counter:Counter
-    /*
-    init(myLabel:UILabel, counter:Counter) {
-        self.myLabel = countLabel
-        self.counter = Counter(label: myLabel)
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
- 
-    func getLabel()->UILabel{
-        return countLabel
-    }
-    */
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        printCount()
-    }
-    
-=======
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
->>>>>>> 739209cc30203fbe968f7d5e4926d4be240b5af6
     func setImageView(x:CGFloat, y:CGFloat){
         let imageView = UIImageView()
         //화면 클릭한곳의 가운데 위치하도록
@@ -55,11 +28,6 @@ class PawViewController: UIViewController {
         
         self.view.addSubview(imageView)
         snowSound.playSound()
-<<<<<<< HEAD
-        count += 1
-        printCount()
-=======
->>>>>>> 739209cc30203fbe968f7d5e4926d4be240b5af6
         
         //alpht = 밝기 -> 1에서 0으로 가면서 fade out
         imageView.alpha = 1
@@ -69,10 +37,6 @@ class PawViewController: UIViewController {
         
     }
     
-    func printCount(){
-        countLabel.text = "\(count)"
-    }
- 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         

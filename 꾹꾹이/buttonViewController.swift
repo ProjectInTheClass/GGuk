@@ -4,8 +4,6 @@
 //
 //  Created by CAUAD23 on 2018. 7. 26..
 //  Copyright © 2018년 CAUAD23. All rights reserved.
-<<<<<<< HEAD
-=======
 //
 //
 //  buttonViewController.swift
@@ -71,23 +69,14 @@ class Button {
     }
     
 }
->>>>>>> 739209cc30203fbe968f7d5e4926d4be240b5af6
 
-import UIKit
 
 class buttonViewController: UIViewController{
-<<<<<<< HEAD
-    
-    var count = 0
-    var buttonSound = sound(soundName: "btnSound")
-    @IBOutlet weak var countLabel: UILabel!
-=======
 
     //var blueCircle:button = button(button: , buttonImage: UIImage(named: "blueCircle"))
     
     var buttonSound = sound(soundName: "btnSound")
     @IBOutlet weak var b: UIButton!
->>>>>>> 739209cc30203fbe968f7d5e4926d4be240b5af6
     
     //버튼크기 작게
     func changeSizeDown(button:UIButton) {
@@ -106,32 +95,18 @@ class buttonViewController: UIViewController{
         button.layer.shadowOpacity = 0.5
         button.layer.cornerRadius = button.frame.width / 2
     }
-    func printCount(){
-        countLabel.text = "\(count)"
-    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-<<<<<<< HEAD
-        printCount()
-=======
 
 
->>>>>>> 739209cc30203fbe968f7d5e4926d4be240b5af6
     }
-    //버튼클릭
+    //빨간원 클릭했을때 반응
     @IBAction func buttonTouchDown(_ sender: UIButton) {
-<<<<<<< HEAD
-        changeSizeDown(button: sender)
-        setShadowColor(button: sender)
-        buttonSound.playSound()
-        count += 1
-        printCount()
-=======
           changeSizeDown(button: sender)
           setShadowColor(button: sender)
           buttonSound.playSound()
     
->>>>>>> 739209cc30203fbe968f7d5e4926d4be240b5af6
     }
     @IBAction func buttonTouchUpInside(_ sender: UIButton) {
         changeSizeUp(button: sender)
@@ -139,6 +114,12 @@ class buttonViewController: UIViewController{
         
         
     }
+    
+    /*
+    @IBAction func buttonClick(button: UIButton){
+        changeSizeDown(button: button)
+    }
+    */
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

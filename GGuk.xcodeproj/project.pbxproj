@@ -7,10 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-<<<<<<< HEAD
-		1D22694421182DD200E48C44 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D22694321182DD200E48C44 /* Counter.swift */; };
-=======
->>>>>>> 739209cc30203fbe968f7d5e4926d4be240b5af6
 		1D2EB2402109952F006E3F7D /* buttonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2EB23F2109952F006E3F7D /* buttonViewController.swift */; };
 		1D62FEBB21103761008E38CE /* dogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D62FEBA21103761008E38CE /* dogViewController.swift */; };
 		1D7B356A2106E68000350DE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7B35692106E68000350DE0 /* AppDelegate.swift */; };
@@ -30,10 +26,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-<<<<<<< HEAD
-		1D22694321182DD200E48C44 /* Counter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
-=======
->>>>>>> 739209cc30203fbe968f7d5e4926d4be240b5af6
 		1D2EB23F2109952F006E3F7D /* buttonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = buttonViewController.swift; sourceTree = "<group>"; };
 		1D62FEBA21103761008E38CE /* dogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dogViewController.swift; sourceTree = "<group>"; };
 		1D7B35662106E68000350DE0 /* GGuk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GGuk.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,7 +79,6 @@
 				1D7B35692106E68000350DE0 /* AppDelegate.swift */,
 				1D7B356D2106E68000350DE0 /* Main.storyboard */,
 				1DD2B7762112DEC70049FDBE /* PawViewController.swift */,
-				1D22694321182DD200E48C44 /* Counter.swift */,
 				1DD2B7562112A4BE0049FDBE /* CollectionViewCell.swift */,
 				1DD2B7542112A37D0049FDBE /* PpocCollectionViewController.swift */,
 				1D62FEBA21103761008E38CE /* dogViewController.swift */,
@@ -183,7 +174,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D22694421182DD200E48C44 /* Counter.swift in Sources */,
 				1D2EB2402109952F006E3F7D /* buttonViewController.swift in Sources */,
 				5D71F4B02117E71E00B70840 /* PopUp.swift in Sources */,
 				1DD2B7552112A37D0049FDBE /* PpocCollectionViewController.swift in Sources */,
