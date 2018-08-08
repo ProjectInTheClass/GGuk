@@ -13,7 +13,8 @@ class PawViewController: UIViewController {
     
     @IBOutlet weak var countLabel: UILabel!
     let pawImage = UIImage(named: "pawe")
-    var snowSound = sound(soundName: "snow2")
+    var snowSound:sound?
+
     var counter = Counter()
     
     override func viewDidLoad() {
@@ -28,8 +29,21 @@ class PawViewController: UIViewController {
         imageView.image = pawImage
         
         self.view.addSubview(imageView)
-        snowSound.playSound()
         counter.count += 1
+
+        switch (counter.count)%4 {
+        case 0:
+            snowSound = sound(soundName: "snow")
+        case 1:
+            snowSound = sound(soundName: "snow2")
+        case 2:
+            snowSound = sound(soundName: "snow3")
+        default:
+            snowSound = sound(soundName: "snow4")
+        }
+        
+        snowSound!.playSound()
+        
         counter.printCount(countLabel: countLabel)
         //alpht = 밝기 -> 1에서 0으로 가면서 fade out
         imageView.alpha = 1
