@@ -128,58 +128,52 @@ class circleViewController: UIViewController {
 
 
 class cooViewController : UIViewController {
-    
+        
     @IBOutlet weak var catTail: UIImageView!
     @IBOutlet weak var light2: UIImageView!
     var down = false
     var catSound = sound(soundName: "cat")
     @IBOutlet weak var countLabel: UILabel!
     var counter = Counter()
+        
     
     override func viewDidLoad() {
         super.viewDidLoad()
         catTail.image = UIImage(named: "cattail")
         light2.image = UIImage(named: "stand")
         counter.printCount(countLabel: countLabel)
-        
-        let downSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipes(_:)))
-        downSwipe.direction = .down
-        view.addGestureRecognizer(downSwipe)
 
-        let upSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipes(_:)))
-        upSwipe.direction = .up
-        view.addGestureRecognizer(upSwipe)
     }
-    func handleSwipes(_ sender:UISwipeGestureRecognizer) {
-        
+    @IBAction func clickButton(_ sender: UIButton) {
         let x = catTail.frame.origin.x
         let y = catTail.frame.origin.y
         let tailPosition:CGPoint?
-        if (down == false && sender.direction == .down) {
+        if (down == false) {
             tailPosition = CGPoint(x: x, y: y + 140)
             UIView.animate(withDuration: 0.5, animations: {
                 self.catTail.frame = CGRect(x: (tailPosition?.x)!, y: (tailPosition?.y)!, width: 60, height: 110)
-            })
+                })
             down = true
             catSound.playSound()
             counter.count += 1
         }
-        else if(down == true && sender.direction == .up){
+        else {
             tailPosition = CGPoint(x: x, y: y - 140)
             UIView.animate(withDuration: 0.5, animations: {
                 self.catTail.frame = CGRect(x: (tailPosition?.x)!, y: (tailPosition?.y)!, width: 60, height: 110)
-            })
+                })
             down = false
             catSound.playSound()
             counter.count += 1
         }
-        
-        counter.printCount(countLabel: countLabel)
-        
+            
     }
+        
+        
     override func didReceiveMemoryWarning() {
-        
+            
     }
+    
 }
 
 

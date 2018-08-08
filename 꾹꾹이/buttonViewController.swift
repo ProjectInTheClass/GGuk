@@ -13,10 +13,15 @@
 //  Copyright © 2018년 CAUAD23. All rights reserved.
 //
 import UIKit
+import AudioToolbox
+
+
+
 class buttonViewController: UIViewController{
 
     var buttonSound = sound(soundName: "btnSound")
-
+    let impact = UIImpactFeedbackGenerator()
+    
     @IBOutlet weak var countLabel: UILabel!
     var counter = Counter()
     //버튼크기 작게
@@ -49,15 +54,20 @@ class buttonViewController: UIViewController{
         buttonSound.playSound()
         counter.count += 1
         counter.printCount(countLabel: countLabel)
+        //AudioServicesPlaySystemSound(4095)
+        //AudioServicesPlaySystemSound(1015)
+
     }
     @IBAction func buttonTouchUpInside(_ sender: UIButton) {
         changeSizeUp(button: sender)
-        
+        //AudioServicesPlaySystemSound(4095)
+        impact.impactOccurred()
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
 
     }
+    
     
 
 

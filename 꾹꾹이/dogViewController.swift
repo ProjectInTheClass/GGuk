@@ -19,6 +19,9 @@ class dogViewController: UIViewController {
     @IBOutlet weak var rightButton: UIButton!
     @IBOutlet weak var countLabel: UILabel!
     
+
+    @IBOutlet weak var boneY: NSLayoutConstraint!
+    @IBOutlet weak var boneX: NSLayoutConstraint!
     
     var leftUp = false
     var rightUp = false
@@ -48,6 +51,11 @@ class dogViewController: UIViewController {
                                   y:view.center.y + translation.y)
         }
         recognizer.setTranslation(CGPoint.zero, in: self.view)
+        self.boneX.constant += translation.x
+        self.boneY.constant += translation.y
+        if((view.center.x == 185) && (view.center.y == 394)){
+            dogSound.playSound()
+        }
     }
     
 
@@ -78,7 +86,10 @@ class dogViewController: UIViewController {
         
         counter.count += 1
         dogSound.playSound()
-        alertCon.printMessage(count: counter.count)
+        
+        if let newScreen = alertCon.printMessage(count: counter.count){
+            self.present(newScreen, animated: true, completion: nil)
+        }
         counter.printCount(countLabel: countLabel)
     }
     
@@ -110,15 +121,17 @@ class dogViewController: UIViewController {
         
         counter.count += 1
         dogSound.playSound()
-        alertCon.printMessage(count: counter.count)
-        counter.printCount(countLabel: countLabel)
         
+        if let newScreen = alertCon.printMessage(count: counter.count){
+            self.present(newScreen, animated: true, completion: nil)
+        }
+        counter.printCount(countLabel: countLabel)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
 
     }
-    }
+}
 
 

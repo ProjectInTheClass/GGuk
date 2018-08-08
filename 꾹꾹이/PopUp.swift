@@ -51,20 +51,23 @@ class PopUp : UIViewController {
         return(message)
     }
     
-    func printMessage(count:Int){
+    func printMessage(count:Int) -> UIAlertController? {
         
-    switch count {
-    case 10:
-    self.showAlertMsg(title: "따단", message: "출발이 좋네요~^^")
-    case 50:
-    self.showAlertMsg(title: "따단", message: "화이팅")
-    case 100:
-    self.showAlertMsg(title: "따단", message: "오예")
-    case 200:
-    self.showAlertMsg(title: "따단", message: "감사합니다")
-    default:
-    print("")
-    }
+        switch count {
+        case 10:
+            self.showAlertMsg(title: "따단", message: "출발이 좋네요~^^")
+        case 50:
+            self.showAlertMsg(title: "따단", message: "화이팅")
+        case 100:
+            self.showAlertMsg(title: "따단", message: "오예")
+        case 200:
+            self.showAlertMsg(title: "따단", message: "감사합니다")
+        default:
+            break
+            
+        }
+        
+        return alertController
     }
     
     
