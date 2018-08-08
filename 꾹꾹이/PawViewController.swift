@@ -16,9 +16,13 @@ class PawViewController: UIViewController {
     var snowSound:sound?
 
     var counter = Counter()
+    let defaults = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if let count = defaults.value(forKey: "pawCnt"){
+            counter.count = count as! Int
+        }
         counter.printCount(countLabel: countLabel)
     }
     
@@ -50,7 +54,7 @@ class PawViewController: UIViewController {
         UIView.animate(withDuration: 5, animations: {
             imageView.alpha = 0
         })
-        
+        defaults.set(counter.count, forKey: "pawCnt")
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

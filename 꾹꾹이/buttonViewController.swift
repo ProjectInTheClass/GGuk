@@ -24,6 +24,7 @@ class buttonViewController: UIViewController{
     
     @IBOutlet weak var countLabel: UILabel!
     var counter = Counter()
+    let defaults = UserDefaults.standard
     //버튼크기 작게
     func changeSizeDown(button:UIButton) {
         button.imageEdgeInsets = UIEdgeInsetsMake(3, 3, 3, 3)
@@ -44,6 +45,9 @@ class buttonViewController: UIViewController{
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        if let count = defaults.value(forKey: "btnCnt"){
+            counter.count = count as! Int
+        }
         counter.printCount(countLabel: countLabel)
 
     }
@@ -54,6 +58,7 @@ class buttonViewController: UIViewController{
         buttonSound.playSound()
         counter.count += 1
         counter.printCount(countLabel: countLabel)
+        defaults.set(counter.count, forKey: "btnCnt")
         //AudioServicesPlaySystemSound(4095)
         //AudioServicesPlaySystemSound(1015)
 
