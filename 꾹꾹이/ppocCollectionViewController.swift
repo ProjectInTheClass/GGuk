@@ -34,7 +34,14 @@ class PpocCollectionViewController: UICollectionViewController {
         }
     }
     
-    
+    func setShadowColor(button:UIButton){
+        button.layer.shadowColor = UIColor.black.cgColor
+        button.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
+        button.layer.masksToBounds = false
+        button.layer.shadowRadius = 1.0
+        button.layer.shadowOpacity = 0.5
+        button.layer.cornerRadius = button.frame.width / 2
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

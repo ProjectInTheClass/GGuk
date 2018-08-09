@@ -22,12 +22,15 @@ class dogViewController: UIViewController {
 
     @IBOutlet weak var boneY: NSLayoutConstraint!
     @IBOutlet weak var boneX: NSLayoutConstraint!
+    var startX:CGFloat?
+    var startY:CGFloat?
     
     var leftUp = false
     var rightUp = false
     var dogSound = sound(soundName: "dv")
     var alertCon = PopUp()
     var counter = Counter()
+    let defaults = UserDefaults.standard
     
     /*
      func printCount() {
@@ -38,11 +41,26 @@ class dogViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        startX = boneX.constant
+        startY = boneY.constant
+        
         dogImage.image = UIImage(named: "standard")!
         boneImage.image = UIImage(named:"bone")
+        if let count = defaults.value(forKey: "dogCnt"){
+            counter.count = count as! Int
+        }
         counter.printCount(countLabel: countLabel)
     }
     
+    @IBAction func replayButton(_ sender: UIBarButtonItem) {
+        counter.count = 0
+        defaults.set(counter.count, forKey: "coinCnt")
+        counter.printCount(countLabel: countLabel)
+        
+        dogImage.image = UIImage(named: "standard")!
+        self.boneX.constant = startX!
+        self.boneY.constant = startY!
+    }
     //뼈움직이는거
     @IBAction func handlePan(recognizer:UIPanGestureRecognizer) {
         let translation = recognizer.translation(in: self.view)
@@ -92,6 +110,7 @@ class dogViewController: UIViewController {
             self.present(newScreen, animated: true, completion: nil)
         }
         counter.printCount(countLabel: countLabel)
+        defaults.set(counter.count, forKey: "dogCnt")
     }
     
     
@@ -127,6 +146,7 @@ class dogViewController: UIViewController {
             self.present(newScreen, animated: true, completion: nil)
         }
         counter.printCount(countLabel: countLabel)
+        defaults.set(counter.count, forKey: "dogCnt")
     }
     
     override func didReceiveMemoryWarning() {

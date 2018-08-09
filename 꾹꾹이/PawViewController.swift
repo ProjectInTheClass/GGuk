@@ -26,6 +26,11 @@ class PawViewController: UIViewController {
         counter.printCount(countLabel: countLabel)
     }
     
+    @IBAction func replayButton(_ sender: UIBarButtonItem) {
+        counter.count = 0
+        defaults.set(counter.count, forKey: "pawCnt")
+        counter.printCount(countLabel: countLabel)
+    }
     func setImageView(x:CGFloat, y:CGFloat){
         let imageView = UIImageView()
         //화면 클릭한곳의 가운데 위치하도록

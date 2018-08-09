@@ -18,17 +18,42 @@ class Coin: UIViewController {
     var coinSound = sound(soundName: "coin")
     var front: [Bool] = []
     
+    let defaults = UserDefaults.standard
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        if let count = defaults.value(forKey: "coinCnt"){
+            counter.count = count as! Int
+        }
         counter.printCount(countLabel: countLabel)
         // Do any additional setup after loading the view.
         for i in 0...btnCoin.count - 1 {
             btnCoin[i].setImage(UIImage(named: "coin1"), for: .normal)
             front.append(false)
+            setShadowColor(button: btnCoin[i])
         }
       
     }
-
+    @IBAction func replayBtn(_ sender: UIBarButtonItem) {
+        counter.count = 0
+        defaults.set(counter.count, forKey: "coinCnt")
+        counter.printCount(countLabel: countLabel)
+        
+        for i in 0...btnCoin.count - 1 {
+            btnCoin[i].setImage(UIImage(named: "coin1"), for: .normal)
+            front.append(false)
+            setShadowColor(button: btnCoin[i])
+        }
+    }
+    
+    func setShadowColor(button:UIButton){
+        button.layer.shadowColor = UIColor.black.cgColor
+        button.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
+        button.layer.masksToBounds = false
+        button.layer.shadowRadius = 1.0
+        button.layer.shadowOpacity = 0.5
+        button.layer.cornerRadius = button.frame.width / 2
+    }
     @IBAction func btnFlip(_ sender: UIButton) {
         if front[sender.tag] {
             front[sender.tag] = false
@@ -37,6 +62,7 @@ class Coin: UIViewController {
             counter.count += 1
             UIView.transition(with: sender, duration: 0.3, options: .transitionFlipFromLeft, animations: nil, completion: nil)
             counter.printCount(countLabel: countLabel)
+            defaults.set(counter.count, forKey: "coinCnt")
         }
             
         else {
@@ -46,7 +72,7 @@ class Coin: UIViewController {
             coinSound.playSound()
             counter.count += 1
             counter.printCount(countLabel: countLabel)
-        
+            defaults.set(counter.count, forKey: "coinCnt")
     }
     
     

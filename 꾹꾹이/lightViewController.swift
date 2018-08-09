@@ -91,12 +91,16 @@ class circleViewController: UIViewController {
     var click = false
     var switchSound = sound(soundName: "light")
     var counter = Counter()
+    let defaults = UserDefaults.standard
     
     @IBOutlet weak var countLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         img1.image = UIImage(named: "switch1")
+        if let count = defaults.value(forKey: "lightCnt"){
+            counter.count = count as! Int
+        }
         counter.printCount(countLabel: countLabel)
     }
     
@@ -115,7 +119,9 @@ class circleViewController: UIViewController {
         }
         counter.count += 1
         counter.printCount(countLabel: countLabel)
+        defaults.set(counter.count, forKey: "lightCnt")
     }
+    
     
     
     override func didReceiveMemoryWarning() {
@@ -133,18 +139,28 @@ class cooViewController : UIViewController {
     @IBOutlet weak var light2: UIImageView!
     var down = false
     var catSound = sound(soundName: "cat")
-    @IBOutlet weak var countLabel: UILabel!
     var counter = Counter()
-        
     
+    let defaults = UserDefaults.standard
+    
+    @IBOutlet weak var countLabel: UILabel!
+    @IBOutlet weak var catBtn: UIButton!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         catTail.image = UIImage(named: "cattail")
         light2.image = UIImage(named: "stand")
+        if let count = defaults.value(forKey: "catCnt"){
+            counter.count = count as! Int
+        }
         counter.printCount(countLabel: countLabel)
+        
 
     }
-    @IBAction func clickButton(_ sender: UIButton) {
+ 
+
+    @IBAction func catClick(_ sender: UIButton) {
+        
         let x = catTail.frame.origin.x
         let y = catTail.frame.origin.y
         let tailPosition:CGPoint?
@@ -152,23 +168,27 @@ class cooViewController : UIViewController {
             tailPosition = CGPoint(x: x, y: y + 140)
             UIView.animate(withDuration: 0.5, animations: {
                 self.catTail.frame = CGRect(x: (tailPosition?.x)!, y: (tailPosition?.y)!, width: 60, height: 110)
-                })
+            })
             down = true
             catSound.playSound()
             counter.count += 1
+            counter.printCount(countLabel: countLabel)
+            defaults.set(counter.count, forKey: "catCnt")
         }
         else {
             tailPosition = CGPoint(x: x, y: y - 140)
             UIView.animate(withDuration: 0.5, animations: {
                 self.catTail.frame = CGRect(x: (tailPosition?.x)!, y: (tailPosition?.y)!, width: 60, height: 110)
-                })
+            })
             down = false
             catSound.playSound()
             counter.count += 1
+            counter.printCount(countLabel: countLabel)
+            defaults.set(counter.count, forKey: "catCnt")
         }
-            
     }
-        
+    
+    
         
     override func didReceiveMemoryWarning() {
             

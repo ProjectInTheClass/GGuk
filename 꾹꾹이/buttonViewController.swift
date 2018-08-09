@@ -16,10 +16,8 @@ import UIKit
 class buttonViewController: UIViewController{
     
     var buttonSound = sound(soundName: "btnSound")
-    
     @IBOutlet weak var countLabel: UILabel!
     var counter = Counter()
-    
     let defaults = UserDefaults.standard
     
     //버튼크기 작게
@@ -40,6 +38,12 @@ class buttonViewController: UIViewController{
         button.layer.cornerRadius = button.frame.width / 2
     }
     
+    @IBAction func replayButton(_ sender: UIBarButtonItem) {
+        counter.count = 0
+        defaults.set(counter.count, forKey: "btnCnt")
+        counter.printCount(countLabel: countLabel)
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
