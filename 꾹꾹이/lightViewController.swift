@@ -98,6 +98,7 @@ class circleViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         img1.image = UIImage(named: "switch1")
+        self.view.backgroundColor = #colorLiteral(red: 0.7544217957, green: 0.7023390309, blue: 0.5660703121, alpha: 1)
         if let count = defaults.value(forKey: "lightCnt"){
             counter.count = count as! Int
         }
@@ -107,13 +108,15 @@ class circleViewController: UIViewController {
     
     @IBAction func btnClick(_ sender: UIButton) {
         if(click == false){
-            img1.image = UIImage(named: "switch2")
+            self.view.backgroundColor = #colorLiteral(red: 0.7544217957, green: 0.7023390309, blue: 0.5660703121, alpha: 1)
+            img1.image = UIImage(named: "switch1")
             click = true
             switchSound.playSound()
         }
         else
         {
-            img1.image = UIImage(named: "switch1")
+            self.view.backgroundColor = #colorLiteral(red: 1, green: 0.930963335, blue: 0.7503366357, alpha: 1)
+            img1.image = UIImage(named: "switch2")
             click = false
             switchSound.playSound()
             

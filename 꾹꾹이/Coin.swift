@@ -17,11 +17,15 @@ class Coin: UIViewController {
     var counter = Counter()
     var coinSound = sound(soundName: "coin")
     var front: [Bool] = []
+    var randomNum:UInt32?
+    var randomInt:Int?
     
     let defaults = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        randomNum = arc4random_uniform(UInt32(btnCoin.count - 1))
+        
         if let count = defaults.value(forKey: "coinCnt"){
             counter.count = count as! Int
         }
@@ -64,18 +68,26 @@ class Coin: UIViewController {
             counter.printCount(countLabel: countLabel)
             defaults.set(counter.count, forKey: "coinCnt")
         }
-            
         else {
             front[sender.tag] = true
-            sender.setImage(UIImage(named: "coin2"), for: .normal)
-            UIView.transition(with: sender, duration: 0.2, options: .transitionFlipFromLeft, animations: nil, completion: nil)
+            if(sender.tag == randomInt){
+                sender.setImage(UIImage(named: "ppoc"), for: .normal)
+                UIView.transition(with: sender, duration: 0.3, options: .transitionFlipFromLeft, animations: nil, completion: nil)
+                
+            }
+            else{
+                sender.setImage(UIImage(named: "coin2"), for: .normal)
+                UIView.transition(with: sender, duration: 0.3, options: .transitionFlipFromLeft, animations: nil, completion: nil)
+                
+                randomNum = arc4random_uniform(UInt32(btnCoin.count - 1))
+            }
+            
+            
             coinSound.playSound()
             counter.count += 1
             counter.printCount(countLabel: countLabel)
             defaults.set(counter.count, forKey: "coinCnt")
-    }
-    
-    
+        }
     /*
     @IBAction func btnFlip(_ sender: Any) {
         if isOpen{

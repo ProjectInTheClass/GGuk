@@ -64,10 +64,13 @@ class dogViewController: UIViewController {
     //뼈움직이는거
     @IBAction func handlePan(recognizer:UIPanGestureRecognizer) {
         let translation = recognizer.translation(in: self.view)
+        let dogX = dogImage.center.x
+        let dogY = dogImage.center.y
         if let view = recognizer.view {
             view.center = CGPoint(x:view.center.x + translation.x,
                                   y:view.center.y + translation.y)
-            if((view.center.x >= 150 && view.center.x <= 200) && (view.center.y >= 350 && view.center.y <= 400)){
+            
+            if((view.center.x >= dogX - 20 && view.center.x <= dogX) && (view.center.y >= dogY - 20 && view.center.y <= dogY)){
                 dogSound.playSound()
             }
         }

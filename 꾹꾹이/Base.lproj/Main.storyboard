@@ -1373,6 +1373,15 @@
                     </navigationItem>
                     <connections>
                         <outlet property="countLabel" destination="mRU-7d-LEY" id="xLF-w0-LpV"/>
+                        <outletCollection property="buttons" destination="UXh-C6-vAs" collectionClass="NSMutableArray" id="Fwa-2Y-KNh"/>
+                        <outletCollection property="buttons" destination="hvH-dt-qPE" collectionClass="NSMutableArray" id="awC-Hc-aPz"/>
+                        <outletCollection property="buttons" destination="7Ze-pi-lgX" collectionClass="NSMutableArray" id="h3P-hw-Tu5"/>
+                        <outletCollection property="buttons" destination="4LR-ZH-QrP" collectionClass="NSMutableArray" id="gcD-tm-wXy"/>
+                        <outletCollection property="buttons" destination="TyO-5a-Ixb" collectionClass="NSMutableArray" id="0aj-sg-ZtD"/>
+                        <outletCollection property="buttons" destination="dvB-pQ-nRs" collectionClass="NSMutableArray" id="lzd-VH-XZJ"/>
+                        <outletCollection property="buttons" destination="WOS-4s-oNj" collectionClass="NSMutableArray" id="Mek-ei-jM9"/>
+                        <outletCollection property="buttons" destination="DTf-h7-8Ag" collectionClass="NSMutableArray" id="LWh-lm-NAh"/>
+                        <outletCollection property="buttons" destination="zoX-j6-SIe" collectionClass="NSMutableArray" id="NrV-qr-JVS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ueu-XY-9zc" userLabel="First Responder" sceneMemberID="firstResponder"/>
