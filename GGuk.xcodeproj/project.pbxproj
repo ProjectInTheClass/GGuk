@@ -35,6 +35,15 @@
 		5D71F4C921182D3400B70840 /* light3.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 5D71F4C621182D2100B70840 /* light3.m4a */; };
 		5D71F4CB21183C2C00B70840 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D71F4CA21183C2C00B70840 /* Counter.swift */; };
 		5DE20D88211C3A8300C47724 /* NavigationControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE20D87211C3A8300C47724 /* NavigationControllers.swift */; };
+		5DE20D92211C48AA00C47724 /* mouse.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 5DE20D8A211C457E00C47724 /* mouse.m4a */; };
+		5DE20D93211C48AC00C47724 /* cookie.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 5DE20D8C211C458B00C47724 /* cookie.m4a */; };
+		5DE20D94211C48AE00C47724 /* duck.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 5DE20D89211C456E00C47724 /* duck.m4a */; };
+		5DE20D95211C48B000C47724 /* glass.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 5DE20D8B211C458300C47724 /* glass.m4a */; };
+		5DE20D96211C48B200C47724 /* jump.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 5DE20D8D211C458F00C47724 /* jump.m4a */; };
+		5DE20D97211C48B400C47724 /* moon.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 5DE20D8E211C461900C47724 /* moon.m4a */; };
+		5DE20D99211C48B800C47724 /* water.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 5DE20D91211C47B600C47724 /* water.m4a */; };
+		5DE20D9B211C49D000C47724 /* heart2.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 5DE20D9A211C49B700C47724 /* heart2.m4a */; };
+		5DE20D9F211C4E8C00C47724 /* puppy.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 5DE20D9E211C4E8700C47724 /* puppy.m4a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,9 +83,10 @@
 		5DE20D8C211C458B00C47724 /* cookie.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = cookie.m4a; sourceTree = "<group>"; };
 		5DE20D8D211C458F00C47724 /* jump.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = jump.m4a; sourceTree = "<group>"; };
 		5DE20D8E211C461900C47724 /* moon.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = moon.m4a; sourceTree = "<group>"; };
-		5DE20D8F211C47A500C47724 /* heart.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = heart.m4a; sourceTree = "<group>"; };
 		5DE20D90211C47AF00C47724 /* water2.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = water2.m4a; sourceTree = "<group>"; };
 		5DE20D91211C47B600C47724 /* water.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = water.m4a; sourceTree = "<group>"; };
+		5DE20D9A211C49B700C47724 /* heart2.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = heart2.m4a; sourceTree = "<group>"; };
+		5DE20D9E211C4E8700C47724 /* puppy.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = puppy.m4a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,9 +148,10 @@
 				5DE20D8B211C458300C47724 /* glass.m4a */,
 				5DE20D8D211C458F00C47724 /* jump.m4a */,
 				5DE20D8E211C461900C47724 /* moon.m4a */,
-				5DE20D8F211C47A500C47724 /* heart.m4a */,
+				5DE20D9A211C49B700C47724 /* heart2.m4a */,
 				5DE20D91211C47B600C47724 /* water.m4a */,
 				5DE20D90211C47AF00C47724 /* water2.m4a */,
+				5DE20D9E211C4E8700C47724 /* puppy.m4a */,
 				1D7B35702106E68000350DE0 /* Assets.xcassets */,
 				1D7B35722106E68000350DE0 /* LaunchScreen.storyboard */,
 				1D7B35752106E68000350DE0 /* Info.plist */,
@@ -229,6 +240,15 @@
 				5D71F4C921182D3400B70840 /* light3.m4a in Resources */,
 				1D2269482119446B00E48C44 /* light.m4a in Resources */,
 				1D7B356F2106E68000350DE0 /* Main.storyboard in Resources */,
+				5DE20D99211C48B800C47724 /* water.m4a in Resources */,
+				5DE20D97211C48B400C47724 /* moon.m4a in Resources */,
+				5DE20D9F211C4E8C00C47724 /* puppy.m4a in Resources */,
+				5DE20D96211C48B200C47724 /* jump.m4a in Resources */,
+				5DE20D95211C48B000C47724 /* glass.m4a in Resources */,
+				5DE20D94211C48AE00C47724 /* duck.m4a in Resources */,
+				5DE20D9B211C49D000C47724 /* heart2.m4a in Resources */,
+				5DE20D93211C48AC00C47724 /* cookie.m4a in Resources */,
+				5DE20D92211C48AA00C47724 /* mouse.m4a in Resources */,
 				1D2269462119433E00E48C44 /* cat.m4a in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

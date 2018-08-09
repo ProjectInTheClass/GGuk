@@ -130,10 +130,10 @@ class buttonViewController: UIViewController{
             buttonSound = sound(soundName: "jump")
             buttonSound?.playSound()
         case 4://고양이
-            buttonSound = sound(soundName: "btnSound")
+            buttonSound = sound(soundName: "cat")
             buttonSound?.playSound()
         case 5://하트
-            buttonSound = sound(soundName: "heart")
+            buttonSound = sound(soundName: "heart2")
             buttonSound?.playSound()
         case 6://과자
             buttonSound = sound(soundName: "cookie")

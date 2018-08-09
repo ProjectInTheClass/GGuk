@@ -10,6 +10,20 @@ import UIKit
 
 class LightViewController : UIPageViewController, UIPageViewControllerDelegate, UIPageViewControllerDataSource {
     
+    var pageControl = UIPageControl()
+    func configurePageControl() {
+        // The total number of pages that are available is based on how many available colors we have.
+        pageControl = UIPageControl(frame: CGRect(x: 0,y: UIScreen.main.bounds.maxY - 50,width: UIScreen.main.bounds.width,height: 50))
+        self.pageControl.numberOfPages = orderedViewControllers.count
+        self.pageControl.currentPage = 0
+        self.pageControl.tintColor = UIColor.black
+        self.pageControl.pageIndicatorTintColor = UIColor.white
+        self.pageControl.currentPageIndicatorTintColor = UIColor.black
+        self.view.addSubview(pageControl)
+    }
+    
+    
+    
     func newVc(viewController: String) -> UIViewController {
         return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: viewController)
     }
@@ -66,7 +80,8 @@ class LightViewController : UIPageViewController, UIPageViewControllerDelegate, 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.delegate = self
+        configurePageControl()
         self.dataSource = self
         
         // This sets up the first view that will show up on our page control
@@ -77,6 +92,10 @@ class LightViewController : UIPageViewController, UIPageViewControllerDelegate, 
                                completion: nil)
         }
         
+    }
+    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+        let pageContentViewController = pageViewController.viewControllers![0]
+        self.pageControl.currentPage = orderedViewControllers.index(of: pageContentViewController)!
     }
     
     

@@ -19,7 +19,8 @@ class dogViewController: UIViewController {
     @IBOutlet weak var rightButton: UIButton!
     @IBOutlet weak var countLabel: UILabel!
     
-
+    @IBOutlet weak var boneLabel: UILabel!
+    
     @IBOutlet weak var boneY: NSLayoutConstraint!
     @IBOutlet weak var boneX: NSLayoutConstraint!
     var startX:CGFloat?
@@ -28,6 +29,7 @@ class dogViewController: UIViewController {
     var leftUp = false
     var rightUp = false
     var dogSound = sound(soundName: "dv")
+    var boneSound = sound(soundName : "puppy")
     var alertCon = PopUp()
     var counter = Counter()
     let defaults = UserDefaults.standard
@@ -67,11 +69,12 @@ class dogViewController: UIViewController {
         let dogX = dogImage.center.x
         let dogY = dogImage.center.y
         if let view = recognizer.view {
+            boneLabel.alpha = 0
             view.center = CGPoint(x:view.center.x + translation.x,
                                   y:view.center.y + translation.y)
             
             if((view.center.x >= dogX - 20 && view.center.x <= dogX) && (view.center.y >= dogY - 20 && view.center.y <= dogY)){
-                dogSound.playSound()
+                boneSound.playSound()
             }
         }
         recognizer.setTranslation(CGPoint.zero, in: self.view)

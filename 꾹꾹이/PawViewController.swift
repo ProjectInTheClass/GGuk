@@ -39,6 +39,13 @@ class PawViewController: UIViewController {
         
         self.view.addSubview(imageView)
         counter.count += 1
+        switch counter.count {
+            
+        case 10:
+            makeBigPaw()
+        default:
+            break;
+        }
         
         switch (counter.count)%4 {
         case 0:
@@ -83,5 +90,18 @@ class PawViewController: UIViewController {
         //터치 좌표를 가지고 넣어준다.
         setImageView(x: touchX, y: touchY)
     }
+    
+    func makeBigPaw() {
+        let paws = UIImageView(frame: CGRect(x:30 , y:200, width: 400, height: 300))
+    
+        paws.image = UIImage(named: "pawe")
+        paws.alpha = 1
+        self.view.addSubview(paws)
+        UIView.animate(withDuration: 3, animations: {
+            paws.alpha = 0})
+            
+        
+    }
+    
     
 }
