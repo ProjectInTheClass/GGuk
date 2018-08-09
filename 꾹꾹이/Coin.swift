@@ -60,7 +60,7 @@ class Coin: UIViewController {
             sender.setImage(UIImage(named: "coin1"), for: .normal)
             coinSound.playSound()
             counter.count += 1
-            UIView.transition(with: sender, duration: 0.3, options: .transitionFlipFromLeft, animations: nil, completion: nil)
+            UIView.transition(with: sender, duration: 0.2, options: .transitionFlipFromLeft, animations: nil, completion: nil)
             counter.printCount(countLabel: countLabel)
             defaults.set(counter.count, forKey: "coinCnt")
         }
@@ -68,7 +68,7 @@ class Coin: UIViewController {
         else {
             front[sender.tag] = true
             sender.setImage(UIImage(named: "coin2"), for: .normal)
-            UIView.transition(with: sender, duration: 0.3, options: .transitionFlipFromLeft, animations: nil, completion: nil)
+            UIView.transition(with: sender, duration: 0.2, options: .transitionFlipFromLeft, animations: nil, completion: nil)
             coinSound.playSound()
             counter.count += 1
             counter.printCount(countLabel: countLabel)

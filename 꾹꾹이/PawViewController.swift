@@ -62,6 +62,16 @@ class PawViewController: UIViewController {
         defaults.set(counter.count, forKey: "pawCnt")
     }
     
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let touch:UITouch = touches.first!
+        let startPoint = touch.location(in: self.view)
+        let touchX = startPoint.x
+        let touchY = startPoint.y
+        setImageView(x: touchX, y: touchY)
+        
+    }
+    
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         

@@ -36,6 +36,7 @@
 		5D71F4C821182D3200B70840 /* light2.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 5D71F4C521182CED00B70840 /* light2.m4a */; };
 		5D71F4C921182D3400B70840 /* light3.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 5D71F4C621182D2100B70840 /* light3.m4a */; };
 		5D71F4CB21183C2C00B70840 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D71F4CA21183C2C00B70840 /* Counter.swift */; };
+		5DE20D88211C3A8300C47724 /* NavigationControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE20D87211C3A8300C47724 /* NavigationControllers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +71,7 @@
 		5D71F4C521182CED00B70840 /* light2.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = light2.m4a; sourceTree = "<group>"; };
 		5D71F4C621182D2100B70840 /* light3.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = light3.m4a; sourceTree = "<group>"; };
 		5D71F4CA21183C2C00B70840 /* Counter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
+		5DE20D87211C3A8300C47724 /* NavigationControllers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationControllers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 		1D7B35682106E68000350DE0 /* GGuk */ = {
 			isa = PBXGroup;
 			children = (
+				5DE20D87211C3A8300C47724 /* NavigationControllers.swift */,
 				1D7B35692106E68000350DE0 /* AppDelegate.swift */,
 				1D7B356D2106E68000350DE0 /* Main.storyboard */,
 				1DD2B7762112DEC70049FDBE /* PawViewController.swift */,
@@ -226,6 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D71F4CB21183C2C00B70840 /* Counter.swift in Sources */,
+				5DE20D88211C3A8300C47724 /* NavigationControllers.swift in Sources */,
 				1D2EB2402109952F006E3F7D /* buttonViewController.swift in Sources */,
 				5D71F4B02117E71E00B70840 /* PopUp.swift in Sources */,
 				1DD2B7552112A37D0049FDBE /* PpocCollectionViewController.swift in Sources */,

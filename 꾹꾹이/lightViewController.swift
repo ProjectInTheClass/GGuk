@@ -116,6 +116,9 @@ class circleViewController: UIViewController {
             img1.image = UIImage(named: "switch1")
             click = false
             switchSound.playSound()
+            
+            
+            
         }
         counter.count += 1
         counter.printCount(countLabel: countLabel)
@@ -136,7 +139,8 @@ class circleViewController: UIViewController {
 class cooViewController : UIViewController {
         
     @IBOutlet weak var catTail: UIImageView!
-    @IBOutlet weak var light2: UIImageView!
+   
+    @IBOutlet weak var img2: UIImageView!
     var down = false
     var catSound = sound(soundName: "cat")
     var counter = Counter()
@@ -149,7 +153,7 @@ class cooViewController : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         catTail.image = UIImage(named: "cattail")
-        light2.image = UIImage(named: "stand")
+        img2.image = UIImage(named: "stand")
         if let count = defaults.value(forKey: "catCnt"){
             counter.count = count as! Int
         }
