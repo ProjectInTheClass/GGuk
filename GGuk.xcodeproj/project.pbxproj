@@ -68,6 +68,15 @@
 		5D71F4C621182D2100B70840 /* light3.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = light3.m4a; sourceTree = "<group>"; };
 		5D71F4CA21183C2C00B70840 /* Counter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
 		5DE20D87211C3A8300C47724 /* NavigationControllers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationControllers.swift; sourceTree = "<group>"; };
+		5DE20D89211C456E00C47724 /* duck.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = duck.m4a; sourceTree = "<group>"; };
+		5DE20D8A211C457E00C47724 /* mouse.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = mouse.m4a; sourceTree = "<group>"; };
+		5DE20D8B211C458300C47724 /* glass.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = glass.m4a; sourceTree = "<group>"; };
+		5DE20D8C211C458B00C47724 /* cookie.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = cookie.m4a; sourceTree = "<group>"; };
+		5DE20D8D211C458F00C47724 /* jump.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = jump.m4a; sourceTree = "<group>"; };
+		5DE20D8E211C461900C47724 /* moon.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = moon.m4a; sourceTree = "<group>"; };
+		5DE20D8F211C47A500C47724 /* heart.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = heart.m4a; sourceTree = "<group>"; };
+		5DE20D90211C47AF00C47724 /* water2.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = water2.m4a; sourceTree = "<group>"; };
+		5DE20D91211C47B600C47724 /* water.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = water.m4a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +132,15 @@
 				1D2269452119433300E48C44 /* cat.m4a */,
 				1D2269472119446700E48C44 /* light.m4a */,
 				5D380ED3211AB9D800D1388F /* coin.m4a */,
+				5DE20D8A211C457E00C47724 /* mouse.m4a */,
+				5DE20D8C211C458B00C47724 /* cookie.m4a */,
+				5DE20D89211C456E00C47724 /* duck.m4a */,
+				5DE20D8B211C458300C47724 /* glass.m4a */,
+				5DE20D8D211C458F00C47724 /* jump.m4a */,
+				5DE20D8E211C461900C47724 /* moon.m4a */,
+				5DE20D8F211C47A500C47724 /* heart.m4a */,
+				5DE20D91211C47B600C47724 /* water.m4a */,
+				5DE20D90211C47AF00C47724 /* water2.m4a */,
 				1D7B35702106E68000350DE0 /* Assets.xcassets */,
 				1D7B35722106E68000350DE0 /* LaunchScreen.storyboard */,
 				1D7B35752106E68000350DE0 /* Info.plist */,

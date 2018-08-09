@@ -118,31 +118,31 @@ class buttonViewController: UIViewController{
     func setSound(tag:Int){
         switch tag {
         case 0://오리
-            buttonSound = sound(soundName: "btnSound")
+            buttonSound = sound(soundName: "duck")
             buttonSound?.playSound()
         case 1://와인잔
-            buttonSound = sound(soundName: "btnSound")
+            buttonSound = sound(soundName: "glass")
             buttonSound?.playSound()
         case 2://물방울
-            buttonSound = sound(soundName: "btnSound")
+            buttonSound = sound(soundName: "water2")
             buttonSound?.playSound()
         case 3://구름
-            buttonSound = sound(soundName: "btnSound")
+            buttonSound = sound(soundName: "jump")
             buttonSound?.playSound()
         case 4://고양이
             buttonSound = sound(soundName: "btnSound")
             buttonSound?.playSound()
         case 5://하트
-            buttonSound = sound(soundName: "btnSound")
+            buttonSound = sound(soundName: "heart")
             buttonSound?.playSound()
         case 6://과자
-            buttonSound = sound(soundName: "btnSound")
+            buttonSound = sound(soundName: "cookie")
             buttonSound?.playSound()
         case 7://달
-            buttonSound = sound(soundName: "btnSound")
+            buttonSound = sound(soundName: "moon")
             buttonSound?.playSound()
         default://마우스
-            buttonSound = sound(soundName: "btnSound")
+            buttonSound = sound(soundName: "mouse")
             buttonSound?.playSound()
         }
     }
