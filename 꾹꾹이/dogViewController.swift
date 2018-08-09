@@ -29,12 +29,12 @@ class dogViewController: UIViewController {
     var alertCon = PopUp()
     var counter = Counter()
     
-   /*
-    func printCount() {
-        self.countLabel.text = "\(alertCon.count)"
-        
-    }
-    */
+    /*
+     func printCount() {
+     self.countLabel.text = "\(alertCon.count)"
+     
+     }
+     */
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,16 +49,17 @@ class dogViewController: UIViewController {
         if let view = recognizer.view {
             view.center = CGPoint(x:view.center.x + translation.x,
                                   y:view.center.y + translation.y)
+            if((view.center.x >= 150 && view.center.x <= 200) && (view.center.y >= 350 && view.center.y <= 400)){
+                dogSound.playSound()
+            }
         }
         recognizer.setTranslation(CGPoint.zero, in: self.view)
         self.boneX.constant += translation.x
         self.boneY.constant += translation.y
-        if((view.center.x == 185) && (view.center.y == 394)){
-            dogSound.playSound()
-        }
+        
     }
     
-
+    
     @IBAction func clickLeft(_ sender: UIButton) {
         
         //귀모양 사진
@@ -127,11 +128,9 @@ class dogViewController: UIViewController {
         }
         counter.printCount(countLabel: countLabel)
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-
+        
     }
 }
-
-

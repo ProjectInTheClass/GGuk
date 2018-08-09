@@ -22,66 +22,60 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ENL-eV-5Xz">
-                                <rect key="frame" x="55" y="273" width="109" height="103"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ENL-eV-5Xz">
+                                <rect key="frame" x="70" y="276" width="87" height="98"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="버튼">
+                                <state key="normal" image="gg">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="kDS-bS-tZ2" kind="show" id="yEN-7D-dJI"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jfi-AL-GPY">
-                                <rect key="frame" x="55" y="442" width="109" height="103"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jfi-AL-GPY">
+                                <rect key="frame" x="67" y="446" width="87" height="98"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="강아지">
+                                <state key="normal" image="mo">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="aZW-67-nt2" kind="show" id="i6N-eP-5JF"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tgg-Wu-hOO">
-                                <rect key="frame" x="210" y="121" width="109" height="103"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tgg-Wu-hOO">
+                                <rect key="frame" x="223" y="122" width="87" height="98"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="조명">
+                                <state key="normal" image="ta">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="EWD-vO-uBG" kind="show" id="rZF-ra-cMv"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EQK-BQ-6jJ">
-                                <rect key="frame" x="210" y="273" width="109" height="103"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EQK-BQ-6jJ">
+                                <rect key="frame" x="223" y="276" width="87" height="98"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="스크롤">
+                                <state key="normal" image="ss">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="fgc-5u-abZ" kind="show" id="YpZ-ah-Ne3"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k8t-98-40R">
-                                <rect key="frame" x="210" y="442" width="109" height="103"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k8t-98-40R">
+                                <rect key="frame" x="223" y="446" width="87" height="98"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="눈">
+                                <state key="normal" image="pu">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="1y7-dx-eG4" kind="show" id="WOc-DB-oNV"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a1Y-lr-LZN">
-                                <rect key="frame" x="55" y="121" width="109" height="103"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a1Y-lr-LZN">
+                                <rect key="frame" x="65" y="124" width="87" height="98"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="뽁뽁이">
+                                <state key="normal" image="pp">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -109,18 +103,651 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cu5-hY-1Tb">
-                                <rect key="frame" x="67" y="213" width="240" height="240"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <action selector="btnFlip:" destination="qVG-R5-V6B" eventType="touchUpInside" id="81d-yT-qlm"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="jVO-pW-Vc9">
+                                <rect key="frame" x="40" y="134" width="295" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cu5-hY-1Tb">
+                                        <rect key="frame" x="0.0" y="0.0" width="55" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="6rA-Xb-u7t"/>
+                                            <constraint firstAttribute="width" constant="55" id="kUi-Rz-cad"/>
+                                        </constraints>
+                                        <state key="normal" image="coin1">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnFlip:" destination="qVG-R5-V6B" eventType="touchUpInside" id="U8v-DW-sJN"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Lt-sG-aco">
+                                        <rect key="frame" x="60" y="0.0" width="55" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="55" id="N9Z-3N-U36"/>
+                                            <constraint firstAttribute="height" constant="50" id="sh1-aP-agu"/>
+                                        </constraints>
+                                        <state key="normal" image="coin1">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnFlip:" destination="qVG-R5-V6B" eventType="touchUpInside" id="uzk-i5-cTF"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3NL-TD-tWr">
+                                        <rect key="frame" x="120" y="0.0" width="55" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="55" id="RKY-g4-1SM"/>
+                                            <constraint firstAttribute="height" constant="50" id="YN1-7c-sJc"/>
+                                        </constraints>
+                                        <state key="normal" image="coin1">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnFlip:" destination="qVG-R5-V6B" eventType="touchUpInside" id="xan-m8-7LW"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6IR-hC-qvc">
+                                        <rect key="frame" x="180" y="0.0" width="55" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="55" id="4O3-LO-uUr"/>
+                                            <constraint firstAttribute="height" constant="50" id="gDR-12-NAv"/>
+                                        </constraints>
+                                        <state key="normal" image="coin1">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnFlip:" destination="qVG-R5-V6B" eventType="touchUpInside" id="Z4c-ip-EYr"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YWb-cC-AOP">
+                                        <rect key="frame" x="240" y="0.0" width="55" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="55" id="r6S-QP-aNA"/>
+                                            <constraint firstAttribute="height" constant="50" id="zKu-dD-9ux"/>
+                                        </constraints>
+                                        <state key="normal" image="coin1">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnFlip:" destination="qVG-R5-V6B" eventType="touchUpInside" id="m1P-ae-BlX"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="12t-46-UtZ">
+                                <rect key="frame" x="40" y="194" width="295" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XZN-iB-TPu">
+                                        <rect key="frame" x="0.0" y="0.0" width="55" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="55" id="KNq-hy-Ds7"/>
+                                            <constraint firstAttribute="height" constant="50" id="TBc-TG-Jej"/>
+                                        </constraints>
+                                        <state key="normal" image="coin1">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnFlip:" destination="qVG-R5-V6B" eventType="touchUpInside" id="PxK-Ni-byH"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ofm-LR-sON">
+                                        <rect key="frame" x="60" y="0.0" width="55" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="FxH-jh-kE7"/>
+                                            <constraint firstAttribute="width" constant="55" id="lUx-il-lk2"/>
+                                        </constraints>
+                                        <state key="normal" image="coin1">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnFlip:" destination="qVG-R5-V6B" eventType="touchUpInside" id="RQ6-TR-5FP"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uZi-bK-3qQ">
+                                        <rect key="frame" x="120" y="0.0" width="55" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="0aa-0u-RxQ"/>
+                                            <constraint firstAttribute="width" constant="55" id="Ve4-85-MEq"/>
+                                        </constraints>
+                                        <state key="normal" image="coin1">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnFlip:" destination="qVG-R5-V6B" eventType="touchUpInside" id="T0S-3B-Cb2"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YtG-G2-f8N">
+                                        <rect key="frame" x="180" y="0.0" width="55" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="55" id="ORe-2z-mw9"/>
+                                            <constraint firstAttribute="height" constant="50" id="yVj-us-RYY"/>
+                                        </constraints>
+                                        <state key="normal" image="coin1">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnFlip:" destination="qVG-R5-V6B" eventType="touchUpInside" id="C3B-Bx-rko"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="toU-I3-tnQ">
+                                        <rect key="frame" x="240" y="0.0" width="55" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="55" id="fQO-c5-9XV"/>
+                                            <constraint firstAttribute="height" constant="50" id="or5-Dw-gLK"/>
+                                        </constraints>
+                                        <state key="normal" image="coin1">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnFlip:" destination="qVG-R5-V6B" eventType="touchUpInside" id="mkh-fo-pEv"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="oKf-sM-qFz">
+                                <rect key="frame" x="40" y="254" width="295" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NIz-Gy-piR">
+                                        <rect key="frame" x="0.0" y="0.0" width="55" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="h4u-hw-B3x"/>
+                                            <constraint firstAttribute="width" constant="55" id="if5-Eu-GZg"/>
+                                        </constraints>
+                                        <state key="normal" image="coin1">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnFlip:" destination="qVG-R5-V6B" eventType="touchUpInside" id="TsW-rn-Kla"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LB2-Ob-3t2">
+                                        <rect key="frame" x="60" y="0.0" width="55" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="DZI-pu-dBh"/>
+                                            <constraint firstAttribute="width" constant="55" id="tor-03-3y7"/>
+                                        </constraints>
+                                        <state key="normal" image="coin1">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnFlip:" destination="qVG-R5-V6B" eventType="touchUpInside" id="Jh3-1y-Y3A"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zvW-d7-wRr">
+                                        <rect key="frame" x="120" y="0.0" width="55" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="55" id="Y4e-vx-nxC"/>
+                                            <constraint firstAttribute="height" constant="50" id="ksw-TX-8Fq"/>
+                                        </constraints>
+                                        <state key="normal" image="coin1">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnFlip:" destination="qVG-R5-V6B" eventType="touchUpInside" id="8Ho-BG-p4a"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x0d-Rn-01x">
+                                        <rect key="frame" x="180" y="0.0" width="55" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="55" id="u8s-pl-XRn"/>
+                                            <constraint firstAttribute="height" constant="50" id="xC8-Sa-KTT"/>
+                                        </constraints>
+                                        <state key="normal" image="coin1">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnFlip:" destination="qVG-R5-V6B" eventType="touchUpInside" id="Xoo-oX-A6b"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WaI-4b-9b9">
+                                        <rect key="frame" x="240" y="0.0" width="55" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="23g-Nb-LfO"/>
+                                            <constraint firstAttribute="width" constant="55" id="Xhy-iH-mMZ"/>
+                                        </constraints>
+                                        <state key="normal" image="coin1">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnFlip:" destination="qVG-R5-V6B" eventType="touchUpInside" id="GBa-qP-hQN"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="wpZ-QV-9AA">
+                                <rect key="frame" x="40" y="314" width="295" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UKb-jl-LMC">
+                                        <rect key="frame" x="0.0" y="0.0" width="55" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="55" id="DRB-Mu-8Zq"/>
+                                            <constraint firstAttribute="height" constant="50" id="wt3-rB-D4K"/>
+                                        </constraints>
+                                        <state key="normal" image="coin1">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnFlip:" destination="qVG-R5-V6B" eventType="touchUpInside" id="wA1-k8-Lv2"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bTW-p1-zlC">
+                                        <rect key="frame" x="60" y="0.0" width="55" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="33J-72-gnM"/>
+                                            <constraint firstAttribute="width" constant="55" id="ASd-LZ-RpU"/>
+                                        </constraints>
+                                        <state key="normal" image="coin1">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnFlip:" destination="qVG-R5-V6B" eventType="touchUpInside" id="xU4-Bf-abN"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="17" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2C0-RW-OxQ">
+                                        <rect key="frame" x="120" y="0.0" width="55" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="55" id="IhS-sc-V6t"/>
+                                            <constraint firstAttribute="height" constant="50" id="boU-1C-iag"/>
+                                        </constraints>
+                                        <state key="normal" image="coin1">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnFlip:" destination="qVG-R5-V6B" eventType="touchUpInside" id="GzH-c9-PBs"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="18" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QfK-7C-s22">
+                                        <rect key="frame" x="180" y="0.0" width="55" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="55" id="Skf-o9-X8w"/>
+                                            <constraint firstAttribute="height" constant="50" id="Xng-FC-dma"/>
+                                        </constraints>
+                                        <state key="normal" image="coin1">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnFlip:" destination="qVG-R5-V6B" eventType="touchUpInside" id="kSu-jZ-LAM"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="19" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CBw-U3-8kO">
+                                        <rect key="frame" x="240" y="0.0" width="55" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="fa6-4s-6lR"/>
+                                            <constraint firstAttribute="width" constant="55" id="vul-68-lnI"/>
+                                        </constraints>
+                                        <state key="normal" image="coin1">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnFlip:" destination="qVG-R5-V6B" eventType="touchUpInside" id="euc-YE-Cnr"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="87X-tb-rC7">
+                                <rect key="frame" x="162" y="104" width="50" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Rtd-ya-jZO">
+                                <rect key="frame" x="40" y="374" width="295" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" tag="20" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k7J-ZS-uLw">
+                                        <rect key="frame" x="0.0" y="0.0" width="55" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="vNG-gU-bZH"/>
+                                            <constraint firstAttribute="width" constant="55" id="zz4-5F-oVT"/>
+                                        </constraints>
+                                        <state key="normal" image="coin1">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnFlip:" destination="qVG-R5-V6B" eventType="touchUpInside" id="IIk-em-Vrg"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="21" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IyV-ar-RHy">
+                                        <rect key="frame" x="60" y="0.0" width="55" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="ZXn-fq-kkZ"/>
+                                            <constraint firstAttribute="width" constant="55" id="nss-aI-cQi"/>
+                                        </constraints>
+                                        <state key="normal" image="coin1">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnFlip:" destination="qVG-R5-V6B" eventType="touchUpInside" id="6oQ-aa-i5I"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="22" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QYm-Wk-YpT">
+                                        <rect key="frame" x="120" y="0.0" width="55" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="55" id="BAo-iQ-9RK"/>
+                                            <constraint firstAttribute="height" constant="50" id="d7G-4Z-Yb5"/>
+                                        </constraints>
+                                        <state key="normal" image="coin1">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnFlip:" destination="qVG-R5-V6B" eventType="touchUpInside" id="yOi-7r-gsV"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="23" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oJh-63-3nm">
+                                        <rect key="frame" x="180" y="0.0" width="55" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="7vz-vs-Lqp"/>
+                                            <constraint firstAttribute="width" constant="55" id="vUP-MM-Pab"/>
+                                        </constraints>
+                                        <state key="normal" image="coin1">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnFlip:" destination="qVG-R5-V6B" eventType="touchUpInside" id="167-Jw-491"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="24" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IEv-fe-vVt">
+                                        <rect key="frame" x="240" y="0.0" width="55" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="55" id="7t8-Vc-yj2"/>
+                                            <constraint firstAttribute="height" constant="50" id="K2N-ke-O7f"/>
+                                        </constraints>
+                                        <state key="normal" image="coin1">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnFlip:" destination="qVG-R5-V6B" eventType="touchUpInside" id="siZ-rO-VGb"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="tMH-ID-owD">
+                                <rect key="frame" x="40" y="434" width="295" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" tag="25" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dej-aA-Udg">
+                                        <rect key="frame" x="0.0" y="0.0" width="55" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Jaa-FQ-AdI"/>
+                                            <constraint firstAttribute="width" constant="55" id="sVy-jR-8jn"/>
+                                        </constraints>
+                                        <state key="normal" image="coin1">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnFlip:" destination="qVG-R5-V6B" eventType="touchUpInside" id="H97-uN-tjA"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="26" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5is-DW-UaY">
+                                        <rect key="frame" x="60" y="0.0" width="55" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="BDR-Rf-GRB"/>
+                                            <constraint firstAttribute="width" constant="55" id="N0H-bH-ddZ"/>
+                                        </constraints>
+                                        <state key="normal" image="coin1">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnFlip:" destination="qVG-R5-V6B" eventType="touchUpInside" id="Roi-it-KsN"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="27" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JXZ-W9-xp4">
+                                        <rect key="frame" x="120" y="0.0" width="55" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="92k-o9-zdg"/>
+                                            <constraint firstAttribute="width" constant="55" id="vhB-ek-ioO"/>
+                                        </constraints>
+                                        <state key="normal" image="coin1">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnFlip:" destination="qVG-R5-V6B" eventType="touchUpInside" id="qqa-Ie-3Fj"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="28" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MAx-Gx-rAj">
+                                        <rect key="frame" x="180" y="0.0" width="55" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="55" id="Pu6-s6-rNw"/>
+                                            <constraint firstAttribute="height" constant="50" id="dMF-ep-uz8"/>
+                                        </constraints>
+                                        <state key="normal" image="coin1">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnFlip:" destination="qVG-R5-V6B" eventType="touchUpInside" id="PwU-hC-5Fg"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="29" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LW5-wa-AEW">
+                                        <rect key="frame" x="240" y="0.0" width="55" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="55" id="AmB-e3-10G"/>
+                                            <constraint firstAttribute="height" constant="50" id="E9x-xi-hqk"/>
+                                        </constraints>
+                                        <state key="normal" image="coin1">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnFlip:" destination="qVG-R5-V6B" eventType="touchUpInside" id="qa1-JG-bHM"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="1CJ-m5-Fzc">
+                                <rect key="frame" x="40" y="494" width="295" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" tag="30" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nJk-ra-F8l">
+                                        <rect key="frame" x="0.0" y="0.0" width="55" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="OIB-4h-c8F"/>
+                                            <constraint firstAttribute="width" constant="55" id="frV-WB-KOs"/>
+                                        </constraints>
+                                        <state key="normal" image="coin1">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnFlip:" destination="qVG-R5-V6B" eventType="touchUpInside" id="d32-ry-HmO"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="31" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o5D-Rj-PAN">
+                                        <rect key="frame" x="60" y="0.0" width="55" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="30M-NK-Ya8"/>
+                                            <constraint firstAttribute="width" constant="55" id="UWi-0Q-aFL"/>
+                                        </constraints>
+                                        <state key="normal" image="coin1">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnFlip:" destination="qVG-R5-V6B" eventType="touchUpInside" id="n6d-Cc-kAc"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="32" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r32-8G-86x">
+                                        <rect key="frame" x="120" y="0.0" width="55" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="55" id="ZLt-F3-bui"/>
+                                            <constraint firstAttribute="height" constant="50" id="bYp-2n-ftw"/>
+                                        </constraints>
+                                        <state key="normal" image="coin1">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnFlip:" destination="qVG-R5-V6B" eventType="touchUpInside" id="0Tj-Pe-Qsv"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="33" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2gF-CY-z2O">
+                                        <rect key="frame" x="180" y="0.0" width="55" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="55" id="aEw-rA-J1a"/>
+                                            <constraint firstAttribute="height" constant="50" id="sme-5o-sTa"/>
+                                        </constraints>
+                                        <state key="normal" image="coin1">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnFlip:" destination="qVG-R5-V6B" eventType="touchUpInside" id="Srl-tM-cgj"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="34" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CbX-X5-aBo">
+                                        <rect key="frame" x="240" y="0.0" width="55" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="55" id="2nM-Ta-G6N"/>
+                                            <constraint firstAttribute="height" constant="50" id="6fH-lg-8De"/>
+                                        </constraints>
+                                        <state key="normal" image="coin1">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnFlip:" destination="qVG-R5-V6B" eventType="touchUpInside" id="9pl-vQ-uyK"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="jBj-lO-9fz">
+                                <rect key="frame" x="40" y="554" width="295" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" tag="35" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CHU-R8-5RS">
+                                        <rect key="frame" x="0.0" y="0.0" width="55" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="55" id="09W-IH-xbl"/>
+                                            <constraint firstAttribute="height" constant="50" id="DgF-7n-9Mp"/>
+                                        </constraints>
+                                        <state key="normal" image="coin1">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnFlip:" destination="qVG-R5-V6B" eventType="touchUpInside" id="btM-6k-wHo"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="36" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NQV-Mn-Wgm">
+                                        <rect key="frame" x="60" y="0.0" width="55" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="TVy-No-PgJ"/>
+                                            <constraint firstAttribute="width" constant="55" id="rYf-xb-1Z8"/>
+                                        </constraints>
+                                        <state key="normal" image="coin1">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnFlip:" destination="qVG-R5-V6B" eventType="touchUpInside" id="PxV-Zu-3yg"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="37" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ovD-2G-AYz">
+                                        <rect key="frame" x="120" y="0.0" width="55" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="55" id="mNJ-26-EDJ"/>
+                                            <constraint firstAttribute="height" constant="50" id="uU4-Mb-bb1"/>
+                                        </constraints>
+                                        <state key="normal" image="coin1">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnFlip:" destination="qVG-R5-V6B" eventType="touchUpInside" id="cPa-Pi-KpT"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="38" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FHF-EH-MgL">
+                                        <rect key="frame" x="180" y="0.0" width="55" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="55" id="9SK-EN-RKL"/>
+                                            <constraint firstAttribute="height" constant="50" id="pUY-Ed-0Po"/>
+                                        </constraints>
+                                        <state key="normal" image="coin1">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnFlip:" destination="qVG-R5-V6B" eventType="touchUpInside" id="cyg-h0-SEK"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="39" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fWW-Uk-TNb">
+                                        <rect key="frame" x="240" y="0.0" width="55" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="55" id="Ft2-7W-g2i"/>
+                                            <constraint firstAttribute="height" constant="50" id="umB-3r-aEG"/>
+                                        </constraints>
+                                        <state key="normal" image="coin1">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnFlip:" destination="qVG-R5-V6B" eventType="touchUpInside" id="IKa-xH-DRv"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="wpZ-QV-9AA" firstAttribute="centerX" secondItem="dNi-Fp-TZV" secondAttribute="centerX" id="CAz-zV-zoW"/>
+                            <constraint firstItem="Rtd-ya-jZO" firstAttribute="leading" secondItem="dNi-Fp-TZV" secondAttribute="leadingMargin" constant="24" id="EmZ-Ec-xfX"/>
+                            <constraint firstItem="jVO-pW-Vc9" firstAttribute="centerX" secondItem="dNi-Fp-TZV" secondAttribute="centerX" id="EzR-A1-FB9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="wpZ-QV-9AA" secondAttribute="trailing" constant="24" id="Gxd-T0-kKh"/>
+                            <constraint firstItem="jBj-lO-9fz" firstAttribute="top" secondItem="1CJ-m5-Fzc" secondAttribute="bottom" constant="10" id="Jn5-ru-9Cp"/>
+                            <constraint firstItem="jBj-lO-9fz" firstAttribute="centerX" secondItem="dNi-Fp-TZV" secondAttribute="centerX" id="KBQ-19-0SH"/>
+                            <constraint firstItem="1CJ-m5-Fzc" firstAttribute="leading" secondItem="dNi-Fp-TZV" secondAttribute="leadingMargin" constant="24" id="Rlq-oR-hja"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="oKf-sM-qFz" secondAttribute="trailing" constant="24" id="TFf-g4-ulY"/>
+                            <constraint firstItem="tMH-ID-owD" firstAttribute="leading" secondItem="dNi-Fp-TZV" secondAttribute="leadingMargin" constant="24" id="TQb-GH-DQT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jBj-lO-9fz" secondAttribute="trailing" constant="24" id="Uot-bH-OSm"/>
+                            <constraint firstItem="12t-46-UtZ" firstAttribute="top" secondItem="jVO-pW-Vc9" secondAttribute="bottom" constant="10" id="X3a-xu-afr"/>
+                            <constraint firstItem="tMH-ID-owD" firstAttribute="centerX" secondItem="dNi-Fp-TZV" secondAttribute="centerX" id="XGc-b0-VaZ"/>
+                            <constraint firstItem="12t-46-UtZ" firstAttribute="centerX" secondItem="dNi-Fp-TZV" secondAttribute="centerX" id="XIU-bx-n6W"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Rtd-ya-jZO" secondAttribute="trailing" constant="24" id="Yrw-Ia-kfd"/>
+                            <constraint firstAttribute="trailing" secondItem="87X-tb-rC7" secondAttribute="trailing" constant="163" id="aLO-Op-scz"/>
+                            <constraint firstItem="87X-tb-rC7" firstAttribute="leading" secondItem="dNi-Fp-TZV" secondAttribute="leading" constant="162" id="arh-ZR-E99"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="12t-46-UtZ" secondAttribute="trailing" constant="24" id="cjG-o7-ef0"/>
+                            <constraint firstItem="wpZ-QV-9AA" firstAttribute="top" secondItem="oKf-sM-qFz" secondAttribute="bottom" constant="10" id="cop-h2-gPc"/>
+                            <constraint firstItem="jVO-pW-Vc9" firstAttribute="top" secondItem="87X-tb-rC7" secondAttribute="bottom" constant="30" id="dAc-vN-15x"/>
+                            <constraint firstItem="oKf-sM-qFz" firstAttribute="leading" secondItem="dNi-Fp-TZV" secondAttribute="leadingMargin" constant="24" id="iXR-fa-HOd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1CJ-m5-Fzc" secondAttribute="trailing" constant="24" id="mPh-4Q-VsJ"/>
+                            <constraint firstItem="87X-tb-rC7" firstAttribute="top" secondItem="UHz-Qv-LKa" secondAttribute="bottom" constant="40" id="nPe-7U-D0g"/>
+                            <constraint firstItem="Rtd-ya-jZO" firstAttribute="top" secondItem="wpZ-QV-9AA" secondAttribute="bottom" constant="10" id="nfT-xh-IYC"/>
+                            <constraint firstItem="tMH-ID-owD" firstAttribute="top" secondItem="Rtd-ya-jZO" secondAttribute="bottom" constant="10" id="pVW-gO-4k5"/>
+                            <constraint firstItem="1CJ-m5-Fzc" firstAttribute="top" secondItem="tMH-ID-owD" secondAttribute="bottom" constant="10" id="pi7-V1-yvW"/>
+                            <constraint firstItem="Rtd-ya-jZO" firstAttribute="centerX" secondItem="dNi-Fp-TZV" secondAttribute="centerX" id="qXJ-jV-dvn"/>
+                            <constraint firstItem="Rtd-ya-jZO" firstAttribute="top" secondItem="wpZ-QV-9AA" secondAttribute="bottom" constant="10" id="qw4-la-SPw"/>
+                            <constraint firstItem="oKf-sM-qFz" firstAttribute="top" secondItem="12t-46-UtZ" secondAttribute="bottom" constant="10" id="smW-RD-S4t"/>
+                            <constraint firstItem="wpZ-QV-9AA" firstAttribute="leading" secondItem="dNi-Fp-TZV" secondAttribute="leadingMargin" constant="24" id="tYr-dU-YW8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tMH-ID-owD" secondAttribute="trailing" constant="24" id="ukP-gN-M9e"/>
+                            <constraint firstItem="oKf-sM-qFz" firstAttribute="centerX" secondItem="dNi-Fp-TZV" secondAttribute="centerX" id="wDR-6q-pE1"/>
+                            <constraint firstItem="jBj-lO-9fz" firstAttribute="leading" secondItem="dNi-Fp-TZV" secondAttribute="leadingMargin" constant="24" id="wXt-i5-rnm"/>
+                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="btnCoin" destination="cu5-hY-1Tb" id="EPw-hA-ds4"/>
+                        <outlet property="countLabel" destination="87X-tb-rC7" id="Gsx-cV-DsF"/>
+                        <outletCollection property="btnCoin" destination="cu5-hY-1Tb" collectionClass="NSMutableArray" id="xF1-tB-52e"/>
+                        <outletCollection property="btnCoin" destination="6Lt-sG-aco" collectionClass="NSMutableArray" id="FTi-gA-AKF"/>
+                        <outletCollection property="btnCoin" destination="3NL-TD-tWr" collectionClass="NSMutableArray" id="gYj-cd-73D"/>
+                        <outletCollection property="btnCoin" destination="6IR-hC-qvc" collectionClass="NSMutableArray" id="jRv-qK-GnM"/>
+                        <outletCollection property="btnCoin" destination="YWb-cC-AOP" collectionClass="NSMutableArray" id="SxK-cC-62v"/>
+                        <outletCollection property="btnCoin" destination="XZN-iB-TPu" collectionClass="NSMutableArray" id="ra1-Tz-F1U"/>
+                        <outletCollection property="btnCoin" destination="Ofm-LR-sON" collectionClass="NSMutableArray" id="3A0-ml-MA6"/>
+                        <outletCollection property="btnCoin" destination="uZi-bK-3qQ" collectionClass="NSMutableArray" id="EEz-Sf-W7M"/>
+                        <outletCollection property="btnCoin" destination="YtG-G2-f8N" collectionClass="NSMutableArray" id="lyY-Tc-TOf"/>
+                        <outletCollection property="btnCoin" destination="toU-I3-tnQ" collectionClass="NSMutableArray" id="wC3-Z6-ndS"/>
+                        <outletCollection property="btnCoin" destination="WaI-4b-9b9" collectionClass="NSMutableArray" id="enz-UZ-hMK"/>
+                        <outletCollection property="btnCoin" destination="x0d-Rn-01x" collectionClass="NSMutableArray" id="Nb6-2O-XYx"/>
+                        <outletCollection property="btnCoin" destination="zvW-d7-wRr" collectionClass="NSMutableArray" id="xeb-I3-jOn"/>
+                        <outletCollection property="btnCoin" destination="LB2-Ob-3t2" collectionClass="NSMutableArray" id="C1C-xG-RH7"/>
+                        <outletCollection property="btnCoin" destination="NIz-Gy-piR" collectionClass="NSMutableArray" id="c2E-ZJ-Ahv"/>
+                        <outletCollection property="btnCoin" destination="CBw-U3-8kO" collectionClass="NSMutableArray" id="GX7-u2-C5Y"/>
+                        <outletCollection property="btnCoin" destination="QfK-7C-s22" collectionClass="NSMutableArray" id="Sdg-bj-HNe"/>
+                        <outletCollection property="btnCoin" destination="2C0-RW-OxQ" collectionClass="NSMutableArray" id="cOd-D8-jvq"/>
+                        <outletCollection property="btnCoin" destination="bTW-p1-zlC" collectionClass="NSMutableArray" id="IDx-RR-maB"/>
+                        <outletCollection property="btnCoin" destination="UKb-jl-LMC" collectionClass="NSMutableArray" id="Ovs-ff-Ci7"/>
+                        <outletCollection property="btnCoin" destination="IEv-fe-vVt" collectionClass="NSMutableArray" id="fQ0-bB-x7W"/>
+                        <outletCollection property="btnCoin" destination="oJh-63-3nm" collectionClass="NSMutableArray" id="7S1-Iy-1hx"/>
+                        <outletCollection property="btnCoin" destination="QYm-Wk-YpT" collectionClass="NSMutableArray" id="RNz-z7-hQR"/>
+                        <outletCollection property="btnCoin" destination="IyV-ar-RHy" collectionClass="NSMutableArray" id="c9C-qb-TUC"/>
+                        <outletCollection property="btnCoin" destination="k7J-ZS-uLw" collectionClass="NSMutableArray" id="fKa-i8-joU"/>
+                        <outletCollection property="btnCoin" destination="LW5-wa-AEW" collectionClass="NSMutableArray" id="2bk-nk-UIZ"/>
+                        <outletCollection property="btnCoin" destination="MAx-Gx-rAj" collectionClass="NSMutableArray" id="KYD-7n-DuP"/>
+                        <outletCollection property="btnCoin" destination="JXZ-W9-xp4" collectionClass="NSMutableArray" id="0Vv-jB-kkR"/>
+                        <outletCollection property="btnCoin" destination="5is-DW-UaY" collectionClass="NSMutableArray" id="Dfd-CR-Biq"/>
+                        <outletCollection property="btnCoin" destination="Dej-aA-Udg" collectionClass="NSMutableArray" id="MEj-hH-GKr"/>
+                        <outletCollection property="btnCoin" destination="CbX-X5-aBo" collectionClass="NSMutableArray" id="pRE-wr-fdc"/>
+                        <outletCollection property="btnCoin" destination="fWW-Uk-TNb" collectionClass="NSMutableArray" id="kNr-83-eIP"/>
+                        <outletCollection property="btnCoin" destination="2gF-CY-z2O" collectionClass="NSMutableArray" id="igX-mS-BuT"/>
+                        <outletCollection property="btnCoin" destination="r32-8G-86x" collectionClass="NSMutableArray" id="Ons-h9-Pmg"/>
+                        <outletCollection property="btnCoin" destination="FHF-EH-MgL" collectionClass="NSMutableArray" id="CQ3-Yg-lGt"/>
+                        <outletCollection property="btnCoin" destination="ovD-2G-AYz" collectionClass="NSMutableArray" id="BmO-Fc-HeV"/>
+                        <outletCollection property="btnCoin" destination="NQV-Mn-Wgm" collectionClass="NSMutableArray" id="Hn7-Wm-vNa"/>
+                        <outletCollection property="btnCoin" destination="o5D-Rj-PAN" collectionClass="NSMutableArray" id="w0p-On-9vf"/>
+                        <outletCollection property="btnCoin" destination="nJk-ra-F8l" collectionClass="NSMutableArray" id="Qms-6w-hpR"/>
+                        <outletCollection property="btnCoin" destination="CHU-R8-5RS" collectionClass="NSMutableArray" id="KXa-qG-FFb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pMN-DA-wMY" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -325,14 +952,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8lp-1R-DnM">
-                                <rect key="frame" x="67" y="215" width="240" height="240"/>
+                                <rect key="frame" x="67" y="200" width="240" height="240"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="Ajo-XW-t8e"/>
                                     <constraint firstAttribute="height" constant="240" id="aMV-Xk-Wmb"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vT5-dC-CgL">
-                                <rect key="frame" x="67" y="215" width="240" height="240"/>
+                                <rect key="frame" x="67" y="200" width="240" height="240"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="gjb-LV-hMm"/>
                                     <constraint firstAttribute="height" constant="240" id="r34-gh-uUX"/>
@@ -342,7 +969,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XHL-ID-cCM">
-                                <rect key="frame" x="163" y="60" width="50" height="0.0"/>
+                                <rect key="frame" x="163" y="60" width="50" height="10"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -350,18 +977,19 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="8lp-1R-DnM" firstAttribute="top" secondItem="XHL-ID-cCM" secondAttribute="bottom" constant="130" id="2PQ-D4-UIJ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="vT5-dC-CgL" secondAttribute="trailing" constant="52" id="6X4-ob-W4O"/>
                             <constraint firstItem="XHL-ID-cCM" firstAttribute="top" secondItem="4yr-jE-tYa" secondAttribute="bottom" constant="40" id="B42-Bl-ei1"/>
                             <constraint firstAttribute="trailingMargin" secondItem="vT5-dC-CgL" secondAttribute="trailing" constant="52" id="G9u-qr-zUQ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="XHL-ID-cCM" secondAttribute="trailing" constant="146" id="OKw-Kj-SKh"/>
-                            <constraint firstItem="8lp-1R-DnM" firstAttribute="top" secondItem="XHL-ID-cCM" secondAttribute="bottom" constant="155" id="Sdi-yG-nab"/>
+                            <constraint firstItem="X11-3g-4UZ" firstAttribute="top" secondItem="vT5-dC-CgL" secondAttribute="bottom" constant="227" id="Xte-fi-VJQ"/>
                             <constraint firstItem="8lp-1R-DnM" firstAttribute="leading" secondItem="g7r-La-XQF" secondAttribute="leadingMargin" constant="51" id="Xti-pI-oXo"/>
+                            <constraint firstItem="X11-3g-4UZ" firstAttribute="top" secondItem="8lp-1R-DnM" secondAttribute="bottom" constant="227" id="YX0-AZ-hEc"/>
                             <constraint firstItem="vT5-dC-CgL" firstAttribute="leading" secondItem="g7r-La-XQF" secondAttribute="leadingMargin" constant="51" id="bMw-hh-FQr"/>
+                            <constraint firstItem="vT5-dC-CgL" firstAttribute="top" secondItem="XHL-ID-cCM" secondAttribute="bottom" constant="130" id="gYb-O5-c1Q"/>
                             <constraint firstAttribute="trailingMargin" secondItem="8lp-1R-DnM" secondAttribute="trailing" constant="52" id="h7W-M9-O8v"/>
                             <constraint firstItem="XHL-ID-cCM" firstAttribute="leading" secondItem="g7r-La-XQF" secondAttribute="leadingMargin" constant="147" id="pu5-2b-oQy"/>
-                            <constraint firstItem="vT5-dC-CgL" firstAttribute="top" secondItem="XHL-ID-cCM" secondAttribute="bottom" constant="155" id="vIW-fW-qDv"/>
                             <constraint firstItem="vT5-dC-CgL" firstAttribute="leading" secondItem="g7r-La-XQF" secondAttribute="leadingMargin" constant="51" id="wIP-9w-tPO"/>
-                            <constraint firstItem="vT5-dC-CgL" firstAttribute="top" secondItem="XHL-ID-cCM" secondAttribute="bottom" constant="155" id="wPa-fT-jSA"/>
                         </constraints>
                     </view>
                     <connections>
@@ -387,27 +1015,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ie1-ON-kIc">
-                                <rect key="frame" x="217" y="250" width="60" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="ony-95-yPB"/>
-                                </constraints>
+                                <rect key="frame" x="217" y="200" width="60" height="140"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xjl-ML-uOT">
-                                <rect key="frame" x="48" y="169" width="280" height="350"/>
+                                <rect key="frame" x="48" y="178" width="280" height="350"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="280" id="W84-If-qmq"/>
                                     <constraint firstAttribute="height" constant="350" id="gJH-ei-z0E"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="avD-X3-FSN">
-                                <rect key="frame" x="163" y="60" width="50" height="0.0"/>
+                                <rect key="frame" x="163" y="60" width="50" height="9"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LSr-AT-jkJ">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LSr-AT-jkJ">
                                 <rect key="frame" x="48" y="169" width="280" height="201"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="sZx-fX-Yg7"/>
+                                </constraints>
                                 <connections>
                                     <action selector="clickButton:" destination="faY-WQ-SRs" eventType="touchUpInside" id="eCa-hW-bfa"/>
                                 </connections>
@@ -418,11 +1045,16 @@
                             <constraint firstAttribute="trailingMargin" secondItem="xjl-ML-uOT" secondAttribute="trailing" constant="31" id="5Ho-Bd-iMi"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ie1-ON-kIc" secondAttribute="trailing" constant="82" id="7HR-6R-a1R"/>
                             <constraint firstItem="xjl-ML-uOT" firstAttribute="top" secondItem="avD-X3-FSN" secondAttribute="bottom" constant="109" id="Dgj-fc-clS"/>
-                            <constraint firstItem="ie1-ON-kIc" firstAttribute="top" secondItem="jGN-1l-B2b" secondAttribute="bottom" constant="230" id="FLA-2H-XIx"/>
+                            <constraint firstItem="P55-As-7Sc" firstAttribute="top" secondItem="ie1-ON-kIc" secondAttribute="bottom" constant="327" id="Dhd-hj-Ts2"/>
+                            <constraint firstItem="ie1-ON-kIc" firstAttribute="top" secondItem="jGN-1l-B2b" secondAttribute="bottom" constant="180" id="GTu-l6-OWi"/>
                             <constraint firstItem="avD-X3-FSN" firstAttribute="leading" secondItem="qdo-hS-WnC" secondAttribute="leadingMargin" constant="147" id="Mea-V3-rlJ"/>
+                            <constraint firstItem="P55-As-7Sc" firstAttribute="top" secondItem="xjl-ML-uOT" secondAttribute="bottom" constant="139" id="SPs-uK-hDj"/>
+                            <constraint firstItem="LSr-AT-jkJ" firstAttribute="centerX" secondItem="qdo-hS-WnC" secondAttribute="centerX" id="Tb6-c9-CCT"/>
                             <constraint firstAttribute="trailingMargin" secondItem="avD-X3-FSN" secondAttribute="trailing" constant="146" id="Wur-wI-11v"/>
                             <constraint firstItem="ie1-ON-kIc" firstAttribute="leading" secondItem="qdo-hS-WnC" secondAttribute="leadingMargin" constant="201" id="alZ-AH-Md1"/>
+                            <constraint firstItem="P55-As-7Sc" firstAttribute="top" secondItem="LSr-AT-jkJ" secondAttribute="bottom" constant="297" id="cbP-56-15Z"/>
                             <constraint firstItem="xjl-ML-uOT" firstAttribute="leading" secondItem="qdo-hS-WnC" secondAttribute="leadingMargin" constant="32" id="deQ-ny-5AX"/>
+                            <constraint firstItem="LSr-AT-jkJ" firstAttribute="top" secondItem="avD-X3-FSN" secondAttribute="bottom" constant="100" id="n2a-Bh-OwN"/>
                             <constraint firstItem="avD-X3-FSN" firstAttribute="top" secondItem="jGN-1l-B2b" secondAttribute="bottom" constant="40" id="nJg-fh-TOS"/>
                         </constraints>
                     </view>
@@ -712,9 +1344,16 @@
         </scene>
     </scenes>
     <resources>
+        <image name="coin1" width="379" height="343"/>
+        <image name="gg" width="78" height="98"/>
+        <image name="mo" width="84" height="96"/>
         <image name="one" width="324" height="289"/>
+        <image name="pp" width="87" height="98"/>
+        <image name="pu" width="79" height="99"/>
         <image name="redCircle" width="256" height="256"/>
         <image name="snow" width="333" height="425"/>
+        <image name="ss" width="99" height="105"/>
+        <image name="ta" width="81" height="101"/>
     </resources>
     <color key="tintColor" red="0.20814387302278525" green="0.31358548274248077" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

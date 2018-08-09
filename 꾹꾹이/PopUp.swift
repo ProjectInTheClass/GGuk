@@ -15,12 +15,14 @@ class PopUp : UIViewController {
     var alertController: UIAlertController?
     var baseMessage: String?
     
-    func showAlertMsg(title: String, message: String) {
+    func showAlertMsg(title: String, message: String){
+        
         
         guard (self.alertController == nil) else {
             print("Alert already displayed")
             return
         }
+        
         
         self.baseMessage = message
         //self.remainingTime = time
@@ -39,9 +41,10 @@ class PopUp : UIViewController {
         
         //self.alertTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.countDown), userInfo: nil, repeats: true)
         
-        self.present(self.alertController!, animated: true, completion: nil)
-        
+        // return self.alertController!
     }
+    
+    
     
     func alertMessage() -> String {
         var message=""
@@ -69,6 +72,8 @@ class PopUp : UIViewController {
         
         return alertController
     }
+    
+    //func printMessage
     
     
     

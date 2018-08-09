@@ -14,11 +14,15 @@ class PawViewController: UIViewController {
     @IBOutlet weak var countLabel: UILabel!
     let pawImage = UIImage(named: "pawe")
     var snowSound:sound?
-
+    
     var counter = Counter()
+    let defaults = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if let count = defaults.value(forKey: "pawCnt"){
+            counter.count = count as! Int
+        }
         counter.printCount(countLabel: countLabel)
     }
     
@@ -30,7 +34,7 @@ class PawViewController: UIViewController {
         
         self.view.addSubview(imageView)
         counter.count += 1
-
+        
         switch (counter.count)%4 {
         case 0:
             snowSound = sound(soundName: "snow")
@@ -50,7 +54,7 @@ class PawViewController: UIViewController {
         UIView.animate(withDuration: 5, animations: {
             imageView.alpha = 0
         })
-        
+        defaults.set(counter.count, forKey: "pawCnt")
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

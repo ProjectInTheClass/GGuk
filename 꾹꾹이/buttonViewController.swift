@@ -13,17 +13,15 @@
 //  Copyright © 2018년 CAUAD23. All rights reserved.
 //
 import UIKit
-import AudioToolbox
-
-
-
 class buttonViewController: UIViewController{
-
+    
     var buttonSound = sound(soundName: "btnSound")
-    let impact = UIImpactFeedbackGenerator()
     
     @IBOutlet weak var countLabel: UILabel!
     var counter = Counter()
+    
+    let defaults = UserDefaults.standard
+    
     //버튼크기 작게
     func changeSizeDown(button:UIButton) {
         button.imageEdgeInsets = UIEdgeInsetsMake(3, 3, 3, 3)
@@ -41,11 +39,15 @@ class buttonViewController: UIViewController{
         button.layer.shadowOpacity = 0.5
         button.layer.cornerRadius = button.frame.width / 2
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let count = defaults.value(forKey: "btnCnt"){
+            counter.count = count as! Int
+        }
         counter.printCount(countLabel: countLabel)
-
+        
     }
     //원 클릭했을때 반응
     @IBAction func buttonTouchDown(_ sender: UIButton) {
@@ -54,21 +56,17 @@ class buttonViewController: UIViewController{
         buttonSound.playSound()
         counter.count += 1
         counter.printCount(countLabel: countLabel)
-        //AudioServicesPlaySystemSound(4095)
-        //AudioServicesPlaySystemSound(1015)
-
+        defaults.set(counter.count, forKey: "btnCnt")
     }
     @IBAction func buttonTouchUpInside(_ sender: UIButton) {
         changeSizeUp(button: sender)
-        //AudioServicesPlaySystemSound(4095)
-        impact.impactOccurred()
+        
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-
+        
     }
     
     
-
-
+    
 }
