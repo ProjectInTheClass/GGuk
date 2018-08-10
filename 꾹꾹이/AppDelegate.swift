@@ -1,21 +1,18 @@
-//
-//  AppDelegate.swift
-//  꾹꾹이
-//
-//  Created by CAUAD23 on 2018. 7. 24..
-//  Copyright © 2018년 CAUAD23. All rights reserved.
-//
-
 import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    
+    
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions:
+        [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let BarButtonItemAppearance = UIBarButtonItem.appearance()
+        BarButtonItemAppearance.setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.clear], for: .normal)
+        
         return true
     }
 
