@@ -761,11 +761,11 @@
                                 </subviews>
                             </stackView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cloud2" translatesAutoresizingMaskIntoConstraints="NO" id="NiQ-JH-BNe">
-                                <rect key="frame" x="34" y="64" width="102" height="47"/>
+                                <rect key="frame" x="20" y="76" width="98" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cloud1" translatesAutoresizingMaskIntoConstraints="NO" id="PSJ-Yt-P7H">
-                                <rect key="frame" x="276" y="64" width="106" height="47"/>
+                                <rect key="frame" x="294" y="72" width="100" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -1009,8 +1009,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Ysa-sx-2fP" firstAttribute="top" secondItem="Fgv-IV-8h1" secondAttribute="bottom" id="5DE-yZ-MLk"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="dTX-3N-hYB" secondAttribute="trailing" constant="147" id="GTi-Nk-WlG"/>
-                            <constraint firstItem="dTX-3N-hYB" firstAttribute="top" secondItem="Fgv-IV-8h1" secondAttribute="bottom" constant="40" id="U7R-fh-i2S"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dTX-3N-hYB" secondAttribute="trailing" constant="-20" id="GTi-Nk-WlG"/>
+                            <constraint firstItem="dTX-3N-hYB" firstAttribute="top" secondItem="Fgv-IV-8h1" secondAttribute="bottom" constant="28" id="U7R-fh-i2S"/>
                             <constraint firstItem="dTX-3N-hYB" firstAttribute="centerX" secondItem="KN0-Nk-hpw" secondAttribute="centerX" id="Ypz-MU-dNX"/>
                             <constraint firstItem="Ysa-sx-2fP" firstAttribute="leading" secondItem="KN0-Nk-hpw" secondAttribute="leading" id="dfD-Ht-nOd"/>
                             <constraint firstItem="N7A-DT-hg0" firstAttribute="top" secondItem="Ysa-sx-2fP" secondAttribute="bottom" id="ncI-If-0z1"/>
@@ -1231,8 +1231,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="OdV-T5-hq4">
-                                <rect key="frame" x="20" y="200" width="374" height="100"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mRU-7d-LEY">
+                                <rect key="frame" x="0.0" y="90" width="414" height="49"/>
+                                <fontDescription key="fontDescription" name="Silkscreen-Expanded" family="Silkscreen Expanded" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="OdV-T5-hq4">
+                                <rect key="frame" x="20" y="193" width="374" height="100"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UXh-C6-vAs">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
@@ -1270,8 +1276,8 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="n5u-C5-D31">
-                                <rect key="frame" x="20" y="325" width="374" height="100"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="n5u-C5-D31">
+                                <rect key="frame" x="20" y="318" width="374" height="100"/>
                                 <subviews>
                                     <button opaque="NO" tag="3" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4LR-ZH-QrP">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
@@ -1309,8 +1315,8 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="WaA-rH-sj1">
-                                <rect key="frame" x="20" y="450" width="374" height="100"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="WaA-rH-sj1">
+                                <rect key="frame" x="20" y="443" width="374" height="100"/>
                                 <subviews>
                                     <button opaque="NO" tag="6" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WOS-4s-oNj">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
@@ -1348,27 +1354,21 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mRU-7d-LEY">
-                                <rect key="frame" x="0.0" y="90" width="414" height="49"/>
-                                <fontDescription key="fontDescription" name="Silkscreen-Expanded" family="Silkscreen Expanded" pointSize="40"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.99078086759999995" blue="0.95718746450000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="OdV-T5-hq4" firstAttribute="top" secondItem="mRU-7d-LEY" secondAttribute="bottom" constant="56" id="9eT-o1-jvp"/>
+                            <constraint firstItem="OdV-T5-hq4" firstAttribute="top" secondItem="mRU-7d-LEY" secondAttribute="bottom" constant="54" id="9eT-o1-jvp"/>
                             <constraint firstAttribute="trailingMargin" secondItem="n5u-C5-D31" secondAttribute="trailing" id="CIh-Uo-2V1"/>
-                            <constraint firstItem="mRU-7d-LEY" firstAttribute="top" secondItem="S4w-2U-WSF" secondAttribute="bottom" constant="40" id="LsC-fA-QB8"/>
+                            <constraint firstItem="mRU-7d-LEY" firstAttribute="top" secondItem="S4w-2U-WSF" secondAttribute="bottom" constant="26" id="LsC-fA-QB8"/>
                             <constraint firstItem="n5u-C5-D31" firstAttribute="top" secondItem="OdV-T5-hq4" secondAttribute="bottom" constant="25" id="NJa-QU-h85"/>
                             <constraint firstItem="WaA-rH-sj1" firstAttribute="top" secondItem="n5u-C5-D31" secondAttribute="bottom" constant="25" id="U1W-Mg-5Ir"/>
                             <constraint firstAttribute="trailingMargin" secondItem="WaA-rH-sj1" secondAttribute="trailing" id="bFV-AK-6dL"/>
                             <constraint firstItem="n5u-C5-D31" firstAttribute="leading" secondItem="g9N-Pw-cP8" secondAttribute="leadingMargin" id="f8d-j9-rJY"/>
-                            <constraint firstItem="mRU-7d-LEY" firstAttribute="leading" secondItem="g9N-Pw-cP8" secondAttribute="leadingMargin" constant="146" id="fkj-Zb-tlZ"/>
+                            <constraint firstItem="mRU-7d-LEY" firstAttribute="leading" secondItem="g9N-Pw-cP8" secondAttribute="leadingMargin" constant="-20" id="fkj-Zb-tlZ"/>
                             <constraint firstItem="OdV-T5-hq4" firstAttribute="leading" secondItem="g9N-Pw-cP8" secondAttribute="leadingMargin" id="i9Y-ra-6xb"/>
                             <constraint firstItem="WaA-rH-sj1" firstAttribute="leading" secondItem="g9N-Pw-cP8" secondAttribute="leadingMargin" id="usb-Zq-0MA"/>
                             <constraint firstAttribute="trailingMargin" secondItem="OdV-T5-hq4" secondAttribute="trailing" id="vMK-iD-ezY"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="mRU-7d-LEY" secondAttribute="trailing" constant="147" id="yFZ-w3-VAv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mRU-7d-LEY" secondAttribute="trailing" constant="-20" id="yFZ-w3-VAv"/>
                             <constraint firstItem="WaA-rH-sj1" firstAttribute="top" secondItem="n5u-C5-D31" secondAttribute="bottom" constant="25" id="zYs-GG-p0E"/>
                         </constraints>
                     </view>

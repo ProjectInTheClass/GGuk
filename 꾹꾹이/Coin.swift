@@ -28,6 +28,7 @@ class Coin: UIViewController {
     var randomNum5:UInt32?
     var randomNum6:UInt32?
     var randomNum7:UInt32?
+    
     let defaults = UserDefaults.standard
     var startBtnLocation:CGPoint?
     var startTag:Int?
@@ -118,6 +119,7 @@ class Coin: UIViewController {
                 UIView.transition(with: sender, duration: 0.3, options: .transitionFlipFromLeft, animations: nil, completion: nil)
                 coinSound.playSound()
             }
+
             counter.count += 1
             counter.printCount(countLabel: countLabel)
             defaults.set(counter.count, forKey: "coinCnt")
