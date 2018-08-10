@@ -1,10 +1,3 @@
-//
-//  LightViewController.swift
-//  GGuk
-//
-//  Created by CAUAD22 on 2018. 8. 6..
-//  Copyright © 2018년 CAUAD23. All rights reserved.
-//
 
 import UIKit
 
@@ -97,12 +90,10 @@ class LightViewController : UIPageViewController, UIPageViewControllerDelegate, 
         let pageContentViewController = pageViewController.viewControllers![0]
         self.pageControl.currentPage = orderedViewControllers.index(of: pageContentViewController)!
     }
-    
-    
 }
 
 
-
+//조명스위치
 class circleViewController: UIViewController {
 
     @IBOutlet weak var img1: UIImageView!
@@ -114,7 +105,11 @@ class circleViewController: UIViewController {
     
     @IBOutlet weak var countLabel: UILabel!
     
-    
+    @IBAction func replayBtn(_ sender: UIButton) {
+        counter.count = 0
+        defaults.set(counter.count, forKey: "lightCnt")
+        counter.printCount(countLabel: countLabel)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         img1.image = UIImage(named: "switch1")
@@ -128,20 +123,17 @@ class circleViewController: UIViewController {
     
     @IBAction func btnClick(_ sender: UIButton) {
         if(click == false){
-            self.view.backgroundColor = #colorLiteral(red: 0.7544217957, green: 0.7023390309, blue: 0.5660703121, alpha: 1)
-            img1.image = UIImage(named: "switch1")
+            self.view.backgroundColor = #colorLiteral(red: 1, green: 0.930963335, blue: 0.7503366357, alpha: 1)
+            img1.image = UIImage(named: "switch2")
             click = true
             switchSound.playSound()
         }
         else
         {
-            self.view.backgroundColor = #colorLiteral(red: 1, green: 0.930963335, blue: 0.7503366357, alpha: 1)
-            img1.image = UIImage(named: "switch2")
+            self.view.backgroundColor = #colorLiteral(red: 0.7544217957, green: 0.7023390309, blue: 0.5660703121, alpha: 1)
+            img1.image = UIImage(named: "switch1")
             click = false
             switchSound.playSound()
-            
-            
-            
         }
         counter.count += 1
         counter.printCount(countLabel: countLabel)
@@ -175,8 +167,6 @@ class cooViewController : UIViewController {
     @IBOutlet weak var countLabel: UILabel!
     @IBOutlet weak var catBtn: UIButton!
 
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         catTail.image = UIImage(named: "cattail")
@@ -187,6 +177,29 @@ class cooViewController : UIViewController {
         counter.printCount(countLabel: countLabel)
     }
     
+    @IBAction func replayBtn(_ sender: UIButton) {
+        counter.count = 0
+        defaults.set(counter.count, forKey: "catCnt")
+        counter.printCount(countLabel: countLabel)
+    }
+    
+    func printCatPaw() {
+        let catPaw = UIImageView(frame: CGRect(x: 35, y: 250, width: 350, height: 550))
+        catPaw.image = UIImage(named:"ppaw")
+        catPaw.alpha = 1
+        self.view.addSubview(catPaw)
+        //발자국 나왔다가 들어가기
+        UIView.animateKeyframes(withDuration: 3, delay: 0, options: .calculationModeCubic, animations: {
+            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.35) {
+                catPaw.center = CGPoint(x: self.view.bounds.midX, y: self.view.bounds.maxY + 250)
+            }
+        }, completion: nil)
+        
+        catSound.player?.stop()
+        angrySound.playSound()
+
+    }
+
     @IBAction func catClick(_ sender: UIButton) {
         
         let x = catTail.frame.origin.x
@@ -213,6 +226,10 @@ class cooViewController : UIViewController {
             counter.count += 1
             counter.printCount(countLabel: countLabel)
             defaults.set(counter.count, forKey: "catCnt")
+        }
+        
+        if(counter.showAction() == true){
+            printCatPaw()
         }
     }
     

@@ -1,17 +1,4 @@
-//
-//  buttonViewController.swift
-//  GGuk
-//
-//  Created by CAUAD23 on 2018. 7. 26..
-//  Copyright © 2018년 CAUAD23. All rights reserved.
-//
-//
-//  buttonViewController.swift
-//  GGuk
-//
-//  Created by CAUAD23 on 2018. 7. 26..
-//  Copyright © 2018년 CAUAD23. All rights reserved.
-//
+
 import UIKit
 class buttonViewController: UIViewController{
     
@@ -43,11 +30,11 @@ class buttonViewController: UIViewController{
         case 7://달
             button.imageEdgeInsets = UIEdgeInsetsMake(2, 13, 2, 13)
         default://마우스
-            button.imageEdgeInsets = UIEdgeInsetsMake(1, 25, 1, 25)
+            button.imageEdgeInsets = UIEdgeInsetsMake(0, 30, 0, 30)
         }
-        
-        
+   
     }
+    
     //버튼크기 크게
     func changeSizeUp(button:UIButton) {
         switch button.tag {
@@ -68,7 +55,7 @@ class buttonViewController: UIViewController{
         case 7://달
             button.imageEdgeInsets = UIEdgeInsetsMake(-2, -13, -2, -13)
         default://마우스
-            button.imageEdgeInsets = UIEdgeInsetsMake(-1, -25, -1, -25)
+            button.imageEdgeInsets = UIEdgeInsetsMake(0, -30, 0, -30)
         }
     }
     
@@ -93,17 +80,16 @@ class buttonViewController: UIViewController{
         for i in 0 ... buttons.count - 1{
             setShadowColor(button: buttons[i])
         }
+        
         if let count = defaults.value(forKey: "btnCnt"){
             counter.count = count as! Int
         }
         counter.printCount(countLabel: countLabel)
         
     }
-    //원 클릭했을때 반응
+    //버튼 클릭했을때 반응
     @IBAction func buttonTouchDown(_ sender: UIButton) {
         changeSizeDown(button: sender)
-        let generator = UINotificationFeedbackGenerator()
-        generator.notificationOccurred(.error)
         setSound(tag: sender.tag)
         counter.count += 1
         counter.printCount(countLabel: countLabel)
@@ -111,9 +97,7 @@ class buttonViewController: UIViewController{
     }
     
     @IBAction func buttonTouchUpInside(_ sender: UIButton) {
-        
         changeSizeUp(button: sender)
-        
     }
     
     func setSound(tag:Int){

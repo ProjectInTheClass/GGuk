@@ -20,7 +20,8 @@ class Coin: UIViewController {
     var specialSound = sound(soundName: "coinflip")
     
     var front: [Bool] = []
-    var randomNum:UInt32?
+    
+    //랜덤
     var randomNum1:UInt32?
     var randomNum2:UInt32?
     var randomNum3:UInt32?
@@ -35,14 +36,8 @@ class Coin: UIViewController {
     var num = 0
     override func viewDidLoad() {
         super.viewDidLoad()
-        randomNum1 = arc4random_uniform(UInt32(btnCoin.count - 1))
-        randomNum2 = arc4random_uniform(UInt32(btnCoin.count - 1))
-        randomNum3 = arc4random_uniform(UInt32(btnCoin.count - 1))
-        randomNum4 = arc4random_uniform(UInt32(btnCoin.count - 1))
-        randomNum5 = arc4random_uniform(UInt32(btnCoin.count - 1))
-        randomNum6 = arc4random_uniform(UInt32(btnCoin.count - 1))
-        randomNum7 = arc4random_uniform(UInt32(btnCoin.count - 1))
         
+        setRandomNum()
         if let count = defaults.value(forKey: "coinCnt"){
             counter.count = count as! Int
         }
@@ -55,6 +50,17 @@ class Coin: UIViewController {
         }
       
     }
+    
+    func setRandomNum(){
+        randomNum1 = arc4random_uniform(UInt32(btnCoin.count - 1))
+        randomNum2 = arc4random_uniform(UInt32(btnCoin.count - 1))
+        randomNum3 = arc4random_uniform(UInt32(btnCoin.count - 1))
+        randomNum4 = arc4random_uniform(UInt32(btnCoin.count - 1))
+        randomNum5 = arc4random_uniform(UInt32(btnCoin.count - 1))
+        randomNum6 = arc4random_uniform(UInt32(btnCoin.count - 1))
+        randomNum7 = arc4random_uniform(UInt32(btnCoin.count - 1))
+    }
+    
     @IBAction func replayBtn(_ sender: UIBarButtonItem) {
         counter.count = 0
         defaults.set(counter.count, forKey: "coinCnt")
@@ -62,9 +68,10 @@ class Coin: UIViewController {
         
         for i in 0...btnCoin.count - 1 {
             btnCoin[i].setImage(UIImage(named: "coin1"), for: .normal)
-            front.append(false)
+            front[i] = false
             setShadowColor(button: btnCoin[i])
         }
+        setRandomNum()
     }
     
     func setShadowColor(button:UIButton){
@@ -75,12 +82,12 @@ class Coin: UIViewController {
         button.layer.shadowOpacity = 0.5
         button.layer.cornerRadius = button.frame.width / 2
     }
+    
     @IBAction func btnFlip(_ sender: UIButton) {
         startBtnLocation = sender.center
         startTag = sender.tag
         
-        
-        if front[sender.tag] {
+        if (front[sender.tag] == true) {
             front[sender.tag] = false
             sender.setImage(UIImage(named: "coin1"), for: .normal)
             coinSound.playSound()
@@ -89,6 +96,7 @@ class Coin: UIViewController {
             counter.printCount(countLabel: countLabel)
             defaults.set(counter.count, forKey: "coinCnt")
         }
+            
         else {
             front[sender.tag] = true
             
@@ -123,11 +131,10 @@ class Coin: UIViewController {
             counter.count += 1
             counter.printCount(countLabel: countLabel)
             defaults.set(counter.count, forKey: "coinCnt")
-        }
+            }
         }
     
     func specialBtn(randomNum:UInt32, sender:UIButton) -> UInt32{
-       
         switch num {
         case 0:
             sender.setImage(UIImage(named: "turtle"), for: .normal)
@@ -140,50 +147,17 @@ class Coin: UIViewController {
             sender.setImage(UIImage(named: "pig"), for: .normal)
             num = 0
         }
-        
         specialSound.playSound()
         
         UIView.transition(with: sender, duration: 0.3, options: .transitionFlipFromLeft, animations: nil, completion: nil)
-        UIView.transition(with: sender, duration: 0.3, options: .transitionFlipFromLeft, animations: nil, completion: nil)
-        UIView.transition(with: sender, duration: 0.3, options: .transitionFlipFromLeft, animations: nil, completion: nil)
-        UIView.transition(with: sender, duration: 0.3, options: .transitionFlipFromLeft, animations: nil, completion: nil)
-        
         return arc4random_uniform(UInt32(btnCoin.count - 1))
         
     }
-    /*
-    @IBAction func btnFlip(_ sender: Any) {
-        if isOpen{
-            isOpen = false
-            btnCoin.setImage(UIImage(named: "coin1"), for: .normal)
 
-            UIView.transition(with: btnCoin, duration: 0.3, options: .transitionFlipFromLeft, animations: nil, completion: nil)
-        }
-        
-        else {
-            isOpen = true
-            btnCoin.imageView?.image = UIImage(named: "coin2")
-            UIView.transition(with: btnCoin, duration: 0.3, options: .transitionFlipFromLeft, animations: nil, completion: nil)
-        
-    }
-    */
-    
-    
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

@@ -1,14 +1,5 @@
-//
-//  dogViewController.swift
-//  GGuk
-//
-//  Created by CAUAD23 on 2018. 7. 31..
-//  Copyright © 2018년 CAUAD23. All rights reserved.
-//
-
 import UIKit
 import AVFoundation
-
 
 class dogViewController: UIViewController {
     
@@ -34,22 +25,15 @@ class dogViewController: UIViewController {
     var counter = Counter()
     let defaults = UserDefaults.standard
     
-    /*
-     func printCount() {
-     self.countLabel.text = "\(alertCon.count)"
-     }
-     */
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         startX = boneX.constant
         startY = boneY.constant
+        
         dogImage.image = UIImage(named: "standard")!
         boneImage.image = UIImage(named:"bone")
-        boneLabel.font = UIFont(name: "slkscre", size: 20)
+        boneLabel.font = UIFont(name: "Silkscreen-Expanded", size: 20)
         
         if let count = defaults.value(forKey: "dogCnt"){
             counter.count = count as! Int
@@ -66,16 +50,19 @@ class dogViewController: UIViewController {
         self.boneX.constant = startX!
         self.boneY.constant = startY!
     }
+    
     //뼈움직이는거
     @IBAction func handlePan(recognizer:UIPanGestureRecognizer) {
         let translation = recognizer.translation(in: self.view)
         let dogX = dogImage.center.x
         let dogY = dogImage.center.y
+        
         if let view = recognizer.view {
-            
             boneLabel.alpha = 0
             view.center = CGPoint(x:view.center.x + translation.x,
                                   y:view.center.y + translation.y)
+            
+            //뼈다귀가 입에가면 멍멍
             if((view.center.x >= dogX - 20 && view.center.x <= dogX) && (view.center.y >= dogY - 20 && view.center.y <= dogY)){
                 boneSound.playSound()
             }
@@ -83,7 +70,6 @@ class dogViewController: UIViewController {
         recognizer.setTranslation(CGPoint.zero, in: self.view)
         self.boneX.constant += translation.x
         self.boneY.constant += translation.y
-        
     }
     
     
@@ -111,17 +97,19 @@ class dogViewController: UIViewController {
         else{
             leftUp = false
         }
-        
         counter.count += 1
         dogSound.playSound()
         
         if let newScreen = alertCon.printMessage(count: counter.count){
             self.present(newScreen, animated: true, completion: nil)
         }
+        
+        if(counter.showAction() == true){
+            printSnack()
+        }
         counter.printCount(countLabel: countLabel)
         defaults.set(counter.count, forKey: "dogCnt")
     }
-    
     
     
     @IBAction func clickRight(_ sender: Any) {
@@ -154,10 +142,23 @@ class dogViewController: UIViewController {
         if let newScreen = alertCon.printMessage(count: counter.count){
             self.present(newScreen, animated: true, completion: nil)
         }
+        if(counter.showAction() == true){
+            printSnack()
+        }
         counter.printCount(countLabel: countLabel)
         defaults.set(counter.count, forKey: "dogCnt")
     }
     
+    func printSnack() {
+        let snack = UIImageView(frame: CGRect(x:10 , y:280, width: 400, height: 150))
+        
+        snack.image = UIImage(named: "snack")
+        snack.alpha = 1
+        self.view.addSubview(snack)
+        UIView.animate(withDuration: 3, animations: {
+            snack.alpha = 0})
+        
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ZB8-Qb-hnY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="17G65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ZB8-Qb-hnY">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -934,8 +934,8 @@
                                     <outletCollection property="gestureRecognizers" destination="pP8-G6-NRd" appends="YES" id="ADv-is-BF9"/>
                                 </connections>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&quot;Click!&quot;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9XS-29-7rF">
-                                <rect key="frame" x="277" y="150" width="56.666666666666686" height="20.333333333333343"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&lt;-Click!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9XS-29-7rF">
+                                <rect key="frame" x="277" y="150" width="117" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -1073,16 +1073,20 @@
                                     <action selector="btnClick:" destination="RLj-ez-bCD" eventType="touchUpInside" id="3bs-l2-FBO"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h22-xZ-6xh">
-                                <rect key="frame" x="351" y="642" width="43" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UUa-Yp-98d">
                                 <rect key="frame" x="0.0" y="102" width="414" height="54"/>
                                 <fontDescription key="fontDescription" name="Silkscreen-Expanded" family="Silkscreen Expanded" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pqs-Gb-Qci">
+                                <rect key="frame" x="350" y="20" width="42" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="replay"/>
+                                <connections>
+                                    <action selector="replayBtn:" destination="RLj-ez-bCD" eventType="touchUpInside" id="QfK-3J-qCb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.95818311030000003" blue="0.75160515299999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -1098,6 +1102,7 @@
                         <outlet property="btn1" destination="b2H-Gq-7bD" id="1ob-Af-gZZ"/>
                         <outlet property="countLabel" destination="UUa-Yp-98d" id="xdf-bR-WXG"/>
                         <outlet property="img1" destination="8lp-1R-DnM" id="FTK-Ww-fEQ"/>
+                        <outlet property="replayBtn" destination="pqs-Gb-Qci" id="0cz-bX-JP2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bhD-yG-EdA" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1146,6 +1151,14 @@
                                     <constraint firstAttribute="width" constant="311" id="she-O3-NpK"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ujj-Ge-Ue4">
+                                <rect key="frame" x="350" y="20" width="42" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="replay"/>
+                                <connections>
+                                    <action selector="replayBtn:" destination="faY-WQ-SRs" eventType="touchUpInside" id="ax7-dQ-4F8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.92927109118301021" blue="0.85647762906266967" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -1402,7 +1415,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZB8-Qb-hnY" customClass="TransparentNavigationController" customModule="GGuk" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6im-Ys-PzF">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="6im-Ys-PzF">
                         <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1417,26 +1430,26 @@
         </scene>
     </scenes>
     <resources>
-        <image name="catt" width="146" height="141"/>
+        <image name="catt" width="104" height="101"/>
         <image name="cloud1" width="135" height="59"/>
         <image name="cloud2" width="125" height="50"/>
-        <image name="cloudd" width="140" height="63"/>
+        <image name="cloudd" width="104" height="47"/>
         <image name="coin1" width="379" height="354"/>
-        <image name="cookiee" width="74" height="74"/>
-        <image name="duckk" width="86" height="68"/>
+        <image name="cookiee" width="104" height="104"/>
+        <image name="duckk" width="104" height="83"/>
         <image name="gg" width="78" height="98"/>
-        <image name="heartt" width="80" height="80"/>
+        <image name="heartt" width="104" height="104"/>
         <image name="mo" width="84" height="96"/>
         <image name="moonn" width="81" height="104"/>
-        <image name="mousee" width="57" height="115"/>
+        <image name="mousee" width="51" height="104"/>
         <image name="pink" width="200" height="261"/>
         <image name="pp" width="87" height="98"/>
         <image name="pu" width="79" height="99"/>
         <image name="snowwww" width="358" height="663"/>
         <image name="ss" width="99" height="105"/>
         <image name="ta" width="81" height="101"/>
-        <image name="waterr" width="64" height="81"/>
-        <image name="winee" width="69" height="92"/>
+        <image name="waterr" width="82" height="104"/>
+        <image name="winee" width="78" height="104"/>
     </resources>
     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>

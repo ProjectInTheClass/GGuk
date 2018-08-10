@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  꾹꾹이
-//
-//  Created by CAUAD23 on 2018. 7. 24..
-//  Copyright © 2018년 CAUAD23. All rights reserved.
-//
-
 import UIKit
 
 @UIApplicationMain

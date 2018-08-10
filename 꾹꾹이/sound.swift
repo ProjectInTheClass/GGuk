@@ -11,14 +11,12 @@ import AVFoundation
 
 class sound {
     
-    
     var player : AVAudioPlayer?
     var soundName:String
     
     init(soundName:String) {
         self.soundName = soundName
     }
-    
     
     func playSound() {
         guard let url = Bundle.main.url(forResource: soundName, withExtension: "m4a")

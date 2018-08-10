@@ -14,11 +14,19 @@ import UIKit
 class Counter {
     let defaults = UserDefaults.standard
     var count:Int = 0
-    
+
     func printCount(countLabel:UILabel){
-        //countLabel.font = UIFont.systemFont(ofSize: 25)
+
         countLabel.font = UIFont(name: "Silkscreen-Expanded", size: 40)
-        //countLabel.font = UIFont.italicSystemFont(ofSize: 20.0)
         countLabel.text = "\(count)"
+    }
+    
+    func showAction() -> Bool{
+        if(count % 10 == 0){
+            return true
+        }
+        else{
+            return false
+        }
     }
 }
