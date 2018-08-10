@@ -17,7 +17,7 @@ class PopUp : UIViewController {
     
     func showAlertMsg(title: String, message: String){
         
-        
+
         guard (self.alertController == nil) else {
             print("Alert already displayed")
             return

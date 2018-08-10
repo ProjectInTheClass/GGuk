@@ -102,7 +102,8 @@ class buttonViewController: UIViewController{
     //원 클릭했을때 반응
     @IBAction func buttonTouchDown(_ sender: UIButton) {
         changeSizeDown(button: sender)
-        
+        let generator = UINotificationFeedbackGenerator()
+        generator.notificationOccurred(.error)
         setSound(tag: sender.tag)
         counter.count += 1
         counter.printCount(countLabel: countLabel)
@@ -124,7 +125,7 @@ class buttonViewController: UIViewController{
             buttonSound = sound(soundName: "glass")
             buttonSound?.playSound()
         case 2://물방울
-            buttonSound = sound(soundName: "water2")
+            buttonSound = sound(soundName: "water")
             buttonSound?.playSound()
         case 3://구름
             buttonSound = sound(soundName: "jump")

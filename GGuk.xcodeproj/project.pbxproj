@@ -34,6 +34,9 @@
 		5D71F4C821182D3200B70840 /* light2.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 5D71F4C521182CED00B70840 /* light2.m4a */; };
 		5D71F4C921182D3400B70840 /* light3.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 5D71F4C621182D2100B70840 /* light3.m4a */; };
 		5D71F4CB21183C2C00B70840 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D71F4CA21183C2C00B70840 /* Counter.swift */; };
+		5D770BF6211D417800EF95D5 /* slkscre.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5D770BF5211D416900EF95D5 /* slkscre.ttf */; };
+		5D770BF8211D96C400EF95D5 /* angrycat.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 5D770BF7211D96BD00EF95D5 /* angrycat.m4a */; };
+		5D770BFA211DA3D900EF95D5 /* coinflip.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 5D770BF9211DA3D500EF95D5 /* coinflip.m4a */; };
 		5DE20D88211C3A8300C47724 /* NavigationControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE20D87211C3A8300C47724 /* NavigationControllers.swift */; };
 		5DE20D92211C48AA00C47724 /* mouse.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 5DE20D8A211C457E00C47724 /* mouse.m4a */; };
 		5DE20D93211C48AC00C47724 /* cookie.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 5DE20D8C211C458B00C47724 /* cookie.m4a */; };
@@ -76,6 +79,9 @@
 		5D71F4C521182CED00B70840 /* light2.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = light2.m4a; sourceTree = "<group>"; };
 		5D71F4C621182D2100B70840 /* light3.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = light3.m4a; sourceTree = "<group>"; };
 		5D71F4CA21183C2C00B70840 /* Counter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
+		5D770BF5211D416900EF95D5 /* slkscre.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = slkscre.ttf; sourceTree = "<group>"; };
+		5D770BF7211D96BD00EF95D5 /* angrycat.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = angrycat.m4a; sourceTree = "<group>"; };
+		5D770BF9211DA3D500EF95D5 /* coinflip.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = coinflip.m4a; sourceTree = "<group>"; };
 		5DE20D87211C3A8300C47724 /* NavigationControllers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationControllers.swift; sourceTree = "<group>"; };
 		5DE20D89211C456E00C47724 /* duck.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = duck.m4a; sourceTree = "<group>"; };
 		5DE20D8A211C457E00C47724 /* mouse.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = mouse.m4a; sourceTree = "<group>"; };
@@ -152,12 +158,15 @@
 				5DE20D91211C47B600C47724 /* water.m4a */,
 				5DE20D90211C47AF00C47724 /* water2.m4a */,
 				5DE20D9E211C4E8700C47724 /* puppy.m4a */,
+				5D770BF7211D96BD00EF95D5 /* angrycat.m4a */,
+				5D770BF9211DA3D500EF95D5 /* coinflip.m4a */,
 				1D7B35702106E68000350DE0 /* Assets.xcassets */,
 				1D7B35722106E68000350DE0 /* LaunchScreen.storyboard */,
 				1D7B35752106E68000350DE0 /* Info.plist */,
 				5D71F4AC2117E35A00B70840 /* sound.swift */,
 				5D71F4AF2117E71E00B70840 /* PopUp.swift */,
 				5D71F4CA21183C2C00B70840 /* Counter.swift */,
+				5D770BF5211D416900EF95D5 /* slkscre.ttf */,
 			);
 			name = GGuk;
 			path = "꾹꾹이";
@@ -240,6 +249,8 @@
 				5D71F4C921182D3400B70840 /* light3.m4a in Resources */,
 				1D2269482119446B00E48C44 /* light.m4a in Resources */,
 				1D7B356F2106E68000350DE0 /* Main.storyboard in Resources */,
+				5D770BFA211DA3D900EF95D5 /* coinflip.m4a in Resources */,
+				5D770BF8211D96C400EF95D5 /* angrycat.m4a in Resources */,
 				5DE20D99211C48B800C47724 /* water.m4a in Resources */,
 				5DE20D97211C48B400C47724 /* moon.m4a in Resources */,
 				5DE20D9F211C4E8C00C47724 /* puppy.m4a in Resources */,
@@ -249,6 +260,7 @@
 				5DE20D9B211C49D000C47724 /* heart2.m4a in Resources */,
 				5DE20D93211C48AC00C47724 /* cookie.m4a in Resources */,
 				5DE20D92211C48AA00C47724 /* mouse.m4a in Resources */,
+				5D770BF6211D417800EF95D5 /* slkscre.ttf in Resources */,
 				1D2269462119433E00E48C44 /* cat.m4a in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

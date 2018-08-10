@@ -41,8 +41,9 @@ class PawViewController: UIViewController {
         counter.count += 1
         switch counter.count {
             
-        case 10:
+        case 10,50,100,200,400,800,1600:
             makeBigPaw()
+        
         default:
             break;
         }
@@ -92,7 +93,7 @@ class PawViewController: UIViewController {
     }
     
     func makeBigPaw() {
-        let paws = UIImageView(frame: CGRect(x:30 , y:200, width: 400, height: 300))
+        let paws = UIImageView(frame: CGRect(x:-30 , y:250, width: 500, height: 350))
     
         paws.image = UIImage(named: "pawe")
         paws.alpha = 1
@@ -105,3 +106,4 @@ class PawViewController: UIViewController {
     
     
 }
+

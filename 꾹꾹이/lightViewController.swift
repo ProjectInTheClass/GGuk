@@ -114,6 +114,7 @@ class circleViewController: UIViewController {
     
     @IBOutlet weak var countLabel: UILabel!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         img1.image = UIImage(named: "switch1")
@@ -165,6 +166,8 @@ class cooViewController : UIViewController {
     @IBOutlet weak var img2: UIImageView!
     var down = false
     var catSound = sound(soundName: "cat")
+    var angrySound  = sound(soundName: "angrycat")
+    
     var counter = Counter()
     
     let defaults = UserDefaults.standard
@@ -172,6 +175,8 @@ class cooViewController : UIViewController {
     @IBOutlet weak var countLabel: UILabel!
     @IBOutlet weak var catBtn: UIButton!
 
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         catTail.image = UIImage(named: "cattail")
@@ -180,11 +185,8 @@ class cooViewController : UIViewController {
             counter.count = count as! Int
         }
         counter.printCount(countLabel: countLabel)
-        
-
     }
- 
-
+    
     @IBAction func catClick(_ sender: UIButton) {
         
         let x = catTail.frame.origin.x
