@@ -17,7 +17,7 @@ class Counter {
     
     func printCount(countLabel:UILabel){
         //countLabel.font = UIFont.systemFont(ofSize: 25)
-        countLabel.font = UIFont(name: "Slikscreen-Expanded", size: 40)
+        countLabel.font = UIFont(name: "Silkscreen-Expanded", size: 40)
         //countLabel.font = UIFont.italicSystemFont(ofSize: 20.0)
         countLabel.text = "\(count)"
     }
