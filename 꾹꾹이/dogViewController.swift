@@ -155,8 +155,13 @@ class dogViewController: UIViewController {
         snack.image = UIImage(named: "snack")
         snack.alpha = 1
         self.view.addSubview(snack)
-        UIView.animate(withDuration: 3, animations: {
-            snack.alpha = 0})
+ 
+        UIView.animateKeyframes(withDuration: 3, delay: 0, options: .calculationModeCubic, animations: {
+            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.35) {
+                snack.transform = CGAffineTransform(scaleX: -2, y: -2)
+            }
+        }, completion: nil)
+
         
     }
     override func didReceiveMemoryWarning() {
