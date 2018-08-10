@@ -37,15 +37,15 @@ class dogViewController: UIViewController {
     /*
      func printCount() {
      self.countLabel.text = "\(alertCon.count)"
-     
      }
      */
+    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         startX = boneX.constant
         startY = boneY.constant
-        
         dogImage.image = UIImage(named: "standard")!
         boneImage.image = UIImage(named:"bone")
         if let count = defaults.value(forKey: "dogCnt"){
@@ -65,14 +65,14 @@ class dogViewController: UIViewController {
     }
     //뼈움직이는거
     @IBAction func handlePan(recognizer:UIPanGestureRecognizer) {
-        let translation = recognizer.translation(in: self.view)
+        var translation = recognizer.translation(in: self.view)
         let dogX = dogImage.center.x
         let dogY = dogImage.center.y
         if let view = recognizer.view {
+            
             boneLabel.alpha = 0
             view.center = CGPoint(x:view.center.x + translation.x,
                                   y:view.center.y + translation.y)
-            
             if((view.center.x >= dogX - 20 && view.center.x <= dogX) && (view.center.y >= dogY - 20 && view.center.y <= dogY)){
                 boneSound.playSound()
             }

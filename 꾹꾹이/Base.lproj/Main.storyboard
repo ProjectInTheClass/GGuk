@@ -921,15 +921,14 @@
                                 <rect key="frame" x="157" y="150" width="100" height="50"/>
                                 <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="ROJ-te-F7o"/>
-                                    <constraint firstAttribute="width" constant="100" id="T8H-CY-enJ"/>
+                                    <constraint firstAttribute="height" constant="50" id="yQP-oh-tqB"/>
                                 </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="pP8-G6-NRd" appends="YES" id="ADv-is-BF9"/>
                                 </connections>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&quot;Click!&quot;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9XS-29-7rF">
-                                <rect key="frame" x="277" y="150" width="75" height="32"/>
+                                <rect key="frame" x="277" y="150" width="56.666666666666686" height="20.333333333333343"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -1033,9 +1032,7 @@
             <objects>
                 <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="EWD-vO-uBG" customClass="LightViewController" customModule="GGuk" customModuleProvider="target" sceneMemberID="viewController">
                     <extendedEdge key="edgesForExtendedLayout" top="YES"/>
-                    <navigationItem key="navigationItem" id="88X-Rh-GKC">
-                        <barButtonItem key="backBarButtonItem" title="뒤로" id="CI3-gj-vBB"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="88X-Rh-GKC"/>
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UPv-zc-HdY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
