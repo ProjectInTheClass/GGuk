@@ -21,7 +21,6 @@ class dogViewController: UIViewController {
     var rightUp = false
     var dogSound = sound(soundName: "dv")
     var boneSound = sound(soundName : "puppy")
-    var alertCon = PopUp()
     var counter = Counter()
     let defaults = UserDefaults.standard
     
@@ -100,10 +99,6 @@ class dogViewController: UIViewController {
         counter.count += 1
         dogSound.playSound()
         
-        if let newScreen = alertCon.printMessage(count: counter.count){
-            self.present(newScreen, animated: true, completion: nil)
-        }
-        
         if(counter.showAction() == true){
             printSnack()
         }
@@ -139,9 +134,6 @@ class dogViewController: UIViewController {
         counter.count += 1
         dogSound.playSound()
         
-        if let newScreen = alertCon.printMessage(count: counter.count){
-            self.present(newScreen, animated: true, completion: nil)
-        }
         if(counter.showAction() == true){
             printSnack()
         }
@@ -157,11 +149,14 @@ class dogViewController: UIViewController {
         self.view.addSubview(snack)
  
         UIView.animateKeyframes(withDuration: 3, delay: 0, options: .calculationModeCubic, animations: {
-            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.35) {
-                snack.transform = CGAffineTransform(scaleX: -2, y: -2)
+            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.5) {
+                snack.transform = CGAffineTransform(scaleX: 0.25, y: 0.25)
             }
         }, completion: nil)
-
+        
+        UIView.animate(withDuration: 2, animations: {
+            snack.alpha = 0
+        })
         
     }
     override func didReceiveMemoryWarning() {
