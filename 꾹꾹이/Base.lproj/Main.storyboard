@@ -1102,7 +1102,6 @@
                         <outlet property="btn1" destination="b2H-Gq-7bD" id="1ob-Af-gZZ"/>
                         <outlet property="countLabel" destination="UUa-Yp-98d" id="xdf-bR-WXG"/>
                         <outlet property="img1" destination="8lp-1R-DnM" id="FTK-Ww-fEQ"/>
-                        <outlet property="replayBtn" destination="pqs-Gb-Qci" id="0cz-bX-JP2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bhD-yG-EdA" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1156,7 +1155,8 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="replay"/>
                                 <connections>
-                                    <action selector="replayBtn:" destination="faY-WQ-SRs" eventType="touchUpInside" id="ax7-dQ-4F8"/>
+                                    <action selector="catClick:" destination="faY-WQ-SRs" eventType="touchUpInside" id="m7q-oI-5Hw"/>
+                                    <action selector="replayBtn:" destination="faY-WQ-SRs" eventType="touchUpInside" id="2Sb-zU-rmH"/>
                                 </connections>
                             </button>
                         </subviews>

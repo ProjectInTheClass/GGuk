@@ -163,6 +163,8 @@ class cooViewController : UIViewController {
     var counter = Counter()
     
     let defaults = UserDefaults.standard
+    var x:CGFloat?
+    var y:CGFloat?
     
     @IBOutlet weak var countLabel: UILabel!
     @IBOutlet weak var catBtn: UIButton!
@@ -170,16 +172,13 @@ class cooViewController : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         catTail.image = UIImage(named: "cattail")
+        x = catTail.center.x
+        y = catTail.center.y
+        
         img2.image = UIImage(named: "stand")
         if let count = defaults.value(forKey: "catCnt"){
             counter.count = count as! Int
         }
-        counter.printCount(countLabel: countLabel)
-    }
-    
-    @IBAction func replayBtn(_ sender: UIButton) {
-        counter.count = 0
-        defaults.set(counter.count, forKey: "catCnt")
         counter.printCount(countLabel: countLabel)
     }
     
@@ -199,17 +198,20 @@ class cooViewController : UIViewController {
         angrySound.playSound()
 
     }
+    @IBAction func replayBtn(_ sender: UIButton) {
+        counter.count = 0
+        defaults.set(counter.count, forKey: "catCnt")
+        counter.printCount(countLabel: countLabel)
+    }
 
     @IBAction func catClick(_ sender: UIButton) {
         
-        let x = catTail.frame.origin.x
-        let y = catTail.frame.origin.y
-        let tailPosition:CGPoint?
+        self.catTail.center = CGPoint(x: self.x!, y: self.y!)
         if (down == false) {
-            tailPosition = CGPoint(x: x, y: y + 140)
-            UIView.animate(withDuration: 0.5, animations: {
-                self.catTail.frame = CGRect(x: (tailPosition?.x)!, y: (tailPosition?.y)!, width: 60, height: 110)
+            UIView.animate(withDuration: 3, animations: {
+                self.catTail.center = CGPoint(x: self.x!, y: self.y! + 20)
             })
+            
             down = true
             catSound.playSound()
             counter.count += 1
@@ -217,10 +219,10 @@ class cooViewController : UIViewController {
             defaults.set(counter.count, forKey: "catCnt")
         }
         else {
-            tailPosition = CGPoint(x: x, y: y - 140)
-            UIView.animate(withDuration: 0.5, animations: {
-                self.catTail.frame = CGRect(x: (tailPosition?.x)!, y: (tailPosition?.y)!, width: 60, height: 110)
+            UIView.animate(withDuration: 3, animations: {
+                self.catTail.center = CGPoint(x: self.x!, y: self.y! - 130)
             })
+            
             down = false
             catSound.playSound()
             counter.count += 1
