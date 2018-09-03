@@ -208,8 +208,8 @@ class cooViewController : UIViewController {
         
         self.catTail.center = CGPoint(x: self.x!, y: self.y!)
         if (down == false) {
-            UIView.animate(withDuration: 3, animations: {
-                self.catTail.center = CGPoint(x: self.x!, y: self.y! + 20)
+            UIView.animate(withDuration: 0.5, animations: {
+                self.catTail.center = CGPoint(x: self.x!, y: self.y! - 100)
             })
             
             down = true
@@ -219,8 +219,8 @@ class cooViewController : UIViewController {
             defaults.set(counter.count, forKey: "catCnt")
         }
         else {
-            UIView.animate(withDuration: 3, animations: {
-                self.catTail.center = CGPoint(x: self.x!, y: self.y! - 130)
+            UIView.animate(withDuration: 0.5, animations: {
+                self.catTail.center = CGPoint(x: self.x!, y: self.y! - 100)
             })
             
             down = false

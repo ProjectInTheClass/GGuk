@@ -70,8 +70,6 @@ class PawViewController: UIViewController {
         let touchY = startPoint.y
         setImageView(x: touchX, y: touchY)
     }
-    
-    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         let touch: UITouch = touches.first!
@@ -81,6 +79,7 @@ class PawViewController: UIViewController {
         //터치 좌표를 가지고 넣어준다.
         setImageView(x: touchX, y: touchY)
     }
+    
     
     func makeBigPaw() {
         let paws = UIImageView(frame: CGRect(x:-30 , y:250, width: 500, height: 350))

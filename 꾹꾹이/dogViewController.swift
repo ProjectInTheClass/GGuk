@@ -21,6 +21,8 @@ class dogViewController: UIViewController {
     var rightUp = false
     var dogSound = sound(soundName: "dv")
     var boneSound = sound(soundName : "puppy")
+    var snackSound = sound(soundName: "doggy")
+    
     var counter = Counter()
     let defaults = UserDefaults.standard
     

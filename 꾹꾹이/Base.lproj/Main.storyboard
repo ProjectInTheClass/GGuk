@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="17G65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ZB8-Qb-hnY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ZB8-Qb-hnY">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="neodgm.ttf">
+            <string>NeoDunggeunmo</string>
+        </array>
         <array key="slkscre.ttf">
             <string>Silkscreen-Expanded</string>
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Main-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GGuk" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="Main" customModule="GGuk" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -95,10 +98,30 @@
                                     <segue destination="qVG-R5-V6B" kind="show" id="Noo-fT-sG6"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WHa-5E-pEw">
+                                <rect key="frame" x="67" y="605" width="110" height="131"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="pawClick1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MFB-Vh-QBR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5r3-Hc-dTq">
+                                <rect key="frame" x="243" y="605" width="110" height="131"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="pawClick2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aKM-ER-tVl"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.96580736074270557" green="0.94873341885481766" blue="0.88392087763893967" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="ecp-o2-1sv"/>
+                    <connections>
+                        <outlet property="paw1" destination="uMU-ZI-AoE" id="Xfv-RV-HIm"/>
+                        <outlet property="paw2" destination="EyY-2V-Kti" id="dzx-ec-sUJ"/>
+                        <outlet property="pawBtn1" destination="WHa-5E-pEw" id="UBg-pa-GdS"/>
+                        <outlet property="pawBtn2" destination="5r3-Hc-dTq" id="fxQ-XG-Zmr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -1079,12 +1102,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pqs-Gb-Qci">
-                                <rect key="frame" x="350" y="20" width="42" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pqs-Gb-Qci">
+                                <rect key="frame" x="359" y="59" width="35" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="replay"/>
+                                <state key="normal" image="re"/>
                                 <connections>
-                                    <action selector="replayBtn:" destination="RLj-ez-bCD" eventType="touchUpInside" id="QfK-3J-qCb"/>
+                                    <action selector="replayBtn:" destination="RLj-ez-bCD" eventType="touchUpInside" id="MXc-fz-JB1"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1150,13 +1173,12 @@
                                     <constraint firstAttribute="width" constant="311" id="she-O3-NpK"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ujj-Ge-Ue4">
-                                <rect key="frame" x="350" y="20" width="42" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ujj-Ge-Ue4">
+                                <rect key="frame" x="359" y="51" width="35" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="replay"/>
+                                <state key="normal" image="re"/>
                                 <connections>
-                                    <action selector="catClick:" destination="faY-WQ-SRs" eventType="touchUpInside" id="m7q-oI-5Hw"/>
-                                    <action selector="replayBtn:" destination="faY-WQ-SRs" eventType="touchUpInside" id="2Sb-zU-rmH"/>
+                                    <action selector="replayBtn:" destination="faY-WQ-SRs" eventType="touchUpInside" id="PTK-0M-zDo"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1183,10 +1205,10 @@
             </objects>
             <point key="canvasLocation" x="4262.3188405797109" y="-136.95652173913044"/>
         </scene>
-        <!--View Controller-->
+        <!--My Picker View-->
         <scene sceneID="sue-3L-wfh">
             <objects>
-                <viewController id="fgc-5u-abZ" sceneMemberID="viewController">
+                <viewController id="fgc-5u-abZ" customClass="MyPickerView" customModule="GGuk" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zYa-o4-sCf"/>
                         <viewControllerLayoutGuide type="bottom" id="wNz-Tm-azR"/>
@@ -1195,42 +1217,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="mgx-K3-msS">
-                                <rect key="frame" x="0.0" y="72" width="414" height="138"/>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xhS-58-yap">
+                                <rect key="frame" x="0.0" y="211" width="414" height="525"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <date key="date" timeIntervalSinceReferenceDate="554101716.68547702">
-                                    <!--2018-07-24 05:08:36 +0000-->
-                                </date>
-                            </datePicker>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="9n7-ev-S9F">
-                                <rect key="frame" x="0.0" y="353" width="414" height="165"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <date key="date" timeIntervalSinceReferenceDate="554101836.33874905">
-                                    <!--2018-07-24 05:10:36 +0000-->
-                                </date>
-                            </datePicker>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="iaX-17-dPa">
-                                <rect key="frame" x="0.0" y="198" width="414" height="147"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <date key="date" timeIntervalSinceReferenceDate="554101811.57402396">
-                                    <!--2018-07-24 05:10:11 +0000-->
-                                </date>
-                            </datePicker>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="QCL-nG-m97">
-                                <rect key="frame" x="0.0" y="477" width="414" height="170"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <date key="date" timeIntervalSinceReferenceDate="554101897.82702696">
-                                    <!--2018-07-24 05:11:37 +0000-->
-                                </date>
-                            </datePicker>
+                                <connections>
+                                    <outlet property="dataSource" destination="fgc-5u-abZ" id="DpN-kM-Hnx"/>
+                                    <outlet property="delegate" destination="fgc-5u-abZ" id="MY4-xO-t0h"/>
+                                </connections>
+                            </pickerView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="slotmachin" translatesAutoresizingMaskIntoConstraints="NO" id="TWk-fi-t7j">
+                                <rect key="frame" x="-43" y="147" width="520" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T5O-nd-tmE">
+                                <rect key="frame" x="43" y="158" width="319" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NeoDunggeunmo" family="NeoDunggeunmo" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.95084387063980103" green="0.88369089365005493" blue="0.78709536790847778" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="q1R-ro-hrB"/>
+                    <connections>
+                        <outlet property="label" destination="T5O-nd-tmE" id="a25-LZ-dgp"/>
+                        <outlet property="pickerView" destination="xhS-58-yap" id="JAR-YT-Ssc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cvi-Oa-atX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="532" y="786"/>
+            <point key="canvasLocation" x="531.8840579710145" y="785.86956521739137"/>
         </scene>
         <!--Button View Controller-->
         <scene sceneID="qQ1-ww-xfw">
@@ -1445,6 +1462,8 @@
         <image name="pink" width="200" height="261"/>
         <image name="pp" width="87" height="98"/>
         <image name="pu" width="79" height="99"/>
+        <image name="re" width="45" height="45"/>
+        <image name="slotmachin" width="300" height="41"/>
         <image name="snowwww" width="358" height="663"/>
         <image name="ss" width="99" height="105"/>
         <image name="ta" width="81" height="101"/>

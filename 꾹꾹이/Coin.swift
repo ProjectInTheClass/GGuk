@@ -149,7 +149,12 @@ class Coin: UIViewController {
         }
         specialSound.playSound()
         
-        UIView.transition(with: sender, duration: 0.3, options: .transitionFlipFromLeft, animations: nil, completion: nil)
+        //동전 여러번 회전
+        UIView.transition(with: sender, duration: 0.2, options: [.transitionFlipFromLeft,.repeat], animations: nil, completion: nil)
+        let delayTime = DispatchTime.now() + 0.5
+        DispatchQueue.main.asyncAfter(deadline: delayTime) {
+            sender.layer.removeAllAnimations()
+        }
         return arc4random_uniform(UInt32(btnCoin.count - 1))
         
     }
