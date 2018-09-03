@@ -84,9 +84,9 @@ class PawViewController: UIViewController {
     func makeBigPaw() {
         let paws = UIImageView(frame: CGRect(x:-30 , y:250, width: 500, height: 350))
         paws.image = UIImage(named: "pawe")
-        paws.alpha = 1
+        paws.alpha = 0.8
         self.view.addSubview(paws)
-        UIView.animate(withDuration: 3, animations: {
+        UIView.animate(withDuration: 2, animations: {
             paws.alpha = 0})
     }
  

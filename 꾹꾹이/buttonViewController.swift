@@ -30,7 +30,7 @@ class buttonViewController: UIViewController{
         case 7://달
             button.imageEdgeInsets = UIEdgeInsetsMake(2, 13, 2, 13)
         default://마우스
-            button.imageEdgeInsets = UIEdgeInsetsMake(0, 30, 0, 30)
+            button.imageEdgeInsets = UIEdgeInsetsMake(0, 20, 5, 20)
         }
    
     }
@@ -55,7 +55,7 @@ class buttonViewController: UIViewController{
         case 7://달
             button.imageEdgeInsets = UIEdgeInsetsMake(-2, -13, -2, -13)
         default://마우스
-            button.imageEdgeInsets = UIEdgeInsetsMake(0, -30, 0, -30)
+            button.imageEdgeInsets = UIEdgeInsetsMake(0, -20, -5, -20)
         }
     }
     
