@@ -15,9 +15,13 @@ class Coin: UIViewController {
     @IBOutlet var btnCoin: [UIButton]!
     @IBOutlet weak var countLabel: UILabel!
     
+    @IBOutlet weak var cloud1: UIButton!
+    @IBOutlet weak var cloud2: UIButton!
+    
     var counter = Counter()
     var coinSound = sound(soundName: "coin")
     var specialSound = sound(soundName: "coinflip")
+    var cloudSound = sound(soundName: "jump")
     
     var front: [Bool] = []
     
@@ -32,7 +36,6 @@ class Coin: UIViewController {
     
     let defaults = UserDefaults.standard
     var startBtnLocation:CGPoint?
-    var startTag:Int?
     var num = 0
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -85,21 +88,20 @@ class Coin: UIViewController {
     
     @IBAction func btnFlip(_ sender: UIButton) {
         startBtnLocation = sender.center
-        startTag = sender.tag
         
         if (front[sender.tag] == true) {
-            front[sender.tag] = false
+            
             sender.setImage(UIImage(named: "coin1"), for: .normal)
             coinSound.playSound()
             counter.count += 1
             UIView.transition(with: sender, duration: 0.2, options: .transitionFlipFromLeft, animations: nil, completion: nil)
             counter.printCount(countLabel: countLabel)
             defaults.set(counter.count, forKey: "coinCnt")
+            front[sender.tag] = false
         }
             
         else {
-            front[sender.tag] = true
-            
+
             switch sender.tag {
             case Int(randomNum1!):
                 randomNum1 = specialBtn(randomNum: randomNum1!, sender: sender)
@@ -131,7 +133,10 @@ class Coin: UIViewController {
             counter.count += 1
             counter.printCount(countLabel: countLabel)
             defaults.set(counter.count, forKey: "coinCnt")
+            front[sender.tag] = true
             }
+        
+        
         }
     
     func specialBtn(randomNum:UInt32, sender:UIButton) -> UInt32{
@@ -164,5 +169,9 @@ class Coin: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func clickCloud(_ sender: UIButton) {
+        cloudSound.playSound()
+    }
+    
 
 }

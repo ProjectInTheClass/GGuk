@@ -25,6 +25,8 @@ class dogViewController: UIViewController {
     
     var counter = Counter()
     let defaults = UserDefaults.standard
+    var snackCount:Int = 0
+    var beforeSnack = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,12 +41,23 @@ class dogViewController: UIViewController {
         if let count = defaults.value(forKey: "dogCnt"){
             counter.count = count as! Int
         }
+        
+        if let sCount = defaults.value(forKey: "eatBoneCnt"){
+            self.snackCount = sCount as! Int
+            beforeSnack = sCount as! Int
+        }
+        
+        afterEatSnack()
         counter.printCount(countLabel: countLabel)
     }
     
     @IBAction func replayButton(_ sender: UIBarButtonItem) {
+
         counter.count = 0
-        defaults.set(counter.count, forKey: "coinCnt")
+        snackCount = 0
+        defaults.set(counter.count, forKey: "dogCnt")
+        defaults.set(snackCount,forKey:"eatBoneCnt")
+        
         counter.printCount(countLabel: countLabel)
         
         dogImage.image = UIImage(named: "standard")!
@@ -145,7 +158,6 @@ class dogViewController: UIViewController {
     
     func printSnack() {
         let snack = UIImageView(frame: CGRect(x:10 , y:280, width: 400, height: 150))
-        
         snack.image = UIImage(named: "snack")
         snack.alpha = 1
         self.view.addSubview(snack)
@@ -159,7 +171,35 @@ class dogViewController: UIViewController {
         UIView.animate(withDuration: 2, animations: {
             snack.alpha = 0
         })
+        snackCount += 1
+        beforeSnack = snackCount
         
+        defaults.set(snackCount, forKey: "eatBoneCnt")
+        afterEatSnack()
+    }
+    
+    func afterEatSnack(){
+        var imageView:UIImageView
+        if(snackCount != 0){
+            for i in 0...snackCount - 1 {
+                imageView = UIImageView()
+                imageView.frame = CGRect(x: 0, y: 30 * (i + 2), width: 40, height: 30)
+                imageView.image = boneImage.image
+                self.view.addSubview(imageView)
+            }
+        }
+        else{
+            var totalSubview = self.view.subviews.count
+            
+            if(beforeSnack != 0){
+                for i in 0...beforeSnack - 1{
+                    //if
+                    //self.view.subviews.remove(at: totalSubview - i)
+                }
+
+            }
+        }
+       
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

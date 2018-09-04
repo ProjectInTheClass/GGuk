@@ -33,10 +33,12 @@ class PawViewController: UIViewController {
         self.view.addSubview(imageView)
         counter.count += 1
         
+        /*
         //일정만큼 클릭하면 발자국 찍히도록
         if(counter.showAction() == true){
             makeBigPaw()
         }
+        */
         
         //snow 사운드 여러개
         switch (counter.count) % 4 {
@@ -80,15 +82,15 @@ class PawViewController: UIViewController {
         setImageView(x: touchX, y: touchY)
     }
     
-    
+    /*
     func makeBigPaw() {
         let paws = UIImageView(frame: CGRect(x:-30 , y:250, width: 500, height: 350))
         paws.image = UIImage(named: "pawe")
-        paws.alpha = 0.8
+        paws.alpha = 1
         self.view.addSubview(paws)
-        UIView.animate(withDuration: 2, animations: {
+        UIView.animate(withDuration: 3, animations: {
             paws.alpha = 0})
     }
- 
+ */
 }
 
