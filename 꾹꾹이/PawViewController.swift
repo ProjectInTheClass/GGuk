@@ -5,23 +5,45 @@ class PawViewController: UIViewController {
     @IBOutlet weak var countLabel: UILabel!
     let pawImage = UIImage(named: "pawe")
     var snowSound:sound?
+    var pawImages:[UIImageView!] = []
     
     var counter = Counter()
     //저장을 위해서
     let defaults = UserDefaults.standard
-    
+    var pawCount:Int!
+    //var subviewCount = 0 초기 값 4 - 서브뷰 제거해주어야함
     override func viewDidLoad() {
+        pawCount = pawImages.count
+        
+        if(pawCount != 0){
+            for i in 0...pawCount - 1{
+                pawImages[pawCount - i - 1]?.removeFromSuperview()
+            }
+            pawImages.removeAll()
+        }
+        
+        
         super.viewDidLoad()
         if let count = defaults.value(forKey: "pawCnt"){
             counter.count = count as! Int
         }
         counter.printCount(countLabel: countLabel)
+
+        
+        
     }
     
     @IBAction func replayButton(_ sender: UIBarButtonItem) {
         counter.count = 0
         defaults.set(counter.count, forKey: "pawCnt")
         counter.printCount(countLabel: countLabel)
+        pawCount = pawImages.count
+        if(pawCount != 0){
+            for i in 0...pawCount - 1{
+                pawImages[pawCount - i - 1]?.removeFromSuperview()
+            }
+            pawImages.removeAll()
+        }
     }
     
     func setImageView(x:CGFloat, y:CGFloat){
@@ -31,6 +53,8 @@ class PawViewController: UIViewController {
         imageView.image = pawImage
         
         self.view.addSubview(imageView)
+        pawImages.append(imageView)
+        
         counter.count += 1
         
         /*
@@ -71,6 +95,7 @@ class PawViewController: UIViewController {
         let touchX = startPoint.x
         let touchY = startPoint.y
         setImageView(x: touchX, y: touchY)
+       
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
@@ -80,6 +105,7 @@ class PawViewController: UIViewController {
         let touchY = startPoint.y
         //터치 좌표를 가지고 넣어준다.
         setImageView(x: touchX, y: touchY)
+       
     }
     
     /*

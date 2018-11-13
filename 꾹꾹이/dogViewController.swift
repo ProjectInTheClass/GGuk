@@ -26,11 +26,13 @@ class dogViewController: UIViewController {
     var counter = Counter()
     let defaults = UserDefaults.standard
     var snackCount:Int = 0
-    var beforeSnack = 0
     
+    var imageView:UIImageView!
+    var eatenBone:[UIImageView?] = []
+    var lastBoneLocation:CGPoint!
+    //초기 서브뷰 8
     override func viewDidLoad() {
         super.viewDidLoad()
-
         startX = boneX.constant
         startY = boneY.constant
         
@@ -44,15 +46,36 @@ class dogViewController: UIViewController {
         
         if let sCount = defaults.value(forKey: "eatBoneCnt"){
             self.snackCount = sCount as! Int
-            beforeSnack = sCount as! Int
         }
         
-        afterEatSnack()
+        if(snackCount != 0){
+            for i in 0...snackCount - 1 {
+                imageView = UIImageView()
+                imageView.frame = CGRect(x: 0, y: 30 * (i + 3), width: 40, height: 30)
+                imageView.image = boneImage.image
+                self.view.addSubview(imageView)
+                eatenBone.append(imageView)
+                lastBoneLocation = CGPoint(x: 0, y: 30*(i+3))
+                
+            }
+        }
+        else{
+            lastBoneLocation = CGPoint(x: 0, y: 60)
+        }
         counter.printCount(countLabel: countLabel)
+        
     }
     
     @IBAction func replayButton(_ sender: UIBarButtonItem) {
 
+        lastBoneLocation = CGPoint(x: 0, y: 0)
+        print(snackCount)
+        print(eatenBone.count)
+        for i in 0...snackCount - 1{
+            eatenBone[snackCount - i - 1]?.removeFromSuperview()
+        }
+        eatenBone.removeAll()
+        
         counter.count = 0
         snackCount = 0
         defaults.set(counter.count, forKey: "dogCnt")
@@ -63,6 +86,14 @@ class dogViewController: UIViewController {
         dogImage.image = UIImage(named: "standard")!
         self.boneX.constant = startX!
         self.boneY.constant = startY!
+        /*
+        if let subview = self.view.viewWithTag(1) {
+            subview.removeFromSuperview()
+        }
+ */
+        
+        lastBoneLocation = CGPoint(x: 0, y: 60)
+        
     }
     
     //뼈움직이는거
@@ -172,33 +203,20 @@ class dogViewController: UIViewController {
             snack.alpha = 0
         })
         snackCount += 1
-        beforeSnack = snackCount
         
         defaults.set(snackCount, forKey: "eatBoneCnt")
         afterEatSnack()
     }
     
     func afterEatSnack(){
-        var imageView:UIImageView
-        if(snackCount != 0){
-            for i in 0...snackCount - 1 {
-                imageView = UIImageView()
-                imageView.frame = CGRect(x: 0, y: 30 * (i + 2), width: 40, height: 30)
-                imageView.image = boneImage.image
-                self.view.addSubview(imageView)
-            }
-        }
-        else{
-            var totalSubview = self.view.subviews.count
-            
-            if(beforeSnack != 0){
-                for i in 0...beforeSnack - 1{
-                    //if
-                    //self.view.subviews.remove(at: totalSubview - i)
-                }
-
-            }
-        }
+        
+        imageView = UIImageView()
+        imageView.frame = CGRect(x: 0, y: lastBoneLocation.y + 30, width: 40, height: 30)
+        lastBoneLocation = CGPoint(x: 0, y: lastBoneLocation.y + 30)
+        imageView.image = boneImage.image
+        self.view.addSubview(imageView)
+      
+        eatenBone.append(imageView)
        
     }
     override func didReceiveMemoryWarning() {
