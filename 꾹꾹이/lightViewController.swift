@@ -15,6 +15,9 @@ class LightViewController : UIPageViewController, UIPageViewControllerDelegate, 
         self.view.addSubview(pageControl)
     }
     
+    @IBAction func replayBtn(_ sender: Any) {
+       // self.currentPage.self.
+    }
     
     
     func newVc(viewController: String) -> UIViewController {
@@ -150,7 +153,7 @@ class circleViewController: UIViewController {
     
 }
 
-
+//빨리 눌렀을때 소리 어떡함..?
 class cooViewController : UIViewController {
         
     @IBOutlet weak var catTail: UIImageView!
@@ -163,6 +166,7 @@ class cooViewController : UIViewController {
     var counter = Counter()
     
     let defaults = UserDefaults.standard
+    //cat tail 좌표
     var x:CGFloat?
     var y:CGFloat?
     
@@ -206,28 +210,35 @@ class cooViewController : UIViewController {
 
     @IBAction func catClick(_ sender: UIButton) {
         
-        self.catTail.center = CGPoint(x: self.x!, y: self.y!)
+        //self.catTail.center = CGPoint(x: self.x!, y: self.y!)
+        
+
         if (down == false) {
-            UIView.animate(withDuration: 0.5, animations: {
-                self.catTail.center = CGPoint(x: self.x!, y: self.y! - 100)
-            })
             
+            
+            UIView.animate(withDuration: 0.5, animations: {
+                self.catTail.transform = CGAffineTransform(translationX: 0, y: 100)
+            })
+
             down = true
             catSound.playSound()
             counter.count += 1
             counter.printCount(countLabel: countLabel)
             defaults.set(counter.count, forKey: "catCnt")
+            
         }
         else {
             UIView.animate(withDuration: 0.5, animations: {
-                self.catTail.center = CGPoint(x: self.x!, y: self.y! - 100)
+                self.catTail.transform = CGAffineTransform.identity
+
             })
-            
+
             down = false
             catSound.playSound()
             counter.count += 1
             counter.printCount(countLabel: countLabel)
             defaults.set(counter.count, forKey: "catCnt")
+            
         }
         
         if(counter.showAction() == true){

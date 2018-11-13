@@ -9,8 +9,6 @@
 import UIKit
 
 class Coin: UIViewController {
-
-   
     
     @IBOutlet var btnCoin: [UIButton]!
     @IBOutlet weak var countLabel: UILabel!

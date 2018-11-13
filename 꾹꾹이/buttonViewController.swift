@@ -1,5 +1,6 @@
 
 import UIKit
+//처음클릭했을때 버튼 커지는거..
 class buttonViewController: UIViewController{
     
     var buttonSound:sound?
@@ -77,10 +78,11 @@ class buttonViewController: UIViewController{
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         for i in 0 ... buttons.count - 1{
             setShadowColor(button: buttons[i])
         }
-        
+ 
         if let count = defaults.value(forKey: "btnCnt"){
             counter.count = count as! Int
         }

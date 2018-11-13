@@ -5,32 +5,26 @@ class PawViewController: UIViewController {
     @IBOutlet weak var countLabel: UILabel!
     let pawImage = UIImage(named: "pawe")
     var snowSound:sound?
-    var pawImages:[UIImageView!] = []
+    var pawImages:[UIImageView?] = []
     
     var counter = Counter()
     //저장을 위해서
     let defaults = UserDefaults.standard
     var pawCount:Int!
-    //var subviewCount = 0 초기 값 4 - 서브뷰 제거해주어야함
+
     override func viewDidLoad() {
         pawCount = pawImages.count
-        
         if(pawCount != 0){
             for i in 0...pawCount - 1{
                 pawImages[pawCount - i - 1]?.removeFromSuperview()
             }
             pawImages.removeAll()
         }
-        
-        
         super.viewDidLoad()
         if let count = defaults.value(forKey: "pawCnt"){
             counter.count = count as! Int
         }
         counter.printCount(countLabel: countLabel)
-
-        
-        
     }
     
     @IBAction func replayButton(_ sender: UIBarButtonItem) {

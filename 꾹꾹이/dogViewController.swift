@@ -14,6 +14,7 @@ class dogViewController: UIViewController {
     
     @IBOutlet weak var boneY: NSLayoutConstraint!
     @IBOutlet weak var boneX: NSLayoutConstraint!
+    //뼈다귀 초기 위치 저장
     var startX:CGFloat?
     var startY:CGFloat?
     
@@ -29,8 +30,12 @@ class dogViewController: UIViewController {
     
     var imageView:UIImageView!
     var eatenBone:[UIImageView?] = []
-    var lastBoneLocation:CGPoint!
-    //초기 서브뷰 8
+    var lastBoneLocation:CGPoint!//쌓인 뼈다귀의 마지막 위치
+    
+    
+    //해야할것: 뼈다귀 마지막 위치에서 위에 쌓이는거..
+    //snack객체 삭제해주기..
+
     override func viewDidLoad() {
         super.viewDidLoad()
         startX = boneX.constant
@@ -68,9 +73,6 @@ class dogViewController: UIViewController {
     
     @IBAction func replayButton(_ sender: UIBarButtonItem) {
 
-        lastBoneLocation = CGPoint(x: 0, y: 0)
-        print(snackCount)
-        print(eatenBone.count)
         for i in 0...snackCount - 1{
             eatenBone[snackCount - i - 1]?.removeFromSuperview()
         }
@@ -86,12 +88,7 @@ class dogViewController: UIViewController {
         dogImage.image = UIImage(named: "standard")!
         self.boneX.constant = startX!
         self.boneY.constant = startY!
-        /*
-        if let subview = self.view.viewWithTag(1) {
-            subview.removeFromSuperview()
-        }
- */
-        
+
         lastBoneLocation = CGPoint(x: 0, y: 60)
         
     }
@@ -219,6 +216,7 @@ class dogViewController: UIViewController {
         eatenBone.append(imageView)
        
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         
